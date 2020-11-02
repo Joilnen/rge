@@ -3,5 +3,7 @@
 tags
 *.o
 *.log
-stolen_death
+russell
 *.bak
+*.so
+*.a
