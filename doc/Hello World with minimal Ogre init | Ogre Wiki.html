@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html id="page_441" lang="en"><head>
+	<!--Latest IE Compatibility-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Tiki Wiki CMS Groupware - https://tiki.org">
+
+<meta content="http://wiki.ogre3d.org/" name="twitter:domain"> 
+
+			<link rel="canonical" href="http://wiki.ogre3d.org/Hello+World+with+minimal+Ogre+init">
+		<meta content="http://wiki.ogre3d.org/Hello+World+with+minimal+Ogre+init" property="og:url">
+	
+
+	<meta name="keywords" content="Ogre, Ogre3d, wiki, support  ">
+
+	<meta name="description" content="Ogre Wiki" property="og:description">
+	<meta name="twitter:description" content="Ogre Wiki">
+
+<meta content="Ogre Wiki" property="og:site_name">
+<meta content="Ogre Wiki" name="twitter:site">
+
+
+
+<title>Hello World with minimal Ogre init | Ogre Wiki</title>
+
+
+<meta property="og:title" content="Hello World with minimal Ogre init | Ogre Wiki">
+
+<meta name="twitter:title" content="Hello World with minimal Ogre init | Ogre Wiki">
+
+			<meta content="website" property="og:type">
+	
+
+<meta name="twitter:card" content="summary">
+
+						
+
+<!--[if lt IE 9]>
+	<script src="vendor_bundled/vendor/afarkas/html5shiv/dist/html5shiv.min.js" type="text/javascript"></script>
+<![endif]-->
+		
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/codemirror_modes.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tiki_base.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/fivealive.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/kiwi-ogre.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/style.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/codemirror.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/codemirror_tiki.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery-ui-timepicker-addon.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/colorbox.css" type="text/css">
+<link rel="stylesheet" href="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery.css" type="text/css">
+<style type="text/css"><!--
+/* css 0 */
+.ui-autocomplete-loading { background: white url("img/spinner.gif") right center no-repeat; }
+-->
+</style>
+<!--[if IE 8]>
+<link rel="stylesheet" href="themes/base_files/feature_css/ie8.css" type="text/css">
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" href="themes/base_files/feature_css/ie9.css" type="text/css">
+<![endif]-->
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>body.tablesorter-disableSelection { -ms-user-select: none; -moz-user-select: -moz-none;-khtml-user-select: none; -webkit-user-select: none; user-select: none; }.tablesorter-resizable-container { position: relative; height: 1px; }.tablesorter-resizable-handle { position: absolute; display: inline-block; width: 8px;top: 1px; cursor: ew-resize; z-index: 3; user-select: none; -moz-user-select: none; }</style></head>
+<body class=" tiki  tiki-index tiki_wiki_page layout_basic en">
+
+
+
+
+
+
+
+
+<div class="container">
+	<div class="page-header" id="page-header">
+		<div class="content clearfix modules row top_modules" id="top_modules">
+	
+
+
+			<div id="module_47" style="" class="module box-logo">
+				<div id="mod-logotop1" class="">
+										<div style="background-color: transparent;" class="pull-left sitelogo"><a href="http://wiki.ogre3d.org/" title="Ogre Wiki"><img src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/ogre-logo-wetfloor_opt.png" alt="Ogre Wiki" style="max-width: 100%; height: auto"></a></div><div class="pull-left sitetitles"><h1 class="sitetitle"><a href="http://wiki.ogre3d.org/">Ogre Wiki</a></h1><h2 class="sitesubtitle">Support and community documentation for Ogre3D </h2></div>
+												</div>
+</div>
+
+
+
+
+
+			<div id="module_51" style="" class="module box-sitemycode">
+				<div id="mod-sitemycodetop2" class="">
+										
+
+<div id="sitemycode" style="display:block;">
+<div style="float:right;"><a href="http://www.ogre3d.org/forums/" title="Ogre Forums">Ogre Forums</a>&nbsp;&nbsp;<a href="http://www.ogre3d.org/" title="ogre3d.org">ogre3d.org</a></div></div>
+
+												</div>
+</div>
+
+
+
+
+
+
+
+			<div id="module_48" style="" class="module box-login_box">
+				<div id="mod-login_boxtop3" class="">
+										
+									<div class="siteloginbar_popup dropdown btn-group pull-right">
+				<button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+					Log in
+					<span class="caret"></span>
+				</button>
+				<div class="siteloginbar_poppedup dropdown-menu pull-right modal-sm"><div class="panel-body">
+							
+		<form name="loginbox" class="form" id="loginbox-1" action="https://wiki.ogre3d.org/tiki-login.php" method="post">
+		
+
+								<div class="user form-group clearfix">
+						<label for="login-user_1">
+																				Username
+										:
+							</label>
+								<input class="form-control" type="text" name="user" id="login-user_1">
+				
+					</div>
+		<div class="pass form-group clearfix">
+			<label for="login-pass_1">Password:</label>
+			<input onkeypress="capLock(event, this)" type="password" name="pass" class="form-control" id="login-pass_1">
+			<div class="divCapson" style="display:none;">
+				<span class="icon icon-error fa fa-exclamation-circle fa-fw " style="vertical-align:middle;"></span> CapsLock is on.
+			</div>
+		</div>
+									<div class="form-group">
+					<div class="checkbox rme">
+						<label for="login-remember-module_1"><input type="checkbox" name="rme" id="login-remember-module_1" value="on">
+							Remember me
+							(for
+															1 year)
+													</label>
+					</div>
+				</div>
+							<div class="form-group text-center">
+			<button class="btn btn-primary button submit" type="submit" name="login">Log in <!--i class="fa fa-arrow-circle-right"></i--></button>
+		</div>
+					&nbsp;
+								
+		<input type="hidden" name="stay_in_ssl_mode_present" value="y">
+					<input type="hidden" name="stay_in_ssl_mode" value="n">
+		
+				<div class="social-buttons">
+								</div>
+		</form></div></div></div>
+				
+												</div>
+</div>
+
+
+
+</div>
+		<div class="topbar row" id="topbar">
+			<div class="content clearfix modules" id="topbar_modules">
+	
+
+
+			<div id="module_52" style="" class="module box-sitemenu_custom_code">
+				<div id="mod-sitemenu_custom_codetopbar1" class="">
+										
+
+<div id="sitemenu_custom_code" style="display:block;">
+<nav class="role_navigation">			<ul id="cssmenu0" class="nav cssmenu_horiz menu43 sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li class="option182 menuOption menuLevel0"><a href="http://wiki.ogre3d.org/Home"><span class="menuText">Home</span></a></li><li class="dropdown option183 menuSection menuSection0 menuLevel0"><a href="http://wiki.ogre3d.org/Tutorials" class="sf-with-ul"><span class="menuText">Tutorials</span></a><ul style="display: none; float: none; width: 13.7143em;"><li class="option383 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Tutorials" style="float: none; width: auto;"><span class="menuText">Tutorials Home</span></a></li><li class="option192 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Basic+Tutorials" style="float: none; width: auto;"><span class="menuText">Basic Tutorials</span></a></li><li class="option194 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Intermediate+Tutorials" style="float: none; width: auto;"><span class="menuText">Intermediate Tutorials</span></a></li><li class="option402 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Mad+Marx+Tutorials" style="float: none; width: auto;"><span class="menuText">Mad Marx Tutorials</span></a></li><li class="option212 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/In+Depth+Tutorials" style="float: none; width: auto;"><span class="menuText">In Depth Tutorials</span></a></li><li class="option285 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Older+Tutorials" style="float: none; width: auto;"><span class="menuText">Older Tutorials</span></a></li><li class="option382 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/External+Tutorials" style="float: none; width: auto;"><span class="menuText">External Tutorials</span></a></li></ul></li><li class="dropdown option184 menuSection menuSection0 menuLevel0"><a href="http://wiki.ogre3d.org/Cookbook" class="sf-with-ul"><span class="menuText">Cookbook</span></a><ul style="display: none; float: none; width: 11.4286em;"><li class="option384 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Cookbook" style="float: none; width: auto;"><span class="menuText">Cookbook Home</span></a></li><li class="option265 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/CodeBank" style="float: none; width: auto;"><span class="menuText">CodeBank</span></a></li><li class="option266 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Snippets" style="float: none; width: auto;"><span class="menuText">Snippets</span></a></li><li class="option267 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Experiences" style="float: none; width: auto;"><span class="menuText">Experiences</span></a></li><li class="option268 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/OgreArticles" style="float: none; width: auto;"><span class="menuText">Ogre Articles</span></a></li></ul></li><li class="dropdown option185 menuSection menuSection0 menuLevel0"><a href="http://wiki.ogre3d.org/Libraries" class="sf-with-ul"><span class="menuText">Libraries</span></a><ul style="display: none; float: none; width: 14em;"><li class="option385 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Libraries" style="float: none; width: auto;"><span class="menuText">Libraries Home</span></a></li><li class="option274 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Alternative+Languages" style="float: none; width: auto;"><span class="menuText">Alternative Languages</span></a></li><li class="dropdown option273 menuSection menuSection1 menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Assembling+A+Toolset" style="float: none; width: auto;" class="sf-with-ul"><span class="menuText">Assembling A Toolset</span></a><ul style="display: none; left: 100%; float: none; width: 12.5em;"><li class="option406 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Development+Tools" style="float: none; width: auto;"><span class="menuText">Development Tools</span></a></li><li class="option276 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/OGRE+Libraries" style="float: none; width: auto;"><span class="menuText">OGRE Libraries</span></a></li><li class="option407 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/List+Of+Libraries" style="float: none; width: auto;"><span class="menuText">List of Libraries</span></a></li></ul></li></ul></li><li class="dropdown option190 menuSection menuSection0 menuLevel0"><a href="http://wiki.ogre3d.org/Tools" class="sf-with-ul"><span class="menuText">Tools</span></a><ul style="display: none; float: none; width: 18.7857em;"><li class="option386 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Tools" style="float: none; width: auto;"><span class="menuText">Tools Home</span></a></li><li class="option277 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/DCC+Tools" style="float: none; width: auto;"><span class="menuText">DCC Tools</span></a></li><li class="option269 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/DCC+Tutorials" style="float: none; width: auto;"><span class="menuText">DCC Tutorials</span></a></li><li class="option270 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/DCC+Articles" style="float: none; width: auto;"><span class="menuText">DCC Articles</span></a></li><li class="option271 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/DCC+Resources" style="float: none; width: auto;"><span class="menuText">DCC Resources</span></a></li><li class="option272 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Assembling+a+production+pipeline" style="float: none; width: auto;"><span class="menuText">Assembling a production pipeline</span></a></li></ul></li><li class="dropdown option189 menuSection menuSection0 menuLevel0"><a href="http://wiki.ogre3d.org/Development" class="sf-with-ul"><span class="menuText">Development</span></a><ul style="display: none; float: none; width: 17.3571em;"><li class="option387 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Development" style="float: none; width: auto;"><span class="menuText">Development Home</span></a></li><li class="option201 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Roadmap" style="float: none; width: auto;"><span class="menuText">Roadmap</span></a></li><li class="option202 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Building+Ogre" style="float: none; width: auto;"><span class="menuText">Building Ogre</span></a></li><li class="option292 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Installing+the+Ogre+SDK" style="float: none; width: auto;"><span class="menuText">Installing the Ogre SDK</span></a></li><li class="option293 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Setting+Up+An+Application" style="float: none; width: auto;"><span class="menuText">Setting Up An Application</span></a></li><li class="option395 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Ogre+Wiki+Tutorial+Framework" style="float: none; width: auto;"><span class="menuText">Ogre Wiki Tutorial Framework</span></a></li><li class="option287 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Frequently+Asked+Questions" style="float: none; width: auto;"><span class="menuText">Frequently Asked Questions</span></a></li><li class="option208 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Google+Summer+Of+Code" style="float: none; width: auto;"><span class="menuText">Google Summer Of Code</span></a></li><li class="option210 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Help+Requested" style="float: none; width: auto;"><span class="menuText">Help Requested</span></a></li><li class="option283 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Ogre+Core+Articles" style="float: none; width: auto;"><span class="menuText">Ogre Core Articles</span></a></li></ul></li><li class="dropdown option187 menuSection menuSection0 menuLevel0"><a href="http://wiki.ogre3d.org/Community" class="sf-with-ul"><span class="menuText">Community</span></a><ul style="display: none; float: none; width: 14.8571em;"><li class="option388 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Community" style="float: none; width: auto;"><span class="menuText">Community Home</span></a></li><li class="option261 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Projects+using+OGRE" style="float: none; width: auto;"><span class="menuText">Projects Using Ogre</span></a></li><li class="option279 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Recommended+reading" style="float: none; width: auto;"><span class="menuText">Recommended Reading</span></a></li><li class="option286 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Contractors" style="float: none; width: auto;"><span class="menuText">Contractors</span></a></li><li class="dropdown option262 menuSection menuSection1 menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Wiki" style="float: none; width: auto;" class="sf-with-ul"><span class="menuText">Wiki</span></a><ul style="display: none; left: 100%; float: none; width: 15.1429em;"><li class="option256 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Immediate+Wiki+Tasklist" style="float: none; width: auto;"><span class="menuText">Immediate Wiki Tasklist</span></a></li><li class="option391 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Wiki+Ideas" style="float: none; width: auto;"><span class="menuText">Wiki Ideas</span></a></li><li class="option254 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Wiki+Guidelines" style="float: none; width: auto;"><span class="menuText">Wiki Guidelines</span></a></li><li class="option284 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Article+Writing+Guidelines" style="float: none; width: auto;"><span class="menuText">Article Writing Guidelines</span></a></li><li class="option263 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Wiki+Styles" style="float: none; width: auto;"><span class="menuText">Wiki Styles</span></a></li><li class="option282 menuOption menuLevel2" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Wiki+Tracker" style="float: none; width: auto;"><span class="menuText">Wiki Page Tracker</span></a></li></ul></li></ul></li></ul>
+</nav><nav class="role_navigation">			<ul id="cssmenu1" class="nav cssmenu_horiz menu50 sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li class="dropdown option396 menuSection menuSection0 menuLevel0"><a href="http://wiki.ogre3d.org/Ogre+Wiki+Help" class="sf-with-ul"><span class="menuText">Ogre Wiki Help</span></a><ul style="display: none; float: none; width: 16.6429em;"><li class="option397 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Ogre+Wiki+Help" style="float: none; width: auto;"><span class="menuText">Ogre Wiki Help Overview</span></a></li><li class="option398 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Help+-+Basic+Syntax" style="float: none; width: auto;"><span class="menuText">Help - Basic Syntax</span></a></li><li class="option399 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Help+-+Images" style="float: none; width: auto;"><span class="menuText">Help - Images</span></a></li><li class="option400 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Help+-+Pages+and+Structures" style="float: none; width: auto;"><span class="menuText">Help - Pages and Structures</span></a></li><li class="option401 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Help+-+Wiki+Plugins" style="float: none; width: auto;"><span class="menuText">Help - Wiki Plugins</span></a></li></ul></li></ul>
+</nav><nav class="role_navigation"></nav><nav class="role_navigation">			<ul id="cssmenu3" class="nav cssmenu_horiz menu45 sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li class="dropdown option390 menuSection menuSection0 menuLevel0"><a tabindex="0" class="sf-with-ul"><span class="menuText">Toolbox</span></a><ul style="display: none; float: none; width: 11em;"><li class="option239 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/tiki-browse_freetags.php" style="float: none; width: auto;"><span class="menuText">Freetags</span></a></li><li class="option240 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/categories" style="float: none; width: auto;"><span class="menuText">Categories</span></a></li><li class="option241 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/tiki-listpages.php" style="float: none; width: auto;"><span class="menuText">List Pages</span></a></li><li class="option243 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/tiki-admin_structures.php" style="float: none; width: auto;"><span class="menuText">Structures</span></a></li><li class="option244 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/trackers" style="float: none; width: auto;"><span class="menuText">Trackers</span></a></li><li class="option258 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/stats" style="float: none; width: auto;"><span class="menuText">Statistics</span></a></li><li class="option259 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/tiki-wiki_rankings.php" style="float: none; width: auto;"><span class="menuText">Rankings</span></a></li><li class="option260 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/tiki-list_file_gallery.php" style="float: none; width: auto;"><span class="menuText">List Galleries</span></a></li><li class="option281 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Ogre+Lexicon" style="float: none; width: auto;"><span class="menuText">Ogre Lexicon</span></a></li><li class="option392 menuOption menuLevel1" style="white-space: normal; float: none; width: 100%;"><a href="http://wiki.ogre3d.org/Comments" style="float: none; width: auto;"><span class="menuText">Comments</span></a></li></ul></li></ul>
+</nav><nav class="role_navigation"></nav></div>
+
+												</div>
+</div>
+
+
+
+</div>
+		</div>
+	</div>
+
+	<div class="row row-middle" id="row-middle">
+									<div class="col-md-12 text-right side-col-toggle">
+										<a class="toggle_zone right" title="Toggle right modules" href="#"><span class="icon icon-toggle-right fa fa-toggle-right fa-fw "></span></a>
+				</div>
+			
+			<div class="col-md-9 col1" id="col1">
+								
+<div id="tikifeedback">
+	</div>
+
+				
+			<div class="wikitopline clearfix" style="clear: both;">
+	<div class="content">
+					<div class="wikiinfo pull-left">
+									<a href="http://wiki.ogre3d.org/tiki-index.php?page=Hello%20World%20with%20minimal%20Ogre%20init" class="titletop" title="refresh">Hello World with minimal Ogre init</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				
+				
+				Hello World without using ExampleApplication.h or resource scripts
+
+											</div>
+		 
+	</div> 
+</div> 
+
+					<div class="wikiactions_wrapper">
+		<div class="wikiactions icons btn-group pull-right">
+			<div class="btn-group">
+				
+				
+				
+				
+													<div class="btn-group structures">
+												<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+							<span class="icon icon-structure fa fa-sitemap fa-fw "></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right" role="menu">
+							<li class="dropdown-title">
+								Structures
+							</li>
+							<li class="divider"></li>
+							<li role="presentation">
+																	<a href="http://wiki.ogre3d.org/tiki-index.php?page=Hello%20World%20with%20minimal%20Ogre%20init&amp;structure=Cookbook" title="" class="selected tips" data-original-title="Current structure">
+																					Cookbook
+																			</a>
+															</li>
+													</ul>
+											</div>
+				
+				
+																	<div class="btn-group page_actions">
+																<a class="btn btn-link" data-toggle="dropdown" data-hover="dropdown" href="#">
+						<span class="icon icon-menu-extra fa fa-chevron-down fa-fw "></span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li class="dropdown-title">
+							Page actions
+						</li>
+						<li class="divider"></li>
+						<li>
+													</li>
+																																																			<li>
+								<a href="http://wiki.ogre3d.org/tiki-print.php?q=%2FHello+World+with+minimal+Ogre+init&amp;page=Hello+World+with+minimal+Ogre+init">
+									<span class="icon icon-print fa fa-print fa-fw "></span> Print
+																	</a>
+							</li>
+																								
+																		
+																							</ul>
+									
+					</div>
+							</div>
+		</div> 
+	</div>
+	
+				
+												
+		
+	
+				
+				
+				
+				
+	
+				
+	<article id="top" class="wikitext clearfix nopagetitle">
+					
+			
+							<div class="tocnav">
+	<div class="clearfix">
+		<div class="pull-left breadcrumb">
+												<a class="tips" title="" href="http://wiki.ogre3d.org/Cookbook?structure=Cookbook&amp;page_ref_id=5" data-original-title="Structure"><span class="icon icon-home fa fa-home fa-fw "></span></a>
+														<a href="http://wiki.ogre3d.org/MinimalApplication" class="tips" title="" data-original-title="Previous page">
+					<span class="icon icon-caret-left fa fa-caret-left fa-fw "></span>
+				</a>
+										<a href="http://wiki.ogre3d.org/Minimal+Ogre+projects" class="tips" title="" data-original-title="Parent page">
+					<span class="icon icon-up fa fa-sort-asc fa-fw "></span>
+				</a>
+										<a href="http://wiki.ogre3d.org/MinimalPracticalApplication" class="tips" title="" data-original-title="Next page">
+					<span class="icon icon-caret-right fa fa-caret-right fa-fw "></span>
+				</a>
+														<a href="http://wiki.ogre3d.org/Cookbook">
+											Cookbook
+									</a>
+							&nbsp;»&nbsp;				<a href="http://wiki.ogre3d.org/Snippets">
+											Snippets
+									</a>
+							&nbsp;»&nbsp;				<a href="http://wiki.ogre3d.org/System">
+											System
+									</a>
+							&nbsp;»&nbsp;				<a href="http://wiki.ogre3d.org/Minimal+Ogre+projects">
+											Minimal Ogre projects
+									</a>
+							&nbsp;»&nbsp;				<a href="http://wiki.ogre3d.org/Hello+World+with+minimal+Ogre+init">
+											Hello World with minimal Ogre init
+									</a>
+					</div>
+								</div>
+</div>
+			
+					 
+
+		
+		<div id="page-data" class="clearfix">
+										<p></p><div id="toc"><div id="toctitle"><h3>Table of contents</h3></div><ul class="toc"><ul><li><a href="#Introduction" class="link">Introduction</a>
+</li><li><a href="#The_Main_line" class="link">The Main line</a>
+</li><li><a href="#Initialize_Ogre" class="link">Initialize Ogre</a>
+</li><li><a href="#Creating_a_Font_resource" class="link">Creating a Font resource</a>
+</li><li><a href="#Create_the_TextAreaOverlayElement" class="link">Create the TextAreaOverlayElement</a>
+</li><li><a href="#Setup_the_FrameListener_and_Hello_World" class="link">Setup the FrameListener and Hello World</a></li></ul></ul><!--toc--></div>
+<p></p>
+
+<h2 class="showhide_heading" id="Introduction"> Introduction<a href="#Introduction" class="heading-link"><span class="icon icon-link fa fa-link fa-fw "></span></a></h2>
+<p>As with all tutorials, a Hello World is almost customary. It turns 
+out that the process of create a Hello World application with Ogre <em>without</em>
+ using ExampleRefApplication requires a few more lines of code than one 
+would expect. Here's a simple tutorial for anyone who would like to see 
+some text on screen without using the ExampleRefApplication.
+</p>
+
+<h2 class="showhide_heading" id="The_Main_line"> The Main&nbsp;line<a href="#The_Main_line" class="heading-link"><span class="icon icon-link fa fa-link fa-fw "></span></a></h2>
+<p>This is a standard cross-platform main line that does nothing other than return 0.
+</p>
+
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">#include &lt;Ogre.h&gt;
+ #include &lt;OgreTextAreaOverlayElement.h&gt;
+ #include &lt;OgreFontManager.h&gt; 
+ #include "ExampleFrameListener.h"
+ #define FONT_FILE_NAME "solo5.ttf" 
+ // save some horizontal space
+ using namespace Ogre;
+ #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+ #define FONT_FOLDER "C:\\My\\Font\\Folder"
+ #define WIN32_LEAN_AND_MEAN
+ #include "windows.h"
+ INT WINAPI WinMain( HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT )
+ #else
+ #define FONT_FOLDER "/usr/share/ogrenew/Samples/Media/fonts"
+ int main(int argc, char **argv)
+ #endif 
+ {
+    return 0;
+ }</pre>
+<h2 class="showhide_heading" id="Initialize_Ogre"> Initialize Ogre<a href="#Initialize_Ogre" class="heading-link"><span class="icon icon-link fa fa-link fa-fw "></span></a></h2>
+<p>
+<br>
+<br>Now we do the most basic Ogre initialization. The basic steps are:
+</p>
+<ol><li> Instantiate Root object
+</li><li> Show the config dialog to select a renderer
+</li><li> Initialize the Root object without creating a full screen window
+</li><li> Create a small RenderWindow
+</li><li> Create a generic scene manager
+</li><li> Create a Camera for the scene
+</li><li> Add a Viewport for the RenderWindow
+</li></ol><p>
+<br>
+<br>
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox2">// create root
+ Root *root = new Root();
+ // choose renderer
+ if(!root-&gt;showConfigDialog())
+ {
+     return 0;
+ }
+ // initialise root
+ root-&gt;initialise(false);
+ // create main window
+ RenderWindow *renderWindow = root-&gt;createRenderWindow("Main",320,240,false);
+ // create the scene
+ SceneManager *sceneMgr = root-&gt;createSceneManager(Ogre::ST_GENERIC);
+ // add a camera
+ Camera *mainCam = sceneMgr-&gt;createCamera("MainCam");
+ // add viewport
+ Viewport *vp = renderWindow-&gt;addViewport(mainCam);</pre>
+<h2 class="showhide_heading" id="Creating_a_Font_resource"> Creating a Font&nbsp;resource<a href="#Creating_a_Font_resource" class="heading-link"><span class="icon icon-link fa fa-link fa-fw "></span></a></h2>
+<p>
+<br>
+<br>Here we need to load the font file into the font manager. Here are the basic steps
+</p>
+<ol><li> Get the ResourceGroupManager
+</li><li> Add the folder that contains the .ttf file as a resouce location of type 'FileSystem'
+</li><li> Get the FontManager
+</li><li> Use the FontManager to create a resource and give it a name
+</li><li> Set the font parameters
+</li><li> Load the font resource
+</li></ol><p>
+<br>
+<br>
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox3">// get the resource manager
+ ResourceGroupManager &amp;resGroupMgr = ResourceGroupManager::getSingleton();
+ // tell it to look at this location
+ resGroupMgr.addResourceLocation(FONT_FOLDER, "FileSystem");
+ // get the font manager
+ FontManager &amp;fontMgr = FontManager::getSingleton();
+ // create a font resource
+ ResourcePtr font = fontMgr.create("MyFont","General");
+ // set as truetype
+ font-&gt;setParameter("type","truetype");
+ // set the .ttf file name
+ font-&gt;setParameter("source",FONT_FILE_NAME);
+ // set the size
+ font-&gt;setParameter("size","26");
+ // set the dpi
+ font-&gt;setParameter("resolution","96");
+ // load the ttf
+ font-&gt;load();</pre>
+<h2 class="showhide_heading" id="Create_the_TextAreaOverlayElement"> Create the&nbsp;TextAreaOverlayElement<a href="#Create_the_TextAreaOverlayElement" class="heading-link"><span class="icon icon-link fa fa-link fa-fw "></span></a></h2>
+<p>
+<br>
+<br>Here we need to create TextAreaOverlayElement and render it on our window. Here are the basic steps:
+</p>
+<ol><li> Create a Panel and set its position and size
+</li><li> Create a TextAreaOverlayElement and set its position, size, caption and font name
+</li><li> Add the TextAreaOverlayElement to the Panel as child
+</li><li> Create an Overlay and add the Panel to the just created Overlay
+</li></ol><p>
+<br>
+<br>
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox4">// get the overlay manager
+ OverlayManager&amp; overlayMgr = OverlayManager::getSingleton();</pre>
+<p>Here we create a panel and set its position and size.
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox5">// Create a panel
+ Ogre::OverlayContainer* panel = static_cast&lt;OverlayContainer*&gt;(
+    overlayMgr.createOverlayElement("Panel", "PanelName"));
+ panel-&gt;setMetricsMode(Ogre::GMM_PIXELS);
+ panel-&gt;setPosition(10, 10);
+ panel-&gt;setDimensions(300, 120);</pre>
+<p>Here we create a TextAreaOverlayElement and initialize its
+</p>
+<ul><li> Position
+</li><li> Size
+</li><li> Font and Font Size
+</li><li> Caption
+</li></ul><p>
+<br>
+<br>
+<br>And finally add the text area to the created panel
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox6">// Create a text area
+ TextAreaOverlayElement* textArea = static_cast&lt;TextAreaOverlayElement*&gt;(
+    overlayMgr.createOverlayElement("TextArea", "TextAreaName"));
+ textArea-&gt;setMetricsMode(Ogre::GMM_PIXELS);
+ textArea-&gt;setPosition(0, 0);
+ textArea-&gt;setDimensions(300, 120);
+ textArea-&gt;setCharHeight(26);
+ // set the font name to the font resource that you just created.
+ textArea-&gt;setFontName("MyFont");
+ // say something
+ textArea-&gt;setCaption("Hello, World!");</pre>
+<p>Here we create an Overlay to display the panel
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox7">// Create an overlay, and add the panel
+ Ogre::Overlay* overlay = overlayMgr.create("OverlayName");
+ overlay-&gt;add2D(panel);</pre>
+<p>We have to add the text area to the panel _after_ adding the panel to an overlay to avoid a segfault.
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox8">// Add the text area to the panel
+ panel-&gt;addChild(textArea);</pre>
+<p>And display our overlay.
+</p>
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox9">// Show the overlay
+ overlay-&gt;show();</pre>
+<h2 class="showhide_heading" id="Setup_the_FrameListener_and_Hello_World"> Setup the FrameListener and Hello&nbsp;World<a href="#Setup_the_FrameListener_and_Hello_World" class="heading-link"><span class="icon icon-link fa fa-link fa-fw "></span></a></h2>
+<p>
+<br>
+<br>The only thing left to do is to setup the nice frame listener
+<br>that will exit the main loop on ESC button or window close event.
+</p>
+
+<p>
+<br><em>Notice:</em> We use the ExampleFrameListener class as a placeholder here before we have a lower level implementation of a frame listener.
+</p>
+
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox10">// setup frame listener
+ ExampleFrameListener *frameListener= new ExampleFrameListener(renderWindow, mainCam);
+ frameListener-&gt;showDebugOverlay(false);
+ root-&gt;addFrameListener(frameListener);</pre>
+<p>After that we should start rendering.
+</p>
+
+<pre class="codelisting" data-theme="default" data-syntax="c++" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox11">// start rendering
+ root-&gt;startRendering();</pre>
+<p>Compile and run the project. The result is a tiny window like this, saying hello to the world:
+</p>
+
+<p><img src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/Hello_World_with_minimal_Ogre_init.png" alt="Screenshot of Intermediate Tutorial 6" class="regImage pluginImg img-responsive">
+
+</p>
+
+					</div>
+
+		
+			</article> 
+
+	
+	<footer class="help-block">
+		
+					<em>	Contributors to this page: <a title="" href="http://wiki.ogre3d.org/tiki-user_information.php?userId=2" class="userlink tips" data-original-title="User">jacmoe</a>
+						and
+				<a title="" href="http://wiki.ogre3d.org/tiki-user_information.php?userId=1387" class="userlink ajaxtips" data-ajaxtips="tiki-user-info?username=OgreWikiBot" data-original-title="User Information">OgreWikiBot</a>
+	.
+	<br>
+	Page last modified on Wednesday 09 of June, 2010 11:02:37 -03 by <a title="" href="http://wiki.ogre3d.org/tiki-user_information.php?userId=2" class="userlink tips" data-original-title="User">jacmoe</a>.
+	
+	
+</em>		
+																	<div class="copyright">This content is licensed under the terms of the <a href="http://wiki.ogre3d.org/Creative+Commons+Attribution-ShareAlike+License?copyrightpage=Hello%20World%20with%20minimal%20Ogre%20init">Creative Commons Attribution-ShareAlike License</a>.</div>
+		
+						
+			</footer>
+
+		
+	
+								
+	
+			<div class="form-group" id="page-bar">
+			<div class="btn-bar">
+									
+			
+							<a class="btn btn-default " data-role="button" data-inline="true" href="http://wiki.ogre3d.org/tiki-pagehistory.php?page=Hello+World+with+minimal+Ogre+init&amp;source=0">Source</a>
+			
+																				<a class="btn btn-default " data-role="button" data-inline="true" href="http://wiki.ogre3d.org/tiki-pagehistory.php?page=Hello+World+with+minimal+Ogre+init">History</a>
+							
+			
+
+							
+
+				
+									
+			</div>
+		</div>
+	
+	
+			
+							</div>
+			<div class="col-md-3" id="col3">
+				<div class="content clearfix modules" id="right_modules">
+	
+
+
+<div id="module_46" class="panel panel-default box-SearchTags cssmenubox module">
+			<div class="panel-heading">
+							<h3 class="panel-title clearfix">
+											<span class="moduletitle">Search by Tags</span>
+														</h3>
+					</div>
+			<div id="mod-SearchTagsright1" style="display: block;" class="clearfix panel-body">
+								
+
+<div id="SearchTags" style="display:block;">
+<nav class="role_navigation">			<ul id="cssmenu0" class="nav cssmenu_vert menu51 sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li class="option405 menuOption menuLevel0"><a href="http://wiki.ogre3d.org/tiki-browse_freetags.php"><span class="menuText">Search Wiki by Freetags</span></a></li></ul>
+</nav></div>
+
+														</div>
+							</div>
+			
+
+
+
+
+
+<div id="module_11" class="panel panel-default box-last_modif_pages module">
+			<div class="panel-heading">
+							<h3 class="panel-title clearfix">
+											<span class="moduletitle">Latest Changes</span>
+																<span class="moduleflip" id="moduleflip-last_modif_pagesright3">
+							<a title="Toggle module contents" class="flipmodtitle close" href="javascript:icntoggle('mod-last_modif_pagesright3','module.png');">
+								<span class="icon icon-bars fa fa-bars fa-fw " id="icnmod-last_modif_pagesright3"></span>
+							</a>
+						</span>
+									</h3>
+					</div>
+			<div id="mod-last_modif_pagesright3" style="display: block;" class="clearfix panel-body">
+								
+	<ol>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/Basic+Tutorial+3" title=" Sat 16 of Feb, 2019 17:47 GMT-0000, by paroj">
+
+																																Basic Tutorial 3
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/Advanced+Mogre+Framework" title=" Tue 05 of Feb, 2019 01:16 GMT-0000, by randomcode">
+
+																																Advanced Mogre Framework
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/AMOFGameEngine" title=" Tue 05 of Feb, 2019 01:15 GMT-0000, by randomcode">
+
+																																AMOFGameEngine
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/Glue+Editor" title=" Mon 21 of Jan, 2019 17:32 GMT-0000, by paroj">
+
+																																Glue Editor
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/Building+Ogre+on+Mac+OS+X+%282013%29" title=" Tue 15 of Jan, 2019 16:51 GMT-0000, by paroj">
+
+																																Building Ogre on Mac OS X (2013)
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/MOGRE" title=" Thu 13 of Dec, 2018 17:41 GMT-0000, by paroj">
+
+																																MOGRE
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/Roadmap" title=" Tue 20 of Nov, 2018 20:58 GMT-0000, by paroj">
+
+																																Roadmap
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/Home" title=" Sun 30 of Sep, 2018 13:36 GMT-0000, by paroj">
+
+																																Home
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/Easy+Ogre+Exporter" title=" Tue 25 of Sep, 2018 19:15 GMT-0000, by arkeon">
+
+																																Easy Ogre Exporter
+																		
+				</a>
+			</li>
+					<li>
+				<a class="linkmodule" href="http://wiki.ogre3d.org/OGRE+Exporters" title=" Tue 25 of Sep, 2018 19:15 GMT-0000, by arkeon">
+
+																																OGRE Exporters
+																		
+				</a>
+			</li>
+			</ol>
+	<a class="linkmodule" style="margin-left: 20px" href="http://wiki.ogre3d.org/tiki-lastchanges.php">...more</a>
+
+														</div>
+							</div>
+			
+
+ <div id="module_32" class="panel panel-default box-search module"><div class="panel-heading"><h3 class="panel-title clearfix"><span class="moduletitle">Search</span></h3></div><div id="mod-searchright4" style="display: block;" class="clearfix panel-body"><form class="form-inline" id="search-module-form1" method="get" action="tiki-searchresults.php"><div class="form-group" style="position: relative;"><div class="input-group input-group-sm" style="margin-left:-7px;margin-right:-7px;"><input style="float:left;" placeholder="Find" class="form-control" id="search_mod_input_1" name="find" type="text" accesskey="s"><div class="input-group-btn btn-group"><input type="submit" class="btn btn-default btn-sm tips btn-primary button_default btn-xs" name="search" value="Go" title="" onclick="$('#search-module-form1').attr('action', 'tiki-searchresults.php').attr('page_selected','');" data-original-title="Search"></div></div><div class="checkbox" style="padding-left: 6px; padding-right: 6px; display: inline-block;"><label for="boolean"><input type="checkbox" name="boolean" id="boolean" checked="checked"> Advanced <a href="http://wiki.ogre3d.org/tiki-search-help?modal=1" data-toggle="modal" data-backdrop="static" data-target=".modal.fade:not(.in):first"><span class="icon icon-help fa fa-question-circle fa-fw "></span> Search Help</a></label></div><input type="hidden" name="boolean_last" value="y"></div></form></div></div> 
+	
+
+
+<div id="module_6" class="panel panel-default box-who_is_there module">
+			<div class="panel-heading">
+							<h3 class="panel-title clearfix">
+											<span class="moduletitle">Online Users</span>
+																<span class="moduleflip" id="moduleflip-who_is_thereright5">
+							<a title="Toggle module contents" class="flipmodtitle close" href="javascript:icntoggle('mod-who_is_thereright5','module.png');">
+								<span class="icon icon-bars fa fa-bars fa-fw " id="icnmod-who_is_thereright5"></span>
+							</a>
+						</span>
+									</h3>
+					</div>
+			<div id="mod-who_is_thereright5" style="display: block;" class="clearfix panel-body">
+								
+						<div>
+				36
+									online users
+							</div>
+			
+			<ul>
+							<li>
+					
+											
+						
+					
+									</li>
+					</ul>
+		
+														</div>
+							</div>
+			
+
+
+</div>
+			</div>
+			</div>
+
+	<footer class="footer" id="footer">
+		<div class="footer_liner">
+			<div class="content clearfix modules row row-sidemargins-zero" id="bottom_modules">
+	
+
+
+
+			<div id="module_49" style="" class="module box-menu">
+				<div id="mod-menubottom1" class="">
+										
+						<nav class="navbar navbar-default" role="navigation">
+									<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mod-menubottom1 .navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+											</div>
+					<div class="collapse navbar-collapse">
+												<ul class="nav navbar-nav">
+						<li class=""><a href="http://wiki.ogre3d.org/Home">Home</a></li>
+								<li class="dropdown ">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Tutorials
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+											<li class=""><a href="http://wiki.ogre3d.org/Tutorials">Tutorials Home</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Basic+Tutorials">Basic Tutorials</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Intermediate+Tutorials">Intermediate Tutorials</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Mad+Marx+Tutorials">Mad Marx Tutorials</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/In+Depth+Tutorials">In Depth Tutorials</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Older+Tutorials">Older Tutorials</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/External+Tutorials">External Tutorials</a></li>
+									</ul>
+			</li>
+								<li class="dropdown ">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Cookbook
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+											<li class=""><a href="http://wiki.ogre3d.org/Cookbook">Cookbook Home</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/CodeBank">CodeBank</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Snippets">Snippets</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Experiences">Experiences</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/OgreArticles">Ogre Articles</a></li>
+									</ul>
+			</li>
+								<li class="dropdown ">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Libraries
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+											<li class=""><a href="http://wiki.ogre3d.org/Libraries">Libraries Home</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Alternative+Languages">Alternative Languages</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Development+Tools">Development Tools</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/OGRE+Libraries">OGRE Libraries</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/List+Of+Libraries">List of Libraries</a></li>
+									</ul>
+			</li>
+								<li class="dropdown ">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Tools
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+											<li class=""><a href="http://wiki.ogre3d.org/Tools">Tools Home</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/DCC+Tools">DCC Tools</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/DCC+Tutorials">DCC Tutorials</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/DCC+Articles">DCC Articles</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/DCC+Resources">DCC Resources</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Assembling+a+production+pipeline">Assembling a production pipeline</a></li>
+									</ul>
+			</li>
+								<li class="dropdown ">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Development
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+											<li class=""><a href="http://wiki.ogre3d.org/Development">Development Home</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Roadmap">Roadmap</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Building+Ogre">Building Ogre</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Installing+the+Ogre+SDK">Installing the Ogre SDK</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Setting+Up+An+Application">Setting Up An Application</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Ogre+Wiki+Tutorial+Framework">Ogre Wiki Tutorial Framework</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Frequently+Asked+Questions">Frequently Asked Questions</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Google+Summer+Of+Code">Google Summer Of Code</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Help+Requested">Help Requested</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Ogre+Core+Articles">Ogre Core Articles</a></li>
+									</ul>
+			</li>
+								<li class="dropdown ">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Community
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+											<li class=""><a href="http://wiki.ogre3d.org/Community">Community Home</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Projects+using+OGRE">Projects Using Ogre</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Recommended+reading">Recommended Reading</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Contractors">Contractors</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Immediate+Wiki+Tasklist">Immediate Wiki Tasklist</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Wiki+Ideas">Wiki Ideas</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Wiki+Guidelines">Wiki Guidelines</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Article+Writing+Guidelines">Article Writing Guidelines</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Wiki+Styles">Wiki Styles</a></li>
+											<li class=""><a href="http://wiki.ogre3d.org/Wiki+Tracker">Wiki Page Tracker</a></li>
+									</ul>
+			</li>
+			</ul>
+
+					</div>
+							</nav>
+			
+												</div>
+</div>
+
+
+
+
+
+			<div id="module_50" style="" class="module box-poweredby">
+				<div id="mod-poweredbybottom2" class="">
+										<div class="power">Powered by <a href="http://tiki.org/" title="© 2002–2019 The Tiki Community">Tiki Wiki CMS Groupware </a><span id="credits">&nbsp;| Theme: Fivealive/Kiwi-ogre</span></div><div class="power_icons"><a href="http://tiki.org/" title="Tiki"><img alt="Powered by Tiki" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tikibutton2.png"></a><a href="http://php.net/" title="PHP"><img alt="Powered by PHP" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/php.png"></a><a href="http://smarty.net/" title="Smarty"><img alt="Powered by Smarty" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/smarty.png"></a></div>
+												</div>
+</div>
+
+
+
+</div>
+		</div>
+	</footer>
+</div>
+
+
+<div id="bootstrap-modal" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel"></h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="bootstrap-modal-2" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		</div>
+	</div>
+</div>
+<div id="bootstrap-modal-3" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		</div>
+	</div>
+</div>
+	
+	
+
+
+
+<!-- Put JS at the end -->
+	
+	
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery_008.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery-ui.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/codemirror.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/codemirror_modes.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tiki-bootstrapmodalfix.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/iconsets.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tiki-js.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tiki-jquery.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tiki-maps.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery_006.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/searchcursor.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/overlay.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/codemirror_tiki.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/superfish.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/supersubs.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/hoverIntent.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery_004.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/widget-pager.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/widget-filter-formatter-jui.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/widget-grouping.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/widget-columnSelector.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/parser-input-select.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/widget-math.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/widget-sort2Hash.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tablesorter.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery_005.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery_003.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery_002.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/validator_tiki.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery_007.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/jquery.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/bootstrap-hover-dropdown.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/files.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/tiki-trackers.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/pluginedit.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/language.js"></script>
+<script type="text/javascript" src="Hello%20World%20with%20minimal%20Ogre%20init%20|%20Ogre%20Wiki_files/captchalib.js"></script>
+	
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+// js 0 
+tiki_cookie_jar=new Object();
+$.lang = 'en';
+
+// JS Object to hold prefs for jq
+var jqueryTiki = {"ui":true,"ui_theme":"smoothness","tooltips":true,"autocomplete":true,"superfish":true,"reflection":false,"tablesorter":true,"colorbox":true,"cboxCurrent":"{current} \/ {total}","sheet":false,"carousel":false,"validate":true,"zoom":false,"effect":"","effect_direction":"vertical","effect_speed":"400","effect_tabs":"slide","effect_tabs_direction":"vertical","effect_tabs_speed":"fast","home_file_gallery":1,"autosave":true,"sefurl":true,"ajax":false,"syntaxHighlighter":true,"chosen":false,"chosen_sortable":false,"mapTileSets":["openstreetmap"],"infoboxTypes":["trackeritem","activity"],"googleStreetView":false,"googleStreetViewOverlay":false,"structurePageRepeat":false,"mobile":false,"no_cookie":false,"language":"en","useInlineComment":false,"useInlineAnnotations":false,"helpurl":"http:\/\/doc.tiki.org\/","shortDateFormat":"yy-mm-dd","shortTimeFormat":"HH:mm","username":null,"userRealName":null,"userAvatar":"http:\/\/wiki.ogre3d.org\/img\/noavatar.png","autoToc_inline":false,"autoToc_pos":"right","autoToc_offset":"10","current_object":{"type":"wiki page","object":"Hello World with minimal Ogre init"}}
+
+jqueryTiki.iconset = {"defaults":["500px","adjust","adn","align-center","align-justify","align-left","align-right","amazon","ambulance","anchor","android","angellist","angle-double-down","angle-double-left","angle-double-right","angle-double-up","angle-down","angle-left","angle-right","angle-up","apple","archive","area-chart","arrow-circle-down","arrow-circle-left","arrow-circle-o-down","arrow-circle-o-left","arrow-circle-o-right","arrow-circle-o-up","arrow-circle-right","arrow-circle-up","arrow-down","arrow-left","arrow-right","arrow-up","arrows","arrows-alt","arrows-h","arrows-v","asterisk","at","automobile","backward","balance-scale","ban","bank","bar-chart","bar-chart-o","barcode","bars","battery-0","battery-1","battery-2","battery-3","battery-4","battery-empty","battery-full","battery-half","battery-quarter","battery-three-quarters","bed","beer","behance","behance-square","bell","bell-o","bell-slash","bell-slash-o","bicycle","binoculars","birthday-cake","bitbucket","bitbucket-square","bitcoin","black-tie","bluetooth","bluetooth-b","bold","bolt","bomb","book","bookmark","bookmark-o","briefcase","btc","bug","building","building-o","bullhorn","bullseye","bus","buysellads","cab","calculator","calendar","calendar-check-o","calendar-minus-o","calendar-o","calendar-plus-o","calendar-times-o","camera","camera-retro","car","caret-down","caret-left","caret-right","caret-square-o-down","caret-square-o-left","caret-square-o-right","caret-square-o-up","caret-up","cart-arrow-down","cart-plus","cc","cc-amex","cc-diners-club","cc-discover","cc-jcb","cc-mastercard","cc-paypal","cc-stripe","cc-visa","certificate","chain","chain-broken","check","check-circle","check-circle-o","check-square","check-square-o","chevron-circle-down","chevron-circle-left","chevron-circle-right","chevron-circle-up","chevron-down","chevron-left","chevron-right","chevron-up","child","chrome","circle","circle-o","circle-o-notch","circle-thin","clipboard","clock-o","clone","close","cloud","cloud-download","cloud-upload","cny","code","code-fork","codepen","codiepie","coffee","cog","cogs","columns","comment","comment-o","commenting","commenting-o","comments","comments-o","compass","compress","connectdevelop","contao","copy","copyright","creative-commons","credit-card","credit-card-alt","crop","crosshairs","css3","cube","cubes","cut","cutlery","dashboard","dashcube","database","dedent","delicious","desktop","deviantart","diamond","digg","dollar","dot-circle-o","download","dribbble","dropbox","drupal","edge","edit","eject","ellipsis-h","ellipsis-v","empire","envelope","envelope-o","envelope-square","eraser","eur","euro","exchange","exclamation","exclamation-circle","exclamation-triangle","expand","expeditedssl","external-link","external-link-square","eye","eye-slash","eyedropper","facebook","facebook-official","facebook-square","fast-backward","fast-forward","fax","female","fighter-jet","file","file-archive-o","file-audio-o","file-code-o","file-excel-o","file-image-o","file-movie-o","file-o","file-pdf-o","file-photo-o","file-picture-o","file-powerpoint-o","file-sound-o","file-text","file-text-o","file-video-o","file-word-o","file-zip-o","files-o","film","filter","fire","fire-extinguisher","firefox","flag","flag-checkered","flag-o","flash","flask","flickr","floppy-o","folder","folder-o","folder-open","folder-open-o","font","fonticons","fort-awesome","forumbee","forward","foursquare","frown-o","futbol-o","gamepad","gavel","gbp","ge","gear","gears","genderless","get-pocket","gg","gg-circle","gift","git","git-square","github","github-alt","github-square","gittip","glass","globe","google","google-plus","google-plus-square","google-wallet","graduation-cap","group","h-square","hacker-news","hand-grab-o","hand-lizard-o","hand-o-down","hand-o-left","hand-o-right","hand-o-up","hand-paper-o","hand-peace-o","hand-pointer-o","hand-rock-o","hand-scissors-o","hand-spock-o","hand-stop-o","hashtag","hdd-o","header","headphones","heart","heartbeat","heart-o","history","home","hospital-o","hotel","hourglass","hourglass-1","hourglass-2","hourglass-3","hourglass-end","hourglass-half","hourglass-o","hourglass-start","houzz","html5","i-cursor","ils","image","inbox","indent","industry","info","info-circle","inr","instagram","institution","internet-explorer","ioxhost","italic","joomla","jpy","jsfiddle","key","keyboard-o","krw","language","laptop","lastfm","lastfm-square","leaf","leanpub","legal","lemon-o","level-down","level-up","life-bouy","life-buoy","life-ring","life-saver","lightbulb-o","line-chart","link","linkedin","linkedin-square","linux","list","list-alt","list-ol","list-ul","location-arrow","lock","long-arrow-down","long-arrow-left","long-arrow-right","long-arrow-up","magic","magnet","mail-forward","mail-reply","mail-reply-all","male","map","map-marker","map-o","map-pin","map-signs","mars","mars-double","mars-stroke","mars-stroke-h","mars-stroke-v","maxcdn","meanpath","medium","medkit","meh-o","mercury","microphone","microphone-slash","minus","minus-circle","minus-square","minus-square-o","mixcloud","mobile","mobile-phone","modx","money","moon-o","mortar-board","motorcycle","mouse-pointer","music","navicon","neuter","newspaper-o","object-group","object-ungroup","odnoklassniki","odnoklassniki-square","opencart","openid","opera","optin-monster","outdent","pagelines","paint-brush","paper-plane","paper-plane-o","paperclip","paragraph","paste","pause","pause-circle","pause-circle-o","paw","paypal","pencil","pencil-square","pencil-square-o","percent","phone","phone-square","photo","picture-o","pie-chart","pied-piper","pied-piper-alt","pinterest","pinterest-p","pinterest-square","plane","play","play-circle","play-circle-o","plug","plus","plus-circle","plus-square","plus-square-o","power-off","print","product-hunt","puzzle-piece","qq","qrcode","question","question-circle","quote-left","quote-right","ra","random","rebel","recycle","reddit","reddit-alien","reddit-square","refresh","registered","remove","renren","reorder","repeat","reply","reply-all","retweet","rmb","road","rocket","rotate-left","rotate-right","rouble","rss","rss-square","rub","ruble","rupee","safari","save","scissors","scribd","search","search-minus","search-plus","sellsy","send","send-o","server","share","share-alt","share-alt-square","share-square","share-square-o","shekel","sheqel","shield","ship","shirtsinbulk","shopping-bag","shopping-basket","shopping-cart","sign-in","sign-out","signal","simplybuilt","sitemap","skyatlas","skype","slack","sliders","slideshare","smile-o","soccer-ball-o","sort","sort-alpha-asc","sort-alpha-desc","sort-amount-asc","sort-amount-desc","sort-asc","sort-desc","sort-down","sort-numeric-asc","sort-numeric-desc","sort-up","soundcloud","space-shuttle","spinner","spoon","spotify","square","square-o","stack-exchange","stack-overflow","star","star-half","star-half-empty","star-half-full","star-half-o","star-o","steam","steam-square","step-backward","step-forward","stethoscope","sticky-note","sticky-note-o","stop","stop-circle","stop-circle-o","street-view","strikethrough","stumbleupon","stumbleupon-circle","subscript","subway","suitcase","sun-o","superscript","support","table","tablet","tachometer","tag","tags","tasks","taxi","television","tencent-weibo","terminal","text-height","text-width","th","th-large","th-list","thumb-tack","thumbs-down","thumbs-o-down","thumbs-o-up","thumbs-up","ticket","times","times-circle","times-circle-o","tint","toggle-down","toggle-left","toggle-off","toggle-on","toggle-right","toggle-up","trademark","train","transgender","transgender-alt","trash","trash-o","tree","trello","tripadvisor","trophy","truck","try","tty","tumblr","tumblr-square","turkish-lira","tv","twitch","twitter","twitter-square","umbrella","underline","undo","university","unlink","unlock","unlock-alt","unsorted","upload","usb","usd","user","user-md","user-plus","user-secret","user-times","users","venus","venus-double","venus-mars","viacoin","vimeo","video-camera","vimeo-square","vine","vk","volume-down","volume-off","volume-up","warning","wechat","weibo","weixin","wheelchair","wifi","wikipedia-w","windows","won","wordpress","wrench","xing","xing-square","y-combinator","yahoo","yc","yelp","yen","youtube","youtube-play","youtube-square","american-sign-language-interpreting","asl-interpreting","assistive-listening-systems","audio-description","blind","braille","deaf","deafness","envira","fa","first-order","font-awesome","gitlab","glide","glide-g","google-plus-circle","google-plus-official","hard-of-hearing","instagram","low-vision","pied-piper","question-circle-o","sign-language","signing","snapchat","snapchat-ghost","snapchat-square","themeisle","universal-access","viadeo","viadeo-square","volume-control-phone","wheelchair-alt","wpbeginner","wpforms","yoast","address-book","address-book-o","address-card","address-card-o","bandcamp","bath","bathtub","drivers-license","drivers-license-o","eercast","envelope-open","envelope-open-o","etsy","free-code-camp","grav","handshake-o","id-badge","id-card","id-card-o","imdb","linode","meetup","microchip","podcast","quora","ravelry","s15","shower","snowflake-o","superpowers","telegram","thermometer","thermometer-0","thermometer-1","thermometer-2","thermometer-3","thermometer-4","thermometer-empty","thermometer-full","thermometer-half","thermometer-quarter","thermometer-three-quarters","times-rectangle","times-rectangle-o","user-circle","user-circle-o","user-o","vcard","vcard-o","window-close","window-close-o","window-maximize","window-minimize","window-restore","wpexplorer"],"icons":{"actions":{"id":"play-circle"},"admin":{"id":"cog"},"add":{"id":"plus-circle"},"admin_ads":{"id":"film"},"admin_articles":{"id":"newspaper-o"},"admin_blogs":{"id":"bold"},"admin_calendar":{"id":"calendar"},"admin_category":{"id":"sitemap fa-rotate-270"},"admin_comments":{"id":"comment"},"admin_community":{"id":"group"},"admin_connect":{"id":"link"},"admin_copyright":{"id":"copyright"},"admin_directory":{"id":"folder-o"},"admin_faqs":{"id":"question"},"admin_features":{"id":"power-off"},"admin_fgal":{"id":"folder-open"},"admin_forums":{"id":"comments"},"admin_freetags":{"id":"tags"},"admin_gal":{"id":"file-image-o"},"admin_general":{"id":"cog"},"admin_i18n":{"id":"language"},"admin_intertiki":{"id":"exchange"},"admin_login":{"id":"sign-in"},"admin_user":{"id":"user"},"admin_look":{"id":"image"},"admin_maps":{"id":"map-marker"},"admin_messages":{"id":"envelope-o"},"admin_metatags":{"id":"tag"},"admin_module":{"id":"cogs"},"admin_payment":{"id":"credit-card"},"admin_performance":{"id":"tachometer"},"admin_polls":{"id":"tasks"},"admin_profiles":{"id":"cube"},"admin_rating":{"id":"check-square"},"admin_rss":{"id":"rss"},"admin_score":{"id":"trophy"},"admin_search":{"id":"search"},"admin_semantic":{"id":"arrows-h"},"admin_security":{"id":"lock"},"admin_sefurl":{"id":"search-plus"},"admin_share":{"id":"share-alt"},"admin_socialnetworks":{"id":"thumbs-up"},"admin_stats":{"id":"bar-chart"},"admin_textarea":{"id":"edit"},"admin_trackers":{"id":"database"},"admin_userfiles":{"id":"cog"},"admin_video":{"id":"video-camera"},"admin_webmail":{"id":"inbox"},"admin_webservices":{"id":"cog"},"admin_wiki":{"id":"file-text-o"},"admin_workspace":{"id":"desktop"},"admin_wysiwyg":{"id":"file-text"},"admin_print":{"id":"print"},"admin_packages":{"id":"gift"},"admin_rtc":{"id":"bullhorn"},"articles":{"id":"newspaper-o"},"attach":{"id":"paperclip"},"audio":{"id":"file-audio-o"},"back":{"id":"arrow-left"},"background-color":{"id":"paint-brush"},"backlink":{"id":"reply"},"backward_step":{"id":"step-backward"},"box":{"id":"list-alt"},"cart":{"id":"shopping-cart"},"chart":{"id":"area-chart"},"code_file":{"id":"file-code-o"},"collapsed":{"id":"plus-square-o"},"comments":{"id":"comments-o"},"compose":{"id":"pencil"},"computer":{"id":"desktop"},"contacts":{"id":"group"},"content-template":{"id":"file-o"},"create":{"id":"plus"},"delete":{"id":"times"},"difference":{"id":"strikethrough"},"disable":{"id":"minus-square"},"documentation":{"id":"book"},"down":{"id":"sort-desc"},"education":{"id":"graduation-cap"},"envelope":{"id":"envelope-o"},"erase":{"id":"eraser"},"error":{"id":"exclamation-circle"},"excel":{"id":"file-excel-o"},"expanded":{"id":"minus-square-o"},"export":{"id":"download"},"file":{"id":"file-o"},"file-archive":{"id":"folder"},"file-archive-open":{"id":"folder-open"},"floppy":{"id":"floppy-o"},"font-color":{"id":"font","class":"text-danger"},"forward_step":{"id":"step-forward"},"fullscreen":{"id":"arrows-alt"},"h1":{"id":"header"},"h2":{"id":"header","size":".9"},"h3":{"id":"header","size":".8"},"help":{"id":"question-circle"},"history":{"id":"clock-o"},"horizontal-rule":{"id":"minus"},"html":{"id":"html5"},"image":{"id":"file-image-o"},"import":{"id":"upload"},"index":{"id":"spinner"},"information":{"id":"info-circle"},"keyboard":{"id":"keyboard-o"},"like":{"id":"thumbs-up"},"link-external":{"id":"external-link"},"link-external-alt":{"id":"external-link-square"},"list-numbered":{"id":"list-ol"},"listgui_display":{"id":"desktop"},"listgui_filter":{"id":"filter"},"listgui_format":{"id":"indent"},"listgui_pagination":{"id":"book"},"listgui_output":{"id":"eye"},"listgui_column":{"id":"columns"},"listgui_tablesorter":{"id":"table"},"listgui_icon":{"id":"user"},"listgui_body":{"id":"align-justify"},"listgui_carousel":{"id":"slideshare"},"listgui_sort":{"id":"sort-alpha-desc"},"listgui_wikitext":{"id":"file-text-o"},"listgui_caption":{"id":"align-center"},"log":{"id":"history"},"login":{"id":"sign-in"},"logout":{"id":"sign-out"},"mailbox":{"id":"inbox"},"menu":{"id":"bars"},"menu-extra":{"id":"chevron-down"},"menuitem":{"id":"angle-right"},"merge":{"id":"random"},"minimize":{"id":"compress"},"module":{"id":"cogs"},"more":{"id":"ellipsis-h"},"move":{"id":"exchange"},"next":{"id":"arrow-right"},"notepad":{"id":"file-text-o"},"notification":{"id":"bell-o"},"off":{"id":"power-off"},"ok":{"id":"check-circle"},"page-break":{"id":"scissors"},"pdf":{"id":"file-pdf-o"},"permission":{"id":"key"},"plugin":{"id":"puzzle-piece"},"popup":{"id":"list-alt"},"post":{"id":"pencil"},"powerpoint":{"id":"file-powerpoint-o"},"previous":{"id":"arrow-left"},"quotes":{"id":"quote-left"},"ranking":{"id":"sort-numeric-asc"},"screencapture":{"id":"camera"},"selectall":{"id":"file-text"},"settings":{"id":"wrench"},"sharethis":{"id":"share-alt"},"smile":{"id":"smile-o"},"sort-down":{"id":"sort-desc"},"sort-up":{"id":"sort-asc"},"star-empty":{"id":"star-o"},"star-empty-selected":{"id":"star-o","class":"text-success"},"star-half-rating":{"id":"star-half-full"},"star-half-selected":{"id":"star-half-full","class":"text-success"},"star-selected":{"id":"star","class":"text-success"},"status-open":{"id":"circle","style":"color:green"},"status-pending":{"id":"adjust","style":"color:orange"},"status-closed":{"id":"times-circle-o","style":"color:grey"},"stop-watching":{"id":"eye-slash"},"structure":{"id":"sitemap"},"success":{"id":"check"},"textfile":{"id":"file-text-o"},"three-d":{"id":"cube"},"time":{"id":"clock-o"},"title":{"id":"text-width"},"toggle-off":{"id":"toggle-off"},"toggle-on":{"id":"toggle-on"},"trackers":{"id":"database"},"translate":{"id":"language"},"trash":{"id":"trash-o"},"unlike":{"id":"thumbs-down"},"up":{"id":"sort-asc"},"video":{"id":"file-video-o"},"video_file":{"id":"file-video-o"},"vimeo":{"id":"vimeo-square"},"view":{"id":"search-plus"},"warning":{"id":"exclamation-triangle"},"watch":{"id":"eye"},"watch-group":{"id":"group"},"wiki":{"id":"file-text-o"},"wizard":{"id":"magic"},"word":{"id":"file-word-o"},"wysiwyg":{"id":"file-text"},"zip":{"id":"file-zip-o"}},"tag":"span","prepend":"fa fa-","append":" fa-fw","rotate":{"90":" fa-rotate-90","180":" fa-rotate-180","270":" fa-rotate-270","horizontal":" fa-flip-horizontal","vertical":" fa-flip-vertical"}}
+var zoomToFoundLocation = "street";
+
+var bootstrapButton;
+if (typeof $.fn.button.noConflict === "function") {
+	bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+	$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+}
+
+
+function capLock(e, el){
+	kc = e.keyCode ? e.keyCode : e.which;
+	sk = e.shiftKey ? e.shiftKey : (kc == 16 ? true : false);
+	if ((kc >= 65 && kc <= 90 && !sk) || (kc >= 97 && kc <= 122 && sk)) {
+		$('.divCapson', $(el).parents('div:first')).show();
+	} else {
+		$('.divCapson', $(el).parents('div:first')).hide();
+	}
+}
+
+
+					function submitSearch1() {
+						var $f = $('#search-module-form1');
+						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
+							if ($f.find('input[name="find"]').length) {
+								$f.find('input[name="find"]').val($f.data('page_selected'));
+							} else {
+								$f.append($('<input name="find">').val($f.data('page_selected')));
+							}
+							$f.attr('action', 'tiki-listpages.php');
+						} else if ($f.attr('action') == "#") {
+							$f.attr('action', 'tiki-searchresults.php');
+						}
+						$exact = $f.find("input[name=exact_match]");
+						if ($exact.val() != "y") {
+							$exact.remove(); // seems exact_match is true even if empty
+						}
+						return true;
+					}
+				
+// js 2 
+
+function inArray(item, array) {
+    for (var i in array) {
+        if (array[i] === item) {
+            return i;
+        }
+    }
+    return false;
+}
+var allTimeZoneCodes = ["ACDT","ACST","ADDT","ADT","AEDT","AEST","AHDT","AHST","AKDT","AKST","AMT","APT","AST","AWDT","AWST","AWT","BDST","BDT","BMT","BOST","BST","CAST","CAT","CDDT","CDT","CEMT","CEST","CET","CMT","CPT","CST","CWT","CHST","DMT","EAT","EDDT","EDT","EEST","EET","EMT","EPT","EST","EWT","FFMT","FMT","GMT","GST","HDT","HKST","HKT","HMT","HST","IDDT","IDT","IMT","IST","JDT","JMT","JST","KDT","KMT","KST","LST","MDDT","MDST","MDT","MMT","MPT","MSD","MSK","MST","MWT","NDDT","NDT","NPT","NST","NWT","NZDT","NZMT","NZST","PDDT","PDT","PKST","PKT","PLMT","PMMT","PMT","PPMT","PPT","PST","PWT","QMT","RMT","SAST","SDMT","SET","SJMT","SMT","SST","TBMT","TMT","UCT","UTC","WAST","WAT","WEMT","WEST","WET","WIB","WITA","WIT","WMT","YDDT","YDT","YPT","YST","YWT","A","B","C","D","E","F","G","H","I","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var now = new Date();
+var now_string = now.toString();
+var offsethours = - now.getTimezoneOffset() / 60;
+setCookie("local_tzoffset", offsethours);
+var m = now_string.match(/[ \(]([A-Z]{3,6})[ \)]?[ \d]*$/);	// try three or more char tz first at the end or just before the year
+if (!m) {
+	m = now_string.match(/[ \(]([A-Z]{1,6})[ \)]?[ \d]*$/);	// might be a "military" one if not
+}
+if (m) {
+	m = m[1];
+} else {	// IE (sometimes) gives UTC +offset instead of the abbreviation
+	// sadly this workaround will fail for non-whole hour offsets
+	var hours = - now.getTimezoneOffset() / 60;
+	m = "GMT" + (hours > 0 ? "+" : "") + hours;
+}
+// Etc/GMT+ is equivalent to GMT-
+if (m.substring(0,4) == "GMT+") {
+	m = "Etc/GMT-" + m.substring(4);
+	setCookie("local_tz", m);
+}
+if (m.substring(0,4) == "GMT-") {
+	m = "Etc/GMT+" + m.substring(4);
+	setCookie("local_tz", m);
+}
+if (inArray(m, allTimeZoneCodes)) {
+	setCookie("local_tz", m);
+}
+
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function(){
+// jq_onready 0 
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+
+$("#loginbox-1").submit( function () {
+	if ($("#login-user_1").val() && $("#login-pass_1").val()) {
+		return true;
+	} else {
+		$("#login-user_1").focus();
+		return false;
+	}
+});
+if (jqueryTiki.no_cookie) {
+	$('.box-login_box input').each(function(){
+		$(this).change(function() {
+			if (jqueryTiki.no_cookie && $(this).val()) {
+				alert(jqueryTiki.cookie_consent_alert);
+			}
+		});
+	});
+}
+
+if ($('#login-user_1:visible').length) {if ($("#login-user_1").offset().top < $(window).height()) {$('#login-user_1')[0].focus();} }
+});
+//--><!]]>
+</script>
+
+	
+	
+
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

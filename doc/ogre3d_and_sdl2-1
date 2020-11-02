@@ -1,0 +1,41 @@
+//SDL
+if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+    printf("Could not initialize SDL\n");
+    return 1;
+}
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_EGL, 1);
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
+SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+
+SDL_DisplayMode displayMode;
+SDL_GetDesktopDisplayMode(0, &displayMode);
+
+/* create window and renderer */
+SDL_Window* window = SDL_CreateWindow(NULL, 0, 0, displayMode.w, displayMode.h,    SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN | SDL_WINDOW_RESIZABLE);
+
+SDL_GLContext glContext = SDL_GL_CreateContext(window);
+
+SDL_SysWMinfo wmInfo;
+SDL_VERSION(&wmInfo.version);
+SDL_GetWindowWMInfo(window,&wmInfo);
+
+m_pLog = Ogre::LogManager::getSingleton().createLog("OgreLogfile.log", true, true, false);
+m_pLog->setDebugOutputEnabled(true);
+
+String pluginsPath;
+m_pRoot = new Ogre::Root(pluginsPath, Ogre::macBundlePath() + "/ogre.cfg");
+m_StaticPluginLoader.load();
+
+m_pRenderWnd = m_pRoot->initialise(false, wndTitle);
+
+size_t winHandle = reinterpret_cast<size_t>(wmInfo.info.uikit.window);
+size_t glHandle = reinterpret_cast<size_t>(glContext);
+
+Ogre::NameValuePairList params;
+params["externalWindowHandle"] = Ogre::StringConverter::toString((unsigned long)winHandle);
+params["externalGLContext"] =   Ogre::StringConverter::toString((unsigned long)glHandle);
+params["externalGLControl"] = String("True");
+
+m_pRenderWnd = m_pRoot->createRenderWindow("", displayMode.w/2, displayMode.h/2, false,  &params);
+

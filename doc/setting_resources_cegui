@@ -1,0 +1,55 @@
+Hi, and welcome :)
+
+The issue is that the resource provider supplied as part of the Ogre GUI renderer module does not derive from DefaultResourceProvider, and the member function you're calling does not exist. I guess the tutorial is not clear enough in this regard, I'll revise it so that it's more explicit, and also so that it includes the Ogre specific steps required (which I am posting here):
+
+Basically the resource provider under Ogre uses Ogre's own resource loading mechanisms, so you should be using those to specify your resource locations. How you actually go about this will very much depend upon two things: 1) The locations of the CEGUI related files, and 2) Whether they contain relative path information.
+
+The way things are done in our samples framework (for use with our files, arranged our way - i.e. not the same as what Ogre is doing), is like this:
+
+First we add resource groups:
+
+Code: Select all
+    Ogre::ResourceGroupManager& rgm = Ogre::ResourceGroupManager::getSingleton();
+
+    // add resource groups that we use
+    rgm.createResourceGroup("imagesets");
+    rgm.createResourceGroup("fonts");
+    rgm.createResourceGroup("layouts");
+    rgm.createResourceGroup("schemes");
+    rgm.createResourceGroup("looknfeels");
+    rgm.createResourceGroup("lua_scripts");
+    rgm.createResourceGroup("schemas");
+
+
+Then, we add a filesystem location for each group:
+
+Code: Select all
+    rgm.addResourceLocation("../datafiles/schemes/", "FileSystem", "schemes");
+    rgm.addResourceLocation("../datafiies/imagesets/", "FileSystem", "imagesets");
+    rgm.addResourceLocation("../datafiles/fonts/", "FileSystem", "fonts");
+    rgm.addResourceLocation("../datafiles/layouts/", "FileSystem", "layouts");
+    rgm.addResourceLocation("../datafiles/looknfeels/", "FileSystem", "looknfeels");
+    rgm.addResourceLocation("../datafiles/lua_scripts/", "FileSystem", "lua_scripts");
+
+
+Finally, we specify the default resource groups for each resource type (as per the tutorial):
+
+Code: Select all
+CEGUI::Imageset::setDefaultResourceGroup("imagesets");
+CEGUI::Font::setDefaultResourceGroup("fonts");
+CEGUI::Scheme::setDefaultResourceGroup("schemes");
+CEGUI::WidgetLookManager::setDefaultResourceGroup("looknfeels");
+CEGUI::WindowManager::setDefaultResourceGroup("layouts");
+CEGUI::ScriptModule::setDefaultResourceGroup("lua_scripts");
+
+
+Since you're probably using the Ogre resource layout, rather than ours, then chances are the above is not what you want, but perhaps rather you might add a single resource location for a "Gui" group in the resource.cfg file, and then use that group as the global default within CEGUI:
+
+Code: Select all
+CEGUI::System::getSingleton().getResourceProvider()->setDefaultResourceGroup("Gui");
+
+
+Hope some of this helps :)
+
+CE.
+

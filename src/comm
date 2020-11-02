@@ -1,0 +1,1 @@
+c++ -g main.cpp `pkg-config --cflags --libs OGRE` -lGL -ltinyxml -lboost_system -l OIS

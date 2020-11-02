@@ -1,0 +1,13 @@
+Linux
+gcc 8.2.1
+Ogre 1.12.2
+SDL 2.0.2
+cppunit 1.13.2
+
+Tools
+=====
+blender 2.79
+blender2Ogre 0.7.0
+gdb 7.12
+valgrind 3.12.0
+

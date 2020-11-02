@@ -1,0 +1,2768 @@
+<skeleton >
+  <bones >
+    <bone id="0" name="Pole_hand_left" >
+      <position x="1.652257" y="0.100085" z="1.070090" />
+      <rotation angle="3.141593" >
+        <axis x="1.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="1" name="Pole_hand_right" >
+      <position x="-1.926132" y="0.139408" z="1.070090" />
+      <rotation angle="3.141593" >
+        <axis x="1.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="2" name="Bone.019" >
+      <position x="-0.038630" y="8.813010" z="1.070090" />
+      <rotation angle="0.000000" >
+        <axis x="1.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="3" name="body" >
+      <position x="-0.038630" y="1.759129" z="1.070090" />
+      <rotation angle="0.000000" >
+        <axis x="1.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="4" name="body_1" >
+      <position x="0.000000" y="1.841203" z="0.000000" />
+      <rotation angle="0.000000" >
+        <axis x="1.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="5" name="Shouders_left" >
+      <position x="0.000000" y="2.437519" z="0.000000" />
+      <rotation angle="2.323795" >
+        <axis x="-0.637272" y="-0.433323" z="-0.637272" />
+      </rotation>
+    </bone>
+    <bone id="6" name="Arm_left_1" >
+      <position x="-0.000000" y="1.818235" z="0.000000" />
+      <rotation angle="1.892486" >
+        <axis x="-0.490123" y="-0.720805" z="0.490122" />
+      </rotation>
+    </bone>
+    <bone id="7" name="Arm_left_2" >
+      <position x="-0.000000" y="2.477345" z="0.000000" />
+      <rotation angle="0.000000" >
+        <axis x="0.000000" y="-0.000000" z="-0.000000" />
+      </rotation>
+    </bone>
+    <bone id="8" name="Shouders_right" >
+      <position x="0.000000" y="2.437519" z="0.000000" />
+      <rotation angle="2.289107" >
+        <axis x="-0.630004" y="0.454081" z="0.630004" />
+      </rotation>
+    </bone>
+    <bone id="9" name="Arm_right_1" >
+      <position x="0.000000" y="1.989601" z="-0.000000" />
+      <rotation angle="1.919719" >
+        <axis x="-0.504758" y="0.700314" z="-0.504758" />
+      </rotation>
+    </bone>
+    <bone id="10" name="Arm_right_2" >
+      <position x="-0.000000" y="2.477346" z="-0.000000" />
+      <rotation angle="0.000000" >
+        <axis x="-0.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="11" name="head" >
+      <position x="0.000000" y="2.437519" z="0.000000" />
+      <rotation angle="0.000000" >
+        <axis x="0.000000" y="-0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="12" name="Pole_foot_left" >
+      <position x="0.905121" y="-6.417694" z="2.682331" />
+      <rotation angle="3.141593" >
+        <axis x="0.000000" y="0.707107" z="0.707107" />
+      </rotation>
+    </bone>
+    <bone id="13" name="hips_left" >
+      <position x="-0.038630" y="1.368250" z="1.070090" />
+      <rotation angle="2.167619" >
+        <axis x="-0.599835" y="-0.529524" z="-0.599835" />
+      </rotation>
+    </bone>
+    <bone id="14" name="Leg_left_1" >
+      <position x="0.000000" y="0.951095" z="0.000000" />
+      <rotation angle="2.024150" >
+        <axis x="-0.551889" y="-0.625170" z="0.551889" />
+      </rotation>
+    </bone>
+    <bone id="15" name="Leg_left_2" >
+      <position x="0.000000" y="1.380307" z="-3.433699" />
+      <rotation angle="2.024150" >
+        <axis x="-0.551889" y="-0.625170" z="0.551889" />
+      </rotation>
+    </bone>
+    <bone id="16" name="Foot_left" >
+      <position x="0.000001" y="1.853416" z="-7.218571" />
+      <rotation angle="1.574092" >
+        <axis x="-0.057312" y="0.180496" z="-0.981904" />
+      </rotation>
+    </bone>
+    <bone id="17" name="Pole_foot_right" >
+      <position x="-0.982381" y="-6.417694" z="2.682331" />
+      <rotation angle="3.141593" >
+        <axis x="0.000000" y="0.707107" z="0.707107" />
+      </rotation>
+    </bone>
+    <bone id="18" name="hips_right" >
+      <position x="-0.038630" y="1.368250" z="1.070090" />
+      <rotation angle="2.167619" >
+        <axis x="-0.599835" y="0.529524" z="0.599835" />
+      </rotation>
+    </bone>
+    <bone id="19" name="Leg_right_1" >
+      <position x="-0.000000" y="0.951095" z="0.000000" />
+      <rotation angle="2.024150" >
+        <axis x="-0.551889" y="0.625170" z="-0.551889" />
+      </rotation>
+    </bone>
+    <bone id="20" name="Leg_right_2" >
+      <position x="-0.000000" y="3.460420" z="-0.000000" />
+      <rotation angle="0.000000" >
+        <axis x="-0.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="21" name="Foot_right" >
+      <position x="-0.000000" y="3.814327" z="-0.000000" />
+      <rotation angle="3.141591" >
+        <axis x="-0.000000" y="0.786434" z="-0.617675" />
+      </rotation>
+    </bone>
+    <bone id="22" name="Bone" >
+      <position x="0.883791" y="-2.382358" z="6.361370" />
+      <rotation angle="0.000000" >
+        <axis x="0.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+    <bone id="23" name="Bone.001" >
+      <position x="-1.016209" y="-2.382358" z="6.361370" />
+      <rotation angle="0.000000" >
+        <axis x="0.000000" y="0.000000" z="0.000000" />
+      </rotation>
+    </bone>
+  </bones>
+  <bonehierarchy >
+    <boneparent bone="body_1" parent="body" />
+    <boneparent bone="Shouders_left" parent="body_1" />
+    <boneparent bone="Arm_left_1" parent="Shouders_left" />
+    <boneparent bone="Arm_left_2" parent="Arm_left_1" />
+    <boneparent bone="Shouders_right" parent="body_1" />
+    <boneparent bone="Arm_right_1" parent="Shouders_right" />
+    <boneparent bone="Arm_right_2" parent="Arm_right_1" />
+    <boneparent bone="head" parent="body_1" />
+    <boneparent bone="Leg_left_1" parent="hips_left" />
+    <boneparent bone="Leg_left_2" parent="hips_left" />
+    <boneparent bone="Foot_left" parent="hips_left" />
+    <boneparent bone="Leg_right_1" parent="hips_right" />
+    <boneparent bone="Leg_right_2" parent="Leg_right_1" />
+    <boneparent bone="Foot_right" parent="Leg_right_2" />
+  </bonehierarchy>
+  <animations >
+    <animation length="1.666667" name="ArmatureAction" >
+      <tracks >
+        <track bone="Pole_hand_left" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <translate x="3.073299" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.041667" >
+              <translate x="3.137540" y="0.213269" z="-0.048939" />
+            </keyframe>
+            <keyframe time="0.083333" >
+              <translate x="3.330879" y="0.855121" z="-0.196223" />
+            </keyframe>
+            <keyframe time="0.125000" >
+              <translate x="3.645237" y="1.898736" z="-0.435700" />
+            </keyframe>
+            <keyframe time="0.166667" >
+              <translate x="4.056402" y="3.263734" z="-0.748923" />
+            </keyframe>
+            <keyframe time="0.208333" >
+              <translate x="4.522186" y="4.810055" z="-1.103755" />
+            </keyframe>
+            <keyframe time="0.250000" >
+              <translate x="4.987969" y="6.356376" z="-1.458587" />
+            </keyframe>
+            <keyframe time="0.291667" >
+              <translate x="5.399135" y="7.721375" z="-1.771811" />
+            </keyframe>
+            <keyframe time="0.333333" >
+              <translate x="5.713493" y="8.764990" z="-2.011287" />
+            </keyframe>
+            <keyframe time="0.375000" >
+              <translate x="5.906831" y="9.406842" z="-2.158571" />
+            </keyframe>
+            <keyframe time="0.416667" >
+              <translate x="5.971073" y="9.620111" z="-2.207510" />
+            </keyframe>
+            <keyframe time="0.458333" >
+              <translate x="5.954655" y="9.555969" z="-2.191470" />
+            </keyframe>
+            <keyframe time="0.500000" >
+              <translate x="5.905025" y="9.362065" z="-2.142981" />
+            </keyframe>
+            <keyframe time="0.541667" >
+              <translate x="5.822084" y="9.038009" z="-2.061946" />
+            </keyframe>
+            <keyframe time="0.583333" >
+              <translate x="5.706521" y="8.586503" z="-1.949039" />
+            </keyframe>
+            <keyframe time="0.625000" >
+              <translate x="5.560043" y="8.014212" z="-1.805929" />
+            </keyframe>
+            <keyframe time="0.666667" >
+              <translate x="5.385567" y="7.332530" z="-1.635463" />
+            </keyframe>
+            <keyframe time="0.708333" >
+              <translate x="5.187344" y="6.558070" z="-1.441797" />
+            </keyframe>
+            <keyframe time="0.750000" >
+              <translate x="4.970959" y="5.712647" z="-1.230385" />
+            </keyframe>
+            <keyframe time="0.791667" >
+              <translate x="4.743146" y="4.822579" z="-1.007809" />
+            </keyframe>
+            <keyframe time="0.833333" >
+              <translate x="4.511430" y="3.917263" z="-0.781420" />
+            </keyframe>
+            <keyframe time="0.875000" >
+              <translate x="4.283617" y="3.027194" z="-0.558843" />
+            </keyframe>
+            <keyframe time="0.916667" >
+              <translate x="4.067231" y="2.181771" z="-0.347432" />
+            </keyframe>
+            <keyframe time="0.958333" >
+              <translate x="3.869009" y="1.407311" z="-0.153766" />
+            </keyframe>
+            <keyframe time="1.000000" >
+              <translate x="3.694533" y="0.725631" z="0.016700" />
+            </keyframe>
+            <keyframe time="1.041667" >
+              <translate x="3.548055" y="0.153338" z="0.159811" />
+            </keyframe>
+            <keyframe time="1.083333" >
+              <translate x="3.432492" y="-0.298167" z="0.272717" />
+            </keyframe>
+            <keyframe time="1.125000" >
+              <translate x="3.349550" y="-0.622224" z="0.353753" />
+            </keyframe>
+            <keyframe time="1.166667" >
+              <translate x="3.299920" y="-0.816128" z="0.402242" />
+            </keyframe>
+            <keyframe time="1.208333" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.250000" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.291667" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.333333" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.375000" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.416667" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.458333" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.500000" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.541667" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.583333" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.625000" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+            <keyframe time="1.666667" >
+              <translate x="3.283503" y="-0.880270" z="0.418281" />
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Pole_hand_right" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <translate x="-3.108223" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.041667" >
+              <translate x="-3.105521" y="0.060467" z="-0.020933" />
+            </keyframe>
+            <keyframe time="0.083333" >
+              <translate x="-3.097354" y="0.243238" z="-0.084207" />
+            </keyframe>
+            <keyframe time="0.125000" >
+              <translate x="-3.083697" y="0.548852" z="-0.190008" />
+            </keyframe>
+            <keyframe time="0.166667" >
+              <translate x="-3.064642" y="0.975285" z="-0.337635" />
+            </keyframe>
+            <keyframe time="0.208333" >
+              <translate x="-3.040425" y="1.517251" z="-0.525259" />
+            </keyframe>
+            <keyframe time="0.250000" >
+              <translate x="-3.011456" y="2.165551" z="-0.749694" />
+            </keyframe>
+            <keyframe time="0.291667" >
+              <translate x="-2.978342" y="2.906612" z="-1.006243" />
+            </keyframe>
+            <keyframe time="0.333333" >
+              <translate x="-2.941890" y="3.722363" z="-1.288648" />
+            </keyframe>
+            <keyframe time="0.375000" >
+              <translate x="-2.903092" y="4.590611" z="-1.589228" />
+            </keyframe>
+            <keyframe time="0.416667" >
+              <translate x="-2.863082" y="5.485977" z="-1.899196" />
+            </keyframe>
+            <keyframe time="0.458333" >
+              <translate x="-2.823073" y="6.381344" z="-2.209164" />
+            </keyframe>
+            <keyframe time="0.500000" >
+              <translate x="-2.784276" y="7.249591" z="-2.509743" />
+            </keyframe>
+            <keyframe time="0.541667" >
+              <translate x="-2.747824" y="8.065343" z="-2.792149" />
+            </keyframe>
+            <keyframe time="0.583333" >
+              <translate x="-2.714709" y="8.806404" z="-3.048698" />
+            </keyframe>
+            <keyframe time="0.625000" >
+              <translate x="-2.685740" y="9.454704" z="-3.273133" />
+            </keyframe>
+            <keyframe time="0.666667" >
+              <translate x="-2.661522" y="9.996670" z="-3.460757" />
+            </keyframe>
+            <keyframe time="0.708333" >
+              <translate x="-2.642467" y="10.423103" z="-3.608385" />
+            </keyframe>
+            <keyframe time="0.750000" >
+              <translate x="-2.628811" y="10.728714" z="-3.714185" />
+            </keyframe>
+            <keyframe time="0.791667" >
+              <translate x="-2.620644" y="10.911488" z="-3.777459" />
+            </keyframe>
+            <keyframe time="0.833333" >
+              <translate x="-2.617942" y="10.971955" z="-3.798392" />
+            </keyframe>
+            <keyframe time="0.875000" >
+              <translate x="-2.623543" y="10.909756" z="-3.778143" />
+            </keyframe>
+            <keyframe time="0.916667" >
+              <translate x="-2.640474" y="10.721747" z="-3.716937" />
+            </keyframe>
+            <keyframe time="0.958333" >
+              <translate x="-2.668784" y="10.407377" z="-3.614594" />
+            </keyframe>
+            <keyframe time="1.000000" >
+              <translate x="-2.708286" y="9.968724" z="-3.471792" />
+            </keyframe>
+            <keyframe time="1.041667" >
+              <translate x="-2.758491" y="9.411230" z="-3.290300" />
+            </keyframe>
+            <keyframe time="1.083333" >
+              <translate x="-2.818545" y="8.744353" z="-3.073199" />
+            </keyframe>
+            <keyframe time="1.125000" >
+              <translate x="-2.887192" y="7.982059" z="-2.825036" />
+            </keyframe>
+            <keyframe time="1.166667" >
+              <translate x="-2.962758" y="7.142934" z="-2.551860" />
+            </keyframe>
+            <keyframe time="1.208333" >
+              <translate x="-3.043187" y="6.249808" z="-2.261104" />
+            </keyframe>
+            <keyframe time="1.250000" >
+              <translate x="-3.126128" y="5.328785" z="-1.961266" />
+            </keyframe>
+            <keyframe time="1.291667" >
+              <translate x="-3.209069" y="4.407763" z="-1.661429" />
+            </keyframe>
+            <keyframe time="1.333333" >
+              <translate x="-3.289498" y="3.514638" z="-1.370673" />
+            </keyframe>
+            <keyframe time="1.375000" >
+              <translate x="-3.365064" y="2.675514" z="-1.097497" />
+            </keyframe>
+            <keyframe time="1.416667" >
+              <translate x="-3.433711" y="1.913218" z="-0.849334" />
+            </keyframe>
+            <keyframe time="1.458333" >
+              <translate x="-3.493765" y="1.246340" z="-0.632232" />
+            </keyframe>
+            <keyframe time="1.500000" >
+              <translate x="-3.543970" y="0.688846" z="-0.450741" />
+            </keyframe>
+            <keyframe time="1.541667" >
+              <translate x="-3.583472" y="0.250196" z="-0.307939" />
+            </keyframe>
+            <keyframe time="1.583333" >
+              <translate x="-3.611782" y="-0.064175" z="-0.205595" />
+            </keyframe>
+            <keyframe time="1.625000" >
+              <translate x="-3.628712" y="-0.252182" z="-0.144390" />
+            </keyframe>
+            <keyframe time="1.666667" >
+              <translate x="-3.634314" y="-0.314383" z="-0.124141" />
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Arm_left_1" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.524953" >
+                <axis x="-0.000000" y="0.000000" z="-1.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.552524" >
+                <axis x="0.015596" y="0.000000" z="-0.999878" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.644039" >
+                <axis x="0.058808" y="0.000000" z="-0.998269" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.476244" >
+                <axis x="0.118681" y="0.000000" z="-0.992933" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.568842" >
+                <axis x="0.181559" y="0.000000" z="-0.983380" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.961826" >
+                <axis x="0.237115" y="0.000000" z="-0.971482" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="1.773236" >
+                <axis x="0.280667" y="0.000000" z="-0.959805" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="1.974154" >
+                <axis x="0.311805" y="0.000000" z="-0.950146" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="2.090177" >
+                <axis x="0.332051" y="-0.000000" z="-0.943262" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="2.148354" >
+                <axis x="0.343236" y="0.000000" z="-0.939249" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="2.166394" >
+                <axis x="0.346762" y="-0.000000" z="-0.937953" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="2.161052" >
+                <axis x="0.345379" y="-0.000000" z="-0.938463" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="2.143915" >
+                <axis x="0.341138" y="0.000000" z="-0.940013" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="2.114517" >
+                <axis x="0.333841" y="0.000000" z="-0.942629" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="2.069821" >
+                <axis x="0.323214" y="-0.000000" z="-0.946326" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="2.005711" >
+                <axis x="0.308918" y="-0.000000" z="-0.951089" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="1.918481" >
+                <axis x="0.290573" y="-0.000000" z="-0.956853" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="1.802042" >
+                <axis x="0.267794" y="-0.000000" z="-0.963476" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="1.421325" >
+                <axis x="0.240264" y="0.000000" z="-0.970708" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="1.061402" >
+                <axis x="0.207837" y="0.000000" z="-0.978163" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.817859" >
+                <axis x="0.170668" y="0.000000" z="-0.985329" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.673274" >
+                <axis x="0.129364" y="0.000000" z="-0.991597" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.668103" >
+                <axis x="0.085112" y="0.000000" z="-0.996372" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.783477" >
+                <axis x="0.039712" y="0.000000" z="-0.999211" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.679842" >
+                <axis x="-0.004520" y="0.000000" z="-0.999990" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.603674" >
+                <axis x="-0.044996" y="0.000000" z="-0.998988" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.550653" >
+                <axis x="-0.079202" y="0.000000" z="-0.996859" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.516054" >
+                <axis x="-0.105028" y="0.000000" z="-0.994470" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.496652" >
+                <axis x="-0.120999" y="0.000000" z="-0.992653" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.490440" >
+                <axis x="-0.126368" y="0.000000" z="-0.991984" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Arm_left_2" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.006020" >
+                <axis x="0.058823" y="0.000006" z="-0.998547" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.662580" >
+                <axis x="0.118681" y="0.000000" z="-0.992933" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="1.031188" >
+                <axis x="0.181559" y="0.000000" z="-0.983380" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.958861" >
+                <axis x="0.237115" y="0.000000" z="-0.971482" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.007689" >
+                <axis x="0.343170" y="0.000003" z="-0.939087" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="0.007627" >
+                <axis x="0.341351" y="0.000006" z="-0.940609" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.007373" >
+                <axis x="0.333615" y="0.000001" z="-0.942013" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.006766" >
+                <axis x="0.290575" y="0.000008" z="-0.956895" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.444677" >
+                <axis x="0.240264" y="0.000000" z="-0.970709" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.785566" >
+                <axis x="0.207837" y="0.000000" z="-0.978164" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.875690" >
+                <axis x="0.170668" y="0.000000" z="-0.985329" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.787933" >
+                <axis x="0.129364" y="0.000000" z="-0.991597" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.480984" >
+                <axis x="0.085112" y="0.000000" z="-0.996372" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.005259" >
+                <axis x="-0.004523" y="0.000007" z="-1.000610" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.005777" >
+                <axis x="-0.045016" y="0.000007" z="-0.999432" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Arm_right_1" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.529847" >
+                <axis x="0.000000" y="0.000000" z="1.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.534899" >
+                <axis x="0.006741" y="0.000000" z="0.999977" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.549423" >
+                <axis x="0.027177" y="0.000000" z="0.999631" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.576643" >
+                <axis x="0.061501" y="0.000000" z="0.998108" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.619565" >
+                <axis x="0.109509" y="0.000000" z="0.993986" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.264546" >
+                <axis x="0.170237" y="0.000000" z="0.985404" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.158109" >
+                <axis x="0.241576" y="0.000000" z="0.970386" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.143188" >
+                <axis x="0.320081" y="0.000000" z="0.947393" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.227295" >
+                <axis x="0.401230" y="0.000000" z="0.915977" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.420126" >
+                <axis x="0.480184" y="0.000000" z="0.877167" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.703628" >
+                <axis x="0.552780" y="0.000000" z="0.833328" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="1.032579" >
+                <axis x="0.616274" y="0.000000" z="0.787531" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="1.375296" >
+                <axis x="0.669539" y="0.000000" z="0.742777" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="1.743866" >
+                <axis x="0.712742" y="0.000000" z="0.701427" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="2.280693" >
+                <axis x="0.746831" y="-0.000000" z="0.665014" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="2.346050" >
+                <axis x="0.773063" y="-0.000000" z="0.634329" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="2.391528" >
+                <axis x="0.792691" y="-0.000000" z="0.609624" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="2.422606" >
+                <axis x="0.806798" y="-0.000000" z="0.590828" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="2.442216" >
+                <axis x="0.816239" y="0.000000" z="0.577714" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="2.453748" >
+                <axis x="0.821634" y="0.000000" z="0.570015" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="2.457247" >
+                <axis x="0.823379" y="0.000000" z="0.567492" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="2.453369" >
+                <axis x="0.821387" y="0.000000" z="0.570371" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="2.440652" >
+                <axis x="0.815233" y="-0.000000" z="0.579133" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="2.418895" >
+                <axis x="0.804482" y="-0.000000" z="0.593977" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="2.384477" >
+                <axis x="0.788471" y="-0.000000" z="0.615072" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="2.334098" >
+                <axis x="0.766320" y="-0.000000" z="0.642459" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="2.261235" >
+                <axis x="0.736982" y="-0.000000" z="0.675913" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="1.742572" >
+                <axis x="0.699371" y="-0.000000" z="0.714758" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="1.370649" >
+                <axis x="0.652611" y="0.000000" z="0.757693" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="1.035295" >
+                <axis x="0.596401" y="0.000000" z="0.802687" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.729484" >
+                <axis x="0.531447" y="0.000000" z="0.847091" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.486527" >
+                <axis x="0.459765" y="0.000000" z="0.888041" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.342742" >
+                <axis x="0.384628" y="0.000000" z="0.923073" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.310815" >
+                <axis x="0.310071" y="0.000000" z="0.950716" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.397652" >
+                <axis x="0.240116" y="0.000000" z="0.970746" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.719794" >
+                <axis x="0.178068" y="0.000000" z="0.984018" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.658835" >
+                <axis x="0.126169" y="0.000000" z="0.992009" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.618572" >
+                <axis x="0.085618" y="0.000000" z="0.996328" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.592732" >
+                <axis x="0.056832" y="0.000000" z="0.998384" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.578752" >
+                <axis x="0.039760" y="0.000000" z="0.999209" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.574306" >
+                <axis x="0.034138" y="0.000000" z="0.999417" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Arm_right_2" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.797081" >
+                <axis x="0.170237" y="-0.000000" z="0.985403" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="1.175002" >
+                <axis x="0.241574" y="0.000000" z="0.970382" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="1.459569" >
+                <axis x="0.320079" y="0.000000" z="0.947391" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="1.659141" >
+                <axis x="0.401230" y="0.000000" z="0.915977" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="1.753651" >
+                <axis x="0.480185" y="-0.000000" z="0.877168" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="1.721608" >
+                <axis x="0.552780" y="-0.000000" z="0.833328" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="1.559631" >
+                <axis x="0.616274" y="-0.000000" z="0.787531" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="1.274610" >
+                <axis x="0.669539" y="0.000000" z="0.742777" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.840298" >
+                <axis x="0.712742" y="0.000000" z="0.701427" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.008053" >
+                <axis x="0.772721" y="0.000001" z="0.634047" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.007994" >
+                <axis x="0.792396" y="-0.000002" z="0.609398" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.007627" >
+                <axis x="0.806606" y="0.000003" z="0.590689" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.007308" >
+                <axis x="0.820870" y="0.000001" z="0.569485" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.007373" >
+                <axis x="0.824141" y="0.000001" z="0.568019" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.007564" >
+                <axis x="0.766568" y="0.000005" z="0.642672" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.008082" >
+                <axis x="0.736962" y="0.000007" z="0.675880" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.789500" >
+                <axis x="0.699371" y="0.000000" z="0.714759" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="1.211281" >
+                <axis x="0.652611" y="-0.000000" z="0.757693" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="1.469252" >
+                <axis x="0.596401" y="-0.000000" z="0.802687" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="1.592933" >
+                <axis x="0.531447" y="-0.000000" z="0.847091" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="1.580135" >
+                <axis x="0.459765" y="0.000000" z="0.888041" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="1.436794" >
+                <axis x="0.384627" y="0.000000" z="0.923072" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="1.175640" >
+                <axis x="0.310070" y="-0.000000" z="0.950714" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.779032" >
+                <axis x="0.240115" y="-0.000000" z="0.970744" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.006215" >
+                <axis x="0.178008" y="-0.000001" z="0.983674" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.006587" >
+                <axis x="0.126084" y="-0.000001" z="0.991327" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.005859" >
+                <axis x="0.085630" y="-0.000001" z="0.996453" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.000000" >
+                <axis x="0.000000" y="0.000000" z="0.000000" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Pole_foot_left" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.041667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.083333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.125000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.166667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.208333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.250000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.291667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.333333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.375000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.416667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.458333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.500000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.541667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.583333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.625000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.666667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.708333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.750000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.791667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.833333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.875000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.916667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="0.958333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.000000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.041667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.083333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.125000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.166667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.208333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.250000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.291667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.333333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.375000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.416667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.458333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.500000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.541667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.583333" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.625000" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+            <keyframe time="1.666667" >
+              <translate x="0.440354" y="0.000000" z="0.000000" />
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="hips_left" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.051929" >
+                <axis x="0.978540" y="-0.096081" z="0.182341" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Foot_left" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.044195" >
+                <axis x="-0.930510" y="-0.000862" z="0.366740" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Pole_foot_right" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.041667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.083333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.125000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.166667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.208333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.250000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.291667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.333333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.375000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.416667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.458333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.500000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.541667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.583333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.625000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.666667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.708333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.750000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.791667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.833333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.875000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.916667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="0.958333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.000000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.041667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.083333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.125000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.166667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.208333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.250000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.291667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.333333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.375000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.416667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.458333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.500000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.541667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.583333" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.625000" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+            <keyframe time="1.666667" >
+              <translate x="0.000000" y="0.000000" z="-0.440354" />
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="hips_right" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.199546" >
+                <axis x="-0.416268" y="0.850376" z="0.321855" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Leg_right_1" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.325614" >
+                <axis x="0.921851" y="0.149468" z="0.357563" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Leg_right_2" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.112273" >
+                <axis x="-0.888702" y="-0.172212" z="-0.424947" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+        <track bone="Foot_right" >
+          <keyframes >
+            <keyframe time="0.000000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.041667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.083333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.125000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.166667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.208333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.250000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.291667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.333333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.375000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.416667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.458333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.500000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.541667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.583333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.625000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.666667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.708333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.750000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.791667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.833333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.875000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.916667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="0.958333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.000000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.041667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.083333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.125000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.166667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.208333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.250000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.291667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.333333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.375000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.416667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.458333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.500000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.541667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.583333" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.625000" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+            <keyframe time="1.666667" >
+              <rotate angle="0.052966" >
+                <axis x="0.933487" y="-0.029083" z="0.357605" />
+              </rotate>
+            </keyframe>
+          </keyframes>
+        </track>
+      </tracks>
+    </animation>
+  </animations>
+</skeleton>

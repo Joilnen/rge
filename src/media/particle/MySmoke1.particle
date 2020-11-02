@@ -1,0 +1,33 @@
+particle_system MySmoke1 {
+    material Examples/Smake
+    particle_width 2
+    particle_height 2
+    cull_each false
+    quota 10000
+    billboard_type oriented_self
+
+    emitter Point {
+        angle 15
+        emission_rate 75
+        time_to_live 1.5
+        direction 0 1 0
+        velocity_min 25
+        velocity_max 80
+        colour_range_start 0 0 0
+        colour_range_end 1 1 1
+    }
+ 
+    affector LinearForce {
+        force_vector 0 -10 0
+        force_application add
+    }
+ 
+    affector ColourFader {
+        red -0.25
+        green -0.25
+        blue -0.25
+    }
+}
+
+
+

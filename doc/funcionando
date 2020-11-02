@@ -1,0 +1,193 @@
+#include <OGRE/Ogre.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_syswm.h>
+#include "GameManager.h"
+#include "Actor.h"
+
+using namespace Ogre;
+
+void GameManager::init(std::string &&pcfg, std::string &&ocfg) { 
+    root = new Root(pcfg.c_str(), ocfg.c_str());
+#if DEBUG
+    root->loadPlugin("RenderSystem_GL_d");  
+#else
+    root->loadPlugin("RenderSystem_GL");  
+#endif
+
+    Ogre::RenderSystem* rs = root->getRenderSystemByName("OpenGL Rendering Subsystem");
+    if (!(rs->getName() == "OpenGL Rendering Subsystem")) {
+
+    }
+    // Configure our RenderSystem
+    root->setRenderSystem(rs);
+    renderWindow = root->initialise(false);
+    
+    // Use SDL2 to create a window
+    SDL_Init(SDL_INIT_EVERYTHING);
+    SDL_DisplayMode displayMode;
+    SDL_GetDesktopDisplayMode(0, &displayMode);
+    SDL_Log(" ###### Width %ld Height %ld\n", displayMode.w, displayMode.h);
+    window = SDL_CreateWindow(
+        "Two Suns",     // window title
+        0,             // initial x position - of the actual render area, not the border
+        0,             // initial y position - of the actual render area, not the border
+        displayMode.w,           // width, in pixels
+        displayMode.h,            // height, in pixels
+        SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE
+    );
+
+    
+    // Give the correct window handle to Ogre
+    SDL_SysWMinfo wmInfo;
+    SDL_GetVersion(&wmInfo.version);
+    if (SDL_GetWindowWMInfo(window, &wmInfo) == SDL_FALSE) {
+
+    }
+
+    Ogre::String winHandle;
+    switch (wmInfo.subsystem) {
+    #ifdef __MINGW32__
+        case SDL_SYSWM_WINDOWS:
+            // Windows code
+            winHandle = Ogre::StringConverter::toString((unsigned long)wmInfo.info.win.window);
+            break;
+    #elif __MACOSX__
+        case SDL_SYSWM_COCOA:
+            //required to make OGRE play nice with our window
+            params.insert(std::make_pair("macAPI", "cocoa"));
+            params.insert(std::make_pair("macAPICocoaUseNSView", "true"));
+            winHandle = Ogre::StringConverter::toString(WindowContentViewHandle(wmInfo));
+            break;
+    #else
+        case SDL_SYSWM_X11:
+            winHandle = Ogre::StringConverter::toString((unsigned long)wmInfo.info.x11.window);
+            break;
+    #endif
+    }
+    
+    Ogre::NameValuePairList params;
+    params["externalWindowHandle"] = winHandle;
+    renderWindow = root->createRenderWindow("Two Suns", displayMode.w, displayMode.h, false, &params);
+}
+
+///////////////////////////////////////
+
+    /****
+    if(SDL_Init(SDL_INIT_EVERYTHING)) {
+        SDL_Log("Error Inicializing SDL\n");
+        exit(-1);
+    }
+
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+
+    SDL_DisplayMode displayMode;
+    SDL_GetDesktopDisplayMode(0, &displayMode);
+    window = SDL_CreateWindow(NULL, 0, 0, displayMode.w, displayMode.h, SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN | SDL_WINDOW_RESIZABLE);
+
+    SDL_GLContext glContext = SDL_GL_CreateContext(window);
+
+    SDL_SysWMinfo wmInfo;
+    SDL_VERSION(&wmInfo.version);
+    SDL_GetWindowWMInfo(window,&wmInfo);
+
+
+    root = new Root(pcfg.c_str(), ocfg.c_str());
+    root->loadPlugin("RenderSystem_GL");  
+    if(!root->restoreConfig());
+    //    root->showConfigDialog();
+    renderWindow = root->initialise(false, "StolenDeath");
+
+    if (SDL_GetWindowWMInfo(window, &wmInfo) == SDL_FALSE) {
+        SDL_Log("Erro: Get Window Info \n");
+    }
+
+    size_t glHandle = reinterpret_cast<size_t>(glContext);
+
+    Ogre::NameValuePairList params;
+    params["currentGLContext"] = String("True");
+    params["externalWindowHandle"] = Ogre::StringConverter::toString((unsigned long)wmInfo.info.x11.window);
+    params["externalGLContext"] =   Ogre::StringConverter::toString((unsigned long)glHandle);
+    params["externalGLControl"] = String("True");
+
+    renderWindow = root->createRenderWindow("", displayMode.w/2, displayMode.h/2, false,  &params);
+    root->initialise(true);
+    *****/
+
+/****
+void GameManager::init(std::string &&pcfg, std::string &&ocfg) {
+    if(SDL_Init(SDL_INIT_EVERYTHING)) {
+        SDL_Log("Error Inicializing SDL\n");
+        exit(-1);
+    }
+    window = SDL_CreateWindow("StolenDeath",
+            SDL_WINDOWPOS_CENTERED,
+            SDL_WINDOWPOS_CENTERED,
+            800, 640, SDL_WINDOW_SHOWN);
+            // conf::WIDTH, conf::HEIGHT, SDL_WINDOW_SHOWN);
+
+    Root *root = new Root(pcfg.c_str(), ocfg.c_str());
+    if(!root->restoreConfig());
+    //    root->showConfigDialog();
+    root->initialise(false);
+
+    Ogre::NameValuePairList misc;
+    misc["currentGLContext"] = String("True");
+
+    // root->initialise(true, "Stolen Death");
+    // window = root->getAutoCreatedWindow();
+    // window = root->getAutoCreatedWindow();
+    renderWindow  = root->createRenderWindow("StolenDeath", 800, 640, false, &misc);
+    sceneMgr = root->createSceneManager(ST_GENERIC);
+    this->root = root;
+}
+****/
+
+void GameManager::setResources() {
+
+}
+
+void GameManager::initSceneManager() {
+    sceneMgr = root->createSceneManager(ST_GENERIC);
+    camera = sceneMgr->createCamera("MainCam");
+    camera->setNearClipDistance(5.0f);
+    camera->setFarClipDistance(1000.0f);
+    camera->setPosition(Vector3(0, 10, 80));
+    camera->lookAt(Vector3(0, 0, -10));
+    renderWindow->addViewport(camera);
+}
+
+void GameManager::createActors() {
+    Actor *a = new Actor;
+    a->setSceneManager(sceneMgr);
+    a->setEntity(sceneMgr->createEntity("model_raw_1.mesh"));
+    actorsStack.push_back(a);
+}
+
+bool GameManager::mainLoop() {
+
+}
+
+RenderWindow *GameManager::getRenderWindow() {
+    return renderWindow;
+}
+
+SceneManager *GameManager::getSceneManager() {
+    return sceneMgr;
+}
+
+void GameManager::addActor(Actor *a) {
+    actorsStack.push_back(a);
+}
+
+// void GameManager::addActor(std::shared_ptr<Actor> &a) {
+//     actorsStack.push_back(a);
+// }
+
+std::vector<Actor *> &GameManager::getVectorActor() {
+    return actorsStack;
+}
+
+
+

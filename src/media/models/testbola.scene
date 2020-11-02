@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.8.0 -->
+<!-- export_time: Fri, 11 Oct 2019 15:34:52 +0000 -->
+<!-- previous_export_time: Fri, 11 Oct 2019 15:18:08 +0000 -->
+<scene author="joilnen" formatVersion="1.1" >
+  <nodes >
+    <node name="Cube" >
+      <position x="-1.176866" y="1.079907" z="-1.151414" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.958835" y="1.958835" z="1.958835" />
+      <entity meshFile="Cube.mesh" name="Cube" >
+        <userData />
+      </entity>
+    </node>
+    <node name="Camera" >
+      <position x="7.358891" y="-6.925791" z="4.958309" />
+      <rotation qw="0.780483" qx="0.483536" qy="0.208704" qz="0.336872" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <camera fov="0.3561858764623951" name="Camera" projectionType="perspective" >
+        <clipping far="100.0" near="0.10000000149011612" />
+      </camera>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="Material" />
+    </item>
+  </externals>
+  <environment >
+    <colourBackground b="0.05087608844041824" g="0.05087608844041824" r="0.05087608844041824" />
+  </environment>
+</scene>

@@ -1,0 +1,62 @@
+06-04-2019
+feito:
+    - Integrar o SDL2 para usar tanto no janelamento como
+      na captura de eventos, nao testei se soh usando o OgreBites
+      evitaria
+    - Testar o exportador do blender, aproveitei para setar as versoes
+      das ferramentas utilizadas
+    - Foi criado o pickobject, aproveitei para implentar uma selecao dos
+      objetos da cena e movimentacao deles
+    - Foi testado materiais, realmente o Ogre3d faz isso de maneira simples
+      o exportador do blender ja seta por default no .mesh.xml o material
+      gerado, mas pode ser sobreposto em cohdigo como entity->setMaterialName
+
+07-04-2019
+feito:
+    - Compilado e testado carregar cenas .scene com um plugin a parte
+      DotScene loader estah no Cave do github do Ogre3d
+
+15-05-2019
+feito:
+    - Sem anotar um tempo mas vamos fazer um resumo do que foi incluido
+      integrado o plugin de leitor de cena DocScene
+    - Integrado tambem o MyGUI, mas foi testado soh inicializacao
+
+18-05-2019
+feito:
+    - Integrado DotScene, agora nao so o plugin, mas o codigo de carregamento
+      de cenas
+    - Integrado MyGUI, um botao "exit" como exemplo 
+
+19-05-2019
+feito:
+    - Foi setado sombra pelo 
+      sceneMgr->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_ADDITIVE);
+      nao é a melhor forma, talvez se houver necessidade tentar 
+      sombra em textura, que parece consumir menos recursos
+
+21-05-2019
+feito:
+    - Foi testado o setAutoTrack, crash quando setado
+      no node como deveria ser
+
+13-06-2019
+feito:
+    - Foi testado particula, apenas carreguei o exemplo "Examples/PurpleFountain"
+      na posicao default
+
+18-06-2019
+feito:
+    - Integrado pluginuniverse plugin, tive que linkar com o plugin, talvez
+      nao seja a forma correta mas tive que fazer para funcionar
+      diferente do MyGui, que veio com um exemplo mais facio de integrar
+
+26-06-2019
+feito:
+    - Rodando PU, ainda com um problema com a textura mas estah rodando
+
+27-06-2019
+pendente:
+    - Modelar o ator principal texturizado e animado
+    - Testar PU no wrapper do jogo(ainda com problemas na textura)
+

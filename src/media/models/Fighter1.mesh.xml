@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mesh>
+    <sharedgeometry vertexcount="__TO_BE_REPLACED_VERTEX_COUNT__">
+        <vertexbuffer colours_diffuse="True" normals="true" positions="true" texture_coords="0">

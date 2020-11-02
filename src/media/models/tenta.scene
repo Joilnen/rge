@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.7.0 -->
+<!-- export_time: Thu, 21 Mar 2019 02:23:12 +0000 -->
+<!-- previous_export_time: Thu, 21 Mar 2019 02:17:05 +0000 -->
+<scene author="joilnen" formatVersion="1.1" >
+  <nodes >
+    <node name="Armature" >
+      <position x="0.015881" y="-1.135284" z="0.000536" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="0.730375" />
+      <node name="tenta" >
+        <position x="-0.015881" y="1.135284" z="-0.000734" />
+        <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.369159" />
+        <entity meshFile="tenta.mesh" name="tenta" >
+          <userData >
+            <property data="1.0" name="mass" type="float" />
+            <property data="1.0" name="mass_radius" type="float" />
+            <property data="STATIC" name="physics_type" type="str" />
+            <property data="False" name="actor" type="bool" />
+            <property data="False" name="ghost" type="bool" />
+            <property data="0.0" name="velocity_min" type="float" />
+            <property data="0.0" name="velocity_max" type="float" />
+            <property data="False" name="lock_trans_x" type="bool" />
+            <property data="False" name="lock_trans_y" type="bool" />
+            <property data="False" name="lock_trans_z" type="bool" />
+            <property data="False" name="lock_rot_x" type="bool" />
+            <property data="False" name="lock_rot_y" type="bool" />
+            <property data="False" name="lock_rot_z" type="bool" />
+            <property data="False" name="anisotropic_friction" type="bool" />
+            <property data="1.0" name="friction_x" type="float" />
+            <property data="1.0" name="friction_y" type="float" />
+            <property data="1.0" name="friction_z" type="float" />
+            <property data="0.02539999969303608" name="damping_trans" type="float" />
+            <property data="0.1589999943971634" name="damping_rot" type="float" />
+            <property data="0.4000000059604645" name="inertia_tensor" type="float" />
+          </userData>
+        </entity>
+      </node>
+    </node>
+    <node name="Lamp" >
+      <position x="4.076245" y="1.005454" z="5.903862" />
+      <rotation qw="0.570947" qx="0.169076" qy="0.272171" qz="0.755880" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <light name="Lamp" powerScale="1.0" type="point" >
+        <colourDiffuse b="1.0" g="1.0" r="1.0" />
+        <colourSpecular b="1.0" g="1.0" r="1.0" />
+        <lightAttenuation constant="1.0" linear="0.03333335240683057" quadratic="0.0" range="5000" />
+      </light>
+    </node>
+    <node name="Camera" >
+      <position x="7.481132" y="-6.507640" z="5.343665" />
+      <rotation qw="0.780483" qx="0.483536" qy="0.208704" qz="0.336872" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <camera fov="0.5033799435163735" name="Camera" projectionType="perspective" >
+        <clipping far="100.0" near="0.10000000149011612" />
+      </camera>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="Material" />
+    </item>
+  </externals>
+  <environment >
+    <colourAmbient b="0.0" g="0.0" r="0.0" />
+    <colourBackground b="0.05087608844041824" g="0.05087608844041824" r="0.05087608844041824" />
+  </environment>
+</scene>

@@ -1,0 +1,73 @@
+_root = new Ogre::Root("", "", "");
+// Load required plugins
+#ifdef _DEBUG
+_root->loadPlugin("RenderSystem_GL_d");
+#else
+_root->loadPlugin("RenderSystem_GL");  
+#endif
+
+// Configure
+// Grab the OpenGL RenderSystem, or exit
+Ogre::RenderSystem* rs = _root->getRenderSystemByName("OpenGL Rendering Subsystem");
+if (!(rs->getName() == "OpenGL Rendering Subsystem")) 
+{
+    return false; //No RenderSystem found
+}
+// Configure our RenderSystem
+_root->setRenderSystem(rs);
+_window = _root->initialise(false);
+
+// Use SDL2 to create a window
+bool fullscreen = false;
+int width = 1280;
+int height = 800;
+_SDLWindow = SDL_CreateWindow(
+    "Two Suns",     // window title
+    25,             // initial x position - of the actual render area, not the border
+    25,             // initial y position - of the actual render area, not the border
+    width,           // width, in pixels
+    height,            // height, in pixels
+    SDL_WINDOW_SHOWN
+    | (fullscreen ? SDL_WINDOW_FULLSCREEN : 0) | SDL_WINDOW_RESIZABLE
+);
+
+// Give the correct window handle to Ogre
+SDL_SysWMinfo wmInfo;
+SDL_GetVersion(&wmInfo.version);
+if (SDL_GetWindowWMInfo(_SDLWindow, &wmInfo) == SDL_FALSE)
+{
+    return false; // Couldn't get WM Info!
+}
+Ogre::String winHandle;
+switch (wmInfo.subsystem)
+{
+#ifdef __MINGW32__
+    case SDL_SYSWM_WINDOWS:
+        // Windows code
+        winHandle = Ogre::StringConverter::toString((unsigned long)wmInfo.info.win.window);
+        break;
+#elif __MACOSX__
+    case SDL_SYSWM_COCOA:
+        //required to make OGRE play nice with our window
+        params.insert(std::make_pair("macAPI", "cocoa"));
+        params.insert(std::make_pair("macAPICocoaUseNSView", "true"));
+        winHandle = Ogre::StringConverter::toString(WindowContentViewHandle(wmInfo));
+        break;
+#else
+    case SDL_SYSWM_X11:
+        winHandle = Ogre::StringConverter::toString((unsigned long)wmInfo.info.x11.window);
+        break;
+#endif
+default:
+    return false; // Unexpected window subsystem
+    break;
+}
+
+Ogre::NameValuePairList params;
+params["externalWindowHandle"] = winHandle;
+_window = _root->createRenderWindow("Two Suns", width, height, fullscreen, &params);
+
+// Get the SceneManager
+_sceneMgr = _root->createSceneManager("DefaultSceneManager", "DefaultSceneManager");
+
+

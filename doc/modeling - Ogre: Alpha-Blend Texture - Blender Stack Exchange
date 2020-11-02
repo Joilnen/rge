@@ -1,0 +1,697 @@
+
+      current community <https://blender.stackexchange.com/>
+
+  *
+    chat
+    <https://chat.stackexchange.com/?tab=site&host=blender.stackexchange.com>
+
+    Blender
+
+    <https://blender.stackexchange.com/>
+  *
+    Blender Meta
+
+    <https://blender.meta.stackexchange.com/>
+
+
+      your communities
+
+Sign up
+<https://blender.stackexchange.com/users/signup?ssrc=site_switcher&returnurl=https%3a%2f%2fblender.stackexchange.com%2fquestions%2f39125%2fogre-alpha-blend-texture>
+or log in
+<https://blender.stackexchange.com/users/login?ssrc=site_switcher&returnurl=https%3a%2f%2fblender.stackexchange.com%2fquestions%2f39125%2fogre-alpha-blend-texture>
+to customize your list.
+
+
+      more stack exchange communities <https://stackexchange.com/sites>
+
+company blog
+
+<https://stackoverflow.blog/>
+Stack Exchange <https://stackexchange.com/> Inbox <#> Reputation and
+Badges <#>
+sign up
+<https://blender.stackexchange.com/users/signup?ssrc=head&returnurl=https%3a%2f%2fblender.stackexchange.com%2fquestions%2f39125%2fogre-alpha-blend-texture>
+log in
+<https://blender.stackexchange.com/users/login?ssrc=head&returnurl=https%3a%2f%2fblender.stackexchange.com%2fquestions%2f39125%2fogre-alpha-blend-texture>
+tour <https://blender.stackexchange.com/tour> help <#>
+
+  * Tour Start here for a quick overview of the site
+    <https://blender.stackexchange.com/tour>
+  * Help Center Detailed answers to any questions you might have
+    <https://blender.stackexchange.com/help>
+  * Meta Discuss the workings and policies of this site
+    <https://blender.meta.stackexchange.com/>
+  * About Us Learn more about Stack Overflow the company
+    <https://stackoverflow.com/company/about>
+  * Business Learn more about hiring developers or posting ads with us
+    <https://www.stackoverflowbusiness.com/?ref=topbar_help>
+
+
+Blender
+
+<https://blender.stackexchange.com/>
+
+  * Questions
+
+    <https://blender.stackexchange.com/questions>
+  * Tags
+
+    <https://blender.stackexchange.com/tags>
+  * Users
+
+    <https://blender.stackexchange.com/users>
+  * Badges
+
+    <https://blender.stackexchange.com/help/badges>
+  * Unanswered
+
+    <https://blender.stackexchange.com/unanswered>
+
+  * Ask Question
+
+    <https://blender.stackexchange.com/questions/ask>
+
+_
+Blender Stack Exchange is a question and answer site for people who use
+Blender to create 3D graphics, animations, or games. Join them; it only
+takes a minute:
+
+Sign up
+<https://blender.stackexchange.com/users/signup?ssrc=hero&returnurl=https%3a%2f%2fblender.stackexchange.com%2fquestions%2f39125%2fogre-alpha-blend-texture>
+
+*Here's how it works:
+
+*
+
+ 1. Anybody can ask a question
+ 2. Anybody can answer
+ 3. The best answers are voted up and rise to the top
+
+
+  Ogre: Alpha-Blend Texture
+  <https://blender.stackexchange.com/questions/39125/ogre-alpha-blend-texture>
+
+No problem. We won't show you that ad again. Why didn't you like it?
+
+  * Uninteresting
+  * Misleading
+  * Offensive
+  * Repetitive
+  * Other
+
+Oops! I didn't mean to do this. <#>
+
+up vote
+
+2 down vote
+
+favorite
+
+<#>
+**
+	
+
+I'm using MakeHuman and Blender for modelling, and I'm using Ogre to
+display my model. There is nothing wrong with the way I load into Ogre
+(make an entity from the .mesh file).
+
+*Most Recent Update:*
+
+I have solved the issues mentioned below with my model's eyelashes,
+hair, and eyebrows. I must keep all materials separate instead of
+combining the textures into one if I want the "further" pixels to show
+through the closer transparent ones. However, I am still having one issue.
+
+Now that I am using separate materials for different parts of my mesh,
+my model's eyes are white or black (AGAIN) depending on the type of |scene_blend| I choose in the eye material's pass or the texture unit's |colour_op|.
+
+I have figured out WHY it is doing this - there is a transparent layer
+being drawn over the eyes as white (or black) which is supposed to
+represent the cornea - but I don't know how to fix it.
+
+I know I can unwrap the UV for the mesh before joining them in blender
+and correct it that way, but I'd have to do this for every model I make
+using MakeHuman. Besides, the eyes were showing up just fine when I was
+using the combined texture I made (look below at picture).
+
+I'm assuming since the eyes showed fine before, there has to be a way
+for the blending to show them correctly. However, I have tried many |scene_blend| and |colour_op| combinations.
+
+Does anybody else know what might be different with the material this
+time, causing the transparent part of the texture to do this?
+
+--End Updated Question--
+
+Here's what I have done so far:
+
+ 1. Create model in MakeHuman (v1.1.0) and export as .mhx2
+ 2. Import model in Blender (2.7) with defaults. It shows up as many
+    meshes - each with their own material, UV map, and texture. I didn't
+    want a bunch of materials and meshes when I export it - I just want
+    one .mesh file for Ogre, so
+ 3. I used Gimp to combine all the textures into one, side by side. I
+    then moved each mesh's UV map to correspond to the correct location
+    on the new texture. UV Map Reassignment
+    <https://i.stack.imgur.com/ct7nG.png>
+ 4. Just to be sure this worked, I linked every material to the same
+    texture (the newly created one) and rendered. This worked fine.
+ 5. I joined all of the meshes into one to get one spread out UV map
+    (before doing it this way I got an overlapped one, which is why I
+    followed this procedure this time). This gave me multiple materials
+    for the one mesh, and each material was linked to the same texture.
+    The only differences between the different materials are their
+    levels of ambience etc.
+ 6. I tried using each material for rendering(and deleting all the
+    rest), and though some are more reflective than others, they look
+    basically the same on rendering.
+
+So at this point, I came to the conclusion that any material should work
+just fine. However, when I export to a .mesh, .material, and .skeleton
+file and load it into Ogre, the hair has gray streaks in the front and
+the eyes and eyebrows are gray. This happens no matter which material I
+keep and which ones I delete.
+
+I don't know what could possibly be the problem, but all I can think is
+that it might be related to the way the different meshes were UV mapped.
+
+*Additional info that might help:*
+
+I also tried baking to auto-generate my texture for me. I actually tried
+this before just combining the textures in Gimp. When I created a new
+material and used texture baking(with or without UV unwrapping of
+different kinds), the same thing happened in Blender - the gray eyes etc
+but the rest rendered correctly. The weird thing is, when I made a
+texture using Full Render baking, the eyes actually showed up in render
+in Blender and in Ogre for that material. The only problem is, I can't
+get the right even lighting to bake. Even with a constant light source,
+the part of the eyes covered by eyelids (and other covered pieces) came
+out black on the texture.
+
+*Update:*
+
+I tried exporting a larger MakeHuman model (using inches instead of
+decimeters for units) and following the same steps. I now see the eyes'
+texture...perhaps the model was too small? the eyelashes, hair, and
+eyebrows show as partly gray still, and I think the problem is that in
+the separate materials, the eyelashes, hair and eyebrows were
+"invisible" materials (not sure how) and since I changed to a material
+that isn't, I get a gray background. I will now try messing with the
+settings of my material.
+
+*Second Update:*
+
+I've figured out that there are some material settings associated with
+Ogre that came with the Ogre exporter (ioDotScene), I had just needed to
+check the box to get the options (which now show up in the Options panel
+at the bottom of the materials tab). Now, my problem is this: I am able
+to export my model using alpha_blending for the scene blending, but it
+doesn't work. If I set the alpha to 0, my person is invisible, and with
+the alpha set to 1, the texture isn't see-through at all where I need it
+to be.
+
+I think the reason alpha_blending won't work for me is that I can't get
+away with turning "depth write" off. When I do, I get a mesh that's all
+inside-out (I can see my person's internal mouth textures and don't see
+the hair or eyes).
+
+The ONLY thing that remotely solves my problem is opening the .material
+file and manually entering |alpha_rejection greater 64| under the line that says |scene_blend alpha_blend|.
+
+Though it works, there are some problems with that solution:
+
+ 1. I don't know that the same alpha number will work every time I
+    export a model with transparency,
+ 2. I don't even know how to begin to edit the export script after
+    giving it a once-over, and
+ 3. |alpha_rejection| doesn't solve it perfectly the way I would like it to, and when I'm
+    close to the model's eyes I can still see a little bit of gray.
+
+modeling <https://blender.stackexchange.com/questions/tagged/modeling>
+texturing <https://blender.stackexchange.com/questions/tagged/texturing>
+materials <https://blender.stackexchange.com/questions/tagged/materials>
+export <https://blender.stackexchange.com/questions/tagged/export>
+transparency
+<https://blender.stackexchange.com/questions/tagged/transparency>
+share <https://blender.stackexchange.com/q/39125>|improve this question
+<https://blender.stackexchange.com/posts/39125/edit>
+	
+edited Sep 30 '15 at 14:09
+<https://blender.stackexchange.com/posts/39125/revisions>
+	
+asked Sep 26 '15 at 0:50
+<https://blender.stackexchange.com/users/18365/ninetoenerd>
+NineToeNerd <https://blender.stackexchange.com/users/18365/ninetoenerd>
+315
+
+	
+	
+
+add a comment |  <#>
+
+
+    1 Answer 1
+
+active
+
+<https://blender.stackexchange.com/questions/39125/ogre-alpha-blend-texture?answertab=active#tab-top>
+oldest
+
+<https://blender.stackexchange.com/questions/39125/ogre-alpha-blend-texture?answertab=oldest#tab-top>
+votes
+
+<https://blender.stackexchange.com/questions/39125/ogre-alpha-blend-texture?answertab=votes#tab-top>
+
+up vote
+
+2 down vote
+
+accepted
+	
+
+I'm going to leave this here in case others have similar issues to the
+one I have faced.
+
+Here's what I figured out to keep transparency working correctly in all
+textures and materials used for Ogre:
+
+ 1. Leave materials /separate/ (or at least the ones using a texture
+    with transparency).
+ 2. Enable the Ogre export tools by choosing |File -> Export -> Ogre3D| in Blender and checking the box in the top toolbar that says "Ogre".
+ 3. Go to the Object Properties of your model in Blender.
+ 4. Scroll to the bottom of the Materials tab with your material
+    selected, and select |alpha_blend| in the drop-down menu for |scene_blend|ing. /Hint: It should have |one zero| selected by default./
+ 5. Either un-check transparency or make sure it has the alpha you want
+    your material to have(I use 1.0 for all of mine - opaque material
+    with transparent parts).
+ 6. Check |guru options|
+ 7. Un-check |depth write| (but don't un-check |depth check|)
+ 8. Scroll to the bottom of the texture tab, with the material still
+    selected and un-check the box to the very right of the drop-down
+    menu that says |mix|. For this step I have a picture. (Look at the only box checked in
+    the texture tab, you want to un-check that) Where to find texture
+    alpha setting <https://i.stack.imgur.com/3f2QB.png> /You will know
+    you did this correctly because the text |alpha_blend:| should change to |modulate:|/
+    Note: Step 8 is optional and may not improve every texture you use,
+    but it will improve some. It didn't make any of my textures look
+    worse at all, though.
+ 9. Repeat steps 4-8 for each of your materials with transparency.
+
+*Note that this will completely mess your model's transparency up in
+Blender, so you may want to save your project beforehand if you will be
+using it for other engines besides Ogre. This is the only way I have
+found to make the settings in Blender show the correct transparency in
+Ogre.*
+
+If you are writing your own .material file and having problems with
+transparency, just remember:
+
+ 1. In the |pass| of your |technique| you will need |depth_write off| and |scene_blend alpha_blend|.
+ 2. Some textures may be improved by blending with the scene better if
+    you add |colour_op modulate| to your |texture_unit| (Otherwise, you should use |colour_op alpha_blend|).
+ 3. If you are seeing your background instead of your texture, make sure
+    in your |pass| you have the material's alpha set to 1.0.
+
+share <https://blender.stackexchange.com/a/39356>|improve this answer
+<https://blender.stackexchange.com/posts/39356/edit>
+	
+edited Oct 1 '15 at 14:37
+<https://blender.stackexchange.com/posts/39356/revisions>
+	
+answered Sep 30 '15 at 22:10
+<https://blender.stackexchange.com/users/18365/ninetoenerd>
+NineToeNerd <https://blender.stackexchange.com/users/18365/ninetoenerd>
+315
+
+	
+	
+
+add a comment |  <#>
+
+
+    Your Answer
+
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+*
+
+ 
+draft saved
+draft discarded
+
+
+      Sign up or log in
+      <https://blender.stackexchange.com/users/login?ssrc=question_page&returnurl=https%3a%2f%2fblender.stackexchange.com%2fquestions%2f39125%2fogre-alpha-blend-texture%23new-answer>
+
+Sign up using Google
+
+Sign up using Facebook
+
+Sign up using Email and Password
+
+
+      Post as a guest
+
+Name
+
+Email
+
+discard <#>
+
+By posting your answer, you agree to the privacy policy
+<http://stackexchange.com/legal/privacy-policy> and terms of service
+<http://stackexchange.com/legal/terms-of-service>.
+
+
+    Not the answer you're looking for? Browse other questions tagged
+    modeling
+    <https://blender.stackexchange.com/questions/tagged/modeling>
+    texturing
+    <https://blender.stackexchange.com/questions/tagged/texturing>
+    materials
+    <https://blender.stackexchange.com/questions/tagged/materials>
+    export <https://blender.stackexchange.com/questions/tagged/export>
+    transparency
+    <https://blender.stackexchange.com/questions/tagged/transparency> or
+    ask your own question
+    <https://blender.stackexchange.com/questions/ask>.
+
+asked
+
+	
+
+*1 year, 8 months ago*
+
+viewed
+
+	
+
+*638 times*
+
+active
+
+	
+
+*17 days ago
+<https://blender.stackexchange.com/questions/39125/ogre-alpha-blend-texture?lastactivity>*
+
+No problem. We won't show you that ad again. Why didn't you like it?
+
+  * Uninteresting
+  * Misleading
+  * Offensive
+  * Repetitive
+  * Other
+
+Oops! I didn't mean to do this. <#>
+
+
+        Related
+
+0
+
+<https://blender.stackexchange.com/q/15106?rq=1>How do I set up a
+material with diffuse, normal and alpha (transparency) maps?
+
+<https://blender.stackexchange.com/questions/15106/how-do-i-set-up-a-material-with-diffuse-normal-and-alpha-transparency-maps?rq=1>
+7
+
+<https://blender.stackexchange.com/q/18346?rq=1>Texture mapping with
+multiple UV maps
+
+<https://blender.stackexchange.com/questions/18346/texture-mapping-with-multiple-uv-maps?rq=1>
+2
+
+<https://blender.stackexchange.com/q/32450?rq=1>How to separate
+texture-alpha without premultiplying the color?
+
+<https://blender.stackexchange.com/questions/32450/how-to-separate-texture-alpha-without-premultiplying-the-color?rq=1>
+2
+
+<https://blender.stackexchange.com/q/35156?rq=1>Alpha textures show only
+when selected
+
+<https://blender.stackexchange.com/questions/35156/alpha-textures-show-only-when-selected?rq=1>
+1
+
+<https://blender.stackexchange.com/q/36387?rq=1>Alpha Mask a texture
+with a mask having a different UV Map
+
+<https://blender.stackexchange.com/questions/36387/alpha-mask-a-texture-with-a-mask-having-a-different-uv-map?rq=1>
+6
+
+<https://blender.stackexchange.com/q/39994?rq=1>Transparent textures
+that allow light to shine through
+
+<https://blender.stackexchange.com/questions/39994/transparent-textures-that-allow-light-to-shine-through?rq=1>
+5
+
+<https://blender.stackexchange.com/q/52187?rq=1>Using alpha data on one
+material to mask a texture in another material
+
+<https://blender.stackexchange.com/questions/52187/using-alpha-data-on-one-material-to-mask-a-texture-in-another-material?rq=1>
+2
+
+<https://blender.stackexchange.com/q/53335?rq=1>Do not repeat the
+texture on Collada export?
+
+<https://blender.stackexchange.com/questions/53335/do-not-repeat-the-texture-on-collada-export?rq=1>
+1
+
+<https://blender.stackexchange.com/q/70498?rq=1>How to use Blender
+Internal to UV map AND Alpha map?
+
+<https://blender.stackexchange.com/questions/70498/how-to-use-blender-internal-to-uv-map-and-alpha-map?rq=1>
+1
+
+<https://blender.stackexchange.com/q/77591?rq=1>Transparent Glass
+Material not rendering alpha in Blender Internal
+
+<https://blender.stackexchange.com/questions/77591/transparent-glass-material-not-rendering-alpha-in-blender-internal?rq=1>
+
+
+        Hot Network Questions <https://stackexchange.com/questions?tab=hot>
+
+  *
+    summer '17 sandbox for a spring '17 org
+    <https://salesforce.stackexchange.com/questions/176465/summer-17-sandbox-for-a-spring-17-org>
+
+  *
+    Why were the speed records set by seaplanes in the early thirties?
+    <https://aviation.stackexchange.com/questions/38429/why-were-the-speed-records-set-by-seaplanes-in-the-early-thirties>
+
+  *
+    Are heat maps "one of the least effective types of data
+    visualization"?
+    <https://stats.stackexchange.com/questions/282180/are-heat-maps-one-of-the-least-effective-types-of-data-visualization>
+
+  *
+    If the astronauts on Apollo 11 had landed safely on the moon but
+    could not take off, would there have been a rescue mission?
+    <https://space.stackexchange.com/questions/21614/if-the-astronauts-on-apollo-11-had-landed-safely-on-the-moon-but-could-not-take>
+
+  *
+    Power rating on 0 Ω resistor
+    <https://electronics.stackexchange.com/questions/307728/power-rating-on-0-%ce%a9-resistor>
+
+  *
+    Does 'rm files*' remove all matches from all sub-directories?
+    <https://askubuntu.com/questions/919812/does-rm-files-remove-all-matches-from-all-sub-directories>
+
+  *
+    Is it an insult to my US university to not walk in graduation?
+    <https://academia.stackexchange.com/questions/90131/is-it-an-insult-to-my-us-university-to-not-walk-in-graduation>
+
+  *
+    Why don't poor people vote in the United States?
+    <https://politics.stackexchange.com/questions/19306/why-dont-poor-people-vote-in-the-united-states>
+
+  *
+    Is Allah not omnipresent?
+    <https://islam.stackexchange.com/questions/40133/is-allah-not-omnipresent>
+
+  *
+    Why can't the quadratic formula be simplified?
+    <https://math.stackexchange.com/questions/2300647/why-cant-the-quadratic-formula-be-simplified>
+
+  *
+    Any number is a combination of powers of 2. If coefficients of those
+    powers can be negative, what is the *shortest* combination?
+    <https://math.stackexchange.com/questions/2301465/any-number-is-a-combination-of-powers-of-2-if-coefficients-of-those-powers-can>
+
+  *
+    Repeat Stream allMatch() until true
+    <https://stackoverflow.com/questions/44241290/repeat-stream-allmatch-until-true>
+
+  *
+    Why do some sites ask for username/email and password on two
+    separate screens?
+    <https://security.stackexchange.com/questions/160692/why-do-some-sites-ask-for-username-email-and-password-on-two-separate-screens>
+
+  *
+    What does "all your women" mean?
+    <https://ell.stackexchange.com/questions/130882/what-does-all-your-women-mean>
+
+  *
+    How to show real images instead of crosses in SXA experience editor
+    <https://sitecore.stackexchange.com/questions/5910/how-to-show-real-images-instead-of-crosses-in-sxa-experience-editor>
+
+  *
+    Why did the Romans change Europe's language, but the barbarians
+    didn't?
+    <https://history.stackexchange.com/questions/38297/why-did-the-romans-change-europes-language-but-the-barbarians-didnt>
+
+  *
+    So… is prostitution in Canada legal or not?
+    <https://law.stackexchange.com/questions/19225/so-is-prostitution-in-canada-legal-or-not>
+
+  *
+    Where have the designers of 5e said that they favored rulings over
+    rules in this edition?
+    <https://rpg.stackexchange.com/questions/100544/where-have-the-designers-of-5e-said-that-they-favored-rulings-over-rules-in-this>
+
+  *
+    Something wrong with Lettrine (indent ?)
+    <https://tex.stackexchange.com/questions/372208/something-wrong-with-lettrine-indent>
+
+  *
+    Is an Airbus A319 allowed to fly with a missing flap track fairing?
+    <https://aviation.stackexchange.com/questions/38446/is-an-airbus-a319-allowed-to-fly-with-a-missing-flap-track-fairing>
+
+  *
+    Is it a Cyclic number?
+    <https://codegolf.stackexchange.com/questions/123251/is-it-a-cyclic-number>
+
+  *
+    Will my 7yo be seated with me on United Basic Economy?
+    <https://travel.stackexchange.com/questions/94078/will-my-7yo-be-seated-with-me-on-united-basic-economy>
+
+  *
+    Sword in the rock - make it last the ages
+    <https://worldbuilding.stackexchange.com/questions/81722/sword-in-the-rock-make-it-last-the-ages>
+
+  *
+    QGIS Invalid Geometry when importing a delimited CSV file
+    <https://gis.stackexchange.com/questions/242022/qgis-invalid-geometry-when-importing-a-delimited-csv-file>
+
+
+question feed <https://blender.stackexchange.com/feeds/question/39125>
+lang-py
+about us <https://stackoverflow.com/company/about> tour
+<https://blender.stackexchange.com/tour> help
+<https://blender.stackexchange.com/help> blog
+<https://stackoverflow.blog/?blb=1> chat
+<https://chat.stackexchange.com/?tab=site&host=blender.stackexchange.com> data
+<https://data.stackexchange.com/> legal
+<https://stackexchange.com/legal> privacy policy
+<https://stackexchange.com/legal/privacy-policy> work here
+<https://stackoverflow.com/company/work-here> advertising info
+<http://stackexchange.com/mediakit> mobile *contact us
+<https://blender.stackexchange.com/contact>* *feedback
+<https://blender.meta.stackexchange.com/>*
+Technology 	Life / Arts 	Culture / Recreation 	Science 	Other
+
+ 1. Stack Overflow <https://stackoverflow.com/>
+ 2. Server Fault <https://serverfault.com/>
+ 3. Super User <https://superuser.com/>
+ 4. Web Applications <https://webapps.stackexchange.com/>
+ 5. Ask Ubuntu <https://askubuntu.com/>
+ 6. Webmasters <https://webmasters.stackexchange.com/>
+ 7. Game Development <https://gamedev.stackexchange.com/>
+ 8. TeX - LaTeX <https://tex.stackexchange.com/>
+ 9. Software Engineering <https://softwareengineering.stackexchange.com/>
+10. Unix & Linux <https://unix.stackexchange.com/>
+11. Ask Different (Apple) <https://apple.stackexchange.com/>
+12. WordPress Development <https://wordpress.stackexchange.com/>
+
+	
+
+ 1. Geographic Information Systems <https://gis.stackexchange.com/>
+ 2. Electrical Engineering <https://electronics.stackexchange.com/>
+ 3. Android Enthusiasts <https://android.stackexchange.com/>
+ 4. Information Security <https://security.stackexchange.com/>
+ 5. Database Administrators <https://dba.stackexchange.com/>
+ 6. Drupal Answers <https://drupal.stackexchange.com/>
+ 7. SharePoint <https://sharepoint.stackexchange.com/>
+ 8. User Experience <https://ux.stackexchange.com/>
+ 9. Mathematica <https://mathematica.stackexchange.com/>
+10. Salesforce <https://salesforce.stackexchange.com/>
+11. ExpressionEngine® Answers <https://expressionengine.stackexchange.com/>
+12. Cryptography <https://crypto.stackexchange.com/>
+
+	
+
+ 1. Code Review <https://codereview.stackexchange.com/>
+ 2. Magento <https://magento.stackexchange.com/>
+ 3. Signal Processing <https://dsp.stackexchange.com/>
+ 4. Raspberry Pi <https://raspberrypi.stackexchange.com/>
+ 5. Programming Puzzles & Code Golf <https://codegolf.stackexchange.com/>
+ 6. more (7) <https://stackexchange.com/sites#technology>
+
+	
+
+ 1. Photography <https://photo.stackexchange.com/>
+ 2. Science Fiction & Fantasy <https://scifi.stackexchange.com/>
+ 3. Graphic Design <https://graphicdesign.stackexchange.com/>
+ 4. Movies & TV <https://movies.stackexchange.com/>
+ 5. Music: Practice & Theory <https://music.stackexchange.com/>
+ 6. Seasoned Advice (cooking) <https://cooking.stackexchange.com/>
+ 7. Home Improvement <https://diy.stackexchange.com/>
+ 8. Personal Finance & Money <https://money.stackexchange.com/>
+ 9. Academia <https://academia.stackexchange.com/>
+10. more (8) <https://stackexchange.com/sites#lifearts>
+
+	
+
+ 1. English Language & Usage <https://english.stackexchange.com/>
+ 2. Skeptics <https://skeptics.stackexchange.com/>
+ 3. Mi Yodeya (Judaism) <https://judaism.stackexchange.com/>
+ 4. Travel <https://travel.stackexchange.com/>
+ 5. Christianity <https://christianity.stackexchange.com/>
+ 6. English Language Learners <https://ell.stackexchange.com/>
+ 7. Japanese Language <https://japanese.stackexchange.com/>
+ 8. Arqade (gaming) <https://gaming.stackexchange.com/>
+ 9. Bicycles <https://bicycles.stackexchange.com/>
+10. Role-playing Games <https://rpg.stackexchange.com/>
+11. Anime & Manga <https://anime.stackexchange.com/>
+12. Motor Vehicle Maintenance & Repair
+    <https://mechanics.stackexchange.com/>
+13. more (17) <https://stackexchange.com/sites#culturerecreation>
+
+	
+
+ 1. MathOverflow <https://mathoverflow.net/>
+ 2. Mathematics <https://math.stackexchange.com/>
+ 3. Cross Validated (stats) <https://stats.stackexchange.com/>
+ 4. Theoretical Computer Science <https://cstheory.stackexchange.com/>
+ 5. Physics <https://physics.stackexchange.com/>
+ 6. Chemistry <https://chemistry.stackexchange.com/>
+ 7. Biology <https://biology.stackexchange.com/>
+ 8. Computer Science <https://cs.stackexchange.com/>
+ 9. Philosophy <https://philosophy.stackexchange.com/>
+10. more (3) <https://stackexchange.com/sites#science>
+
+	
+
+ 1. Meta Stack Exchange <https://meta.stackexchange.com/>
+ 2. Stack Apps <https://stackapps.com/>
+ 3. Area 51 <https://area51.stackexchange.com/>
+ 4. Stack Overflow Talent <https://www.stackoverflowbusiness.com/talent>
+
+site design / logo © 2017 Stack Exchange Inc; user contributions
+licensed under cc by-sa 3.0
+<https://creativecommons.org/licenses/by-sa/3.0/> with attribution
+required <https://stackoverflow.blog/2009/06/25/attribution-required/>
+rev 2017.5.29.26075

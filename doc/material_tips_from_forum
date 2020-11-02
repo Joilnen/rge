@@ -1,0 +1,1144 @@
+<http://www.ogre3d.org/forums/index.php?sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+
+  Ogre Forums
+
+Support and community hang-out spot for Ogre3D
+
+Skip to content <#start_here>
+<http://www.ogre3d.org/forums/viewtopic.php?t=11886>
+<http://www.ogre3d.org/> <http://www.ogre3d.org/addonforums/>
+<http://www.ogre3d.org/wiki/>
+
+Advanced search
+<http://www.ogre3d.org/forums/search.php?sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+  * Board index
+    <http://www.ogre3d.org/forums/index.php?sid=8765a79d1a85b5f48bebb5fef8b44633>
+    *‹* User Forums
+    <http://www.ogre3d.org/forums/viewforum.php?f=18&sid=8765a79d1a85b5f48bebb5fef8b44633>
+    *‹* Help
+    <http://www.ogre3d.org/forums/viewforum.php?f=2&sid=8765a79d1a85b5f48bebb5fef8b44633>
+  * Change font size
+
+    <#>
+  * Print view
+
+    <http://www.ogre3d.org/forums/viewtopic.php?f=2&t=54233&sid=8765a79d1a85b5f48bebb5fef8b44633&view=print>
+
+  * FAQ
+    <http://www.ogre3d.org/forums/faq.php?sid=8765a79d1a85b5f48bebb5fef8b44633>
+  * Register
+    <http://www.ogre3d.org/forums/ucp.php?mode=register&sid=8765a79d1a85b5f48bebb5fef8b44633>
+  * Login
+    <http://www.ogre3d.org/forums/ucp.php?mode=login&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+    Help change color of manual object
+    <http://www.ogre3d.org/forums/viewtopic.php?f=2&t=54233&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+Problems building or running the engine, queries about how to use
+features etc.
+Post a reply
+
+<http://www.ogre3d.org/forums/posting.php?mode=reply&f=2&t=54233&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+19 posts • Page *1* of *1*
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368671&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Help change color of manual object <#p368671>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368671&sid=8765a79d1a85b5f48bebb5fef8b44633#p368671>by
+*tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Thu Dec 10, 2009 4:38 pm
+
+I use manual object to draw the grid on terrain but the color is look
+like picture below, i want to change the color to other but not this
+one, is it possible?How can i change it? Also can i make grid thicker? How ?
+Image
+
+Image
+
+
+Here is my code about drawing grid
+
+Code: Select all <#>
+
+    |
+    for(std::vector<TileStruct*>::iterator it=mTileContainer.begin(); it!=mTileContainer.end(); it++)
+       {
+          /*Draw a tile*/
+          //draw a line from first to second vertex
+          
+          Ogre::ManualObject* Line1=mSceneMgr->createManualObject("ManualObject"+Ogre::StringConverter::toString(mObjNumber));
+          Line1->estimateVertexCount(2);
+          Line1->begin("none", RenderOperation::OT_LINE_STRIP);
+          Line1->position((*it)->GetFirstVertex());
+          Line1->position((*it)->GetSecondVertex());
+          Line1->end();
+          //attached to scene node
+          mSceneMgr->getRootSceneNode()->createChildSceneNode("ManualObjectSceneNode"+Ogre::StringConverter::toString(mObjNumber))->attachObject(Line1);
+
+          mObjNumber++;
+
+          //draw a line from second to third vertex
+          Ogre::ManualObject* Line2=mSceneMgr->createManualObject("ManualObject"+Ogre::StringConverter::toString(mObjNumber));
+          Line2->estimateVertexCount(2);
+          Line2->begin("none", RenderOperation::OT_LINE_STRIP);
+          Line2->position((*it)->GetSecondVertex());
+          Line2->position((*it)->GetThirdVertex());
+          Line2->end();
+          //attached to scene node
+          mSceneMgr->getRootSceneNode()->createChildSceneNode("ManualObjectSceneNode"+Ogre::StringConverter::toString(mObjNumber))->attachObject(Line2);
+
+          mObjNumber++;
+
+          //draw a line from third to fourth vertex
+          Ogre::ManualObject* Line3=mSceneMgr->createManualObject("ManualObject"+Ogre::StringConverter::toString(mObjNumber));
+          Line3->estimateVertexCount(2);
+          Line3->begin("none", RenderOperation::OT_LINE_STRIP);
+          Line3->position((*it)->GetThirdVertex());
+          Line3->position((*it)->GetFourthVertex());
+          Line3->end();
+          //attached to scene node
+          mSceneMgr->getRootSceneNode()->createChildSceneNode("ManualObjectSceneNode"+Ogre::StringConverter::toString(mObjNumber))->attachObject(Line3);
+
+          mObjNumber++;
+
+          //draw a line from fourth to first vertex
+          Ogre::ManualObject* Line4=mSceneMgr->createManualObject("ManualObject"+Ogre::StringConverter::toString(mObjNumber));
+          Line4->estimateVertexCount(2);
+          Line4->begin("none", RenderOperation::OT_LINE_STRIP);
+          Line4->position((*it)->GetFourthVertex());
+          Line4->position((*it)->GetFirstVertex());
+          Line4->end();
+          //attached to scene node
+          mSceneMgr->getRootSceneNode()->createChildSceneNode("ManualObjectSceneNode"+Ogre::StringConverter::toString(mObjNumber))->attachObject(Line4);
+
+          mObjNumber++;
+       }
+
+    |
+
+Last edited by tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+on Fri Dec 11, 2009 6:35 am, edited 2 times in total.
+Ogre beginner
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Greenskin
+     
+    *Posts:* 132
+    *Kudos:* 0 
+    *Joined:* 18 Jun 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368680&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368680>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368680&sid=8765a79d1a85b5f48bebb5fef8b44633#p368680>by
+*Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Thu Dec 10, 2009 5:23 pm
+
+Hi,
+but I can't find any code which is setting colour. Where is that picture
+you did write about? I can't find it.
+
+Why you are creating for each line manual object?
+Every object will be separate vertex buffer, which is separate batch of
+primitives. This will cause huge performance impact.
+Only reason I can think of, is if you want to hide and show individual
+tiles.
+But if you create dynamic manual objects and recreating it always, it
+would be faster.
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Halfling
+     
+    *Posts:* 94
+    *Kudos:* 1
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=17710&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 11 Jun 2008
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368689&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368689>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368689&sid=8765a79d1a85b5f48bebb5fef8b44633#p368689>by
+*spacegaier
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=16228&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Thu Dec 10, 2009 6:18 pm
+
+This is a part of the code I use to draw a little axis visualization:
+
+Code: Select all <#>
+
+    |ManualObject* m_pDirectionManObj; 
+    SceneNode* m_pDirectionManObjNode; 
+    MaterialPtr m_pDirectionManObjMaterial;
+
+    // X-Axe
+    m_pDirectionManObj =  m_pSceneMgr->createManualObject("X-Axe"); 
+    m_pDirectionManObjNode = m_pSceneMgr->getRootSceneNode()->createChildSceneNode("X-Axe-Node"); 
+        
+    m_pDirectionManObjMaterial = MaterialManager::getSingleton().create("X-Axe-Mat","Debugger"); 
+    m_pDirectionManObjMaterial->setReceiveShadows(false); 
+    m_pDirectionManObjMaterial->getTechnique(0)->setLightingEnabled(true); 
+    m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setDiffuse(1,0,0,0); 
+    m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setAmbient(1,0,0); 
+    m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setSelfIllumination(1,0,0); 
+     
+    m_pDirectionManObj->begin("X-Axe-Mat", Ogre::RenderOperation::OT_LINE_LIST); 
+    m_pDirectionManObj->position(-100,0,0); 
+    m_pDirectionManObj->position(+100,0,0); 
+    m_pDirectionManObj->end(); 
+    m_pDirectionManObjNode->attachObject(m_pDirectionManObj);
+
+    |
+
+Ogre Admin [Admin, Dev, PR, Finance, Wiki, etc.] | BasicOgreFramework
+<http://www.ogre3d.org/tikiwiki/Basic%20Ogre%20Framework> |
+AdvancedOgreFramework
+<http://www.ogre3d.org/tikiwiki/Advanced%20Ogre%20Framework>
+Don't know what to do in your spare time? Help the Ogre wiki grow! Or
+squash a bug...
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=16228&sid=8765a79d1a85b5f48bebb5fef8b44633>
+spacegaier
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=16228&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    OGRE Team Member
+    OGRE Team Member
+     
+    *Posts:* 4291
+    *Kudos:* 126
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=16228&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 04 Feb 2008
+    *Location:* Germany
+
+      * Website
+
+        <http://www.bpcompass.com/>
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368724&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368724>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368724&sid=8765a79d1a85b5f48bebb5fef8b44633#p368724>by
+*tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Fri Dec 11, 2009 3:48 am
+
+    Anicka wrote:
+
+    Hi,
+    but I can't find any code which is setting colour. Where is that
+    picture you did write about? I can't find it.
+
+    Why you are creating for each line manual object?
+    Every object will be separate vertex buffer, which is separate batch
+    of primitives. This will cause huge performance impact.
+    Only reason I can think of, is if you want to hide and show
+    individual tiles.
+    But if you create dynamic manual objects and recreating it always,
+    it would be faster.
+
+
+
+I make grid is because i will use it for A*.
+Each tiles are individual, the reason is that if there is a object stand
+on terrain, it will mark those titles, which are covered by object as
+unwalkable, if titles are not covered by object then it will be marked
+walkable.
+The purpose to do this is i want to output those tile as a template like
+terrain.cfg, so i can read it into my game application, i draw title
+because i want to see if it is correct.
+Yes, you are right, the performance is not good because each line is
+consist with two vertex and a square is consist with four lines.
+
+What do you mean by create dynamic objects and recreate? Could you tell
+me more detail?
+
+Here my step.
+1. A tile is construct with four vertex, so i use STL vector to store
+every tiles.
+2. I run through each tiles and use manual object to construct them, as
+the code i posted.
+Last edited by tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+on Fri Dec 11, 2009 4:03 am, edited 1 time in total.
+Ogre beginner
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Greenskin
+     
+    *Posts:* 132
+    *Kudos:* 0 
+    *Joined:* 18 Jun 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368725&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368725>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368725&sid=8765a79d1a85b5f48bebb5fef8b44633#p368725>by
+*tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Fri Dec 11, 2009 3:48 am
+
+    spacegaier wrote:
+
+    This is a part of the code I use to draw a little axis visualization:
+
+    Code: Select all <#>
+
+        |ManualObject* m_pDirectionManObj; 
+        SceneNode* m_pDirectionManObjNode; 
+        MaterialPtr m_pDirectionManObjMaterial;
+
+        // X-Axe
+        m_pDirectionManObj =  m_pSceneMgr->createManualObject("X-Axe"); 
+        m_pDirectionManObjNode = m_pSceneMgr->getRootSceneNode()->createChildSceneNode("X-Axe-Node"); 
+            
+        m_pDirectionManObjMaterial = MaterialManager::getSingleton().create("X-Axe-Mat","Debugger"); 
+        m_pDirectionManObjMaterial->setReceiveShadows(false); 
+        m_pDirectionManObjMaterial->getTechnique(0)->setLightingEnabled(true); 
+        m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setDiffuse(1,0,0,0); 
+        m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setAmbient(1,0,0); 
+        m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setSelfIllumination(1,0,0); 
+         
+        m_pDirectionManObj->begin("X-Axe-Mat", Ogre::RenderOperation::OT_LINE_LIST); 
+        m_pDirectionManObj->position(-100,0,0); 
+        m_pDirectionManObj->position(+100,0,0); 
+        m_pDirectionManObj->end(); 
+        m_pDirectionManObjNode->attachObject(m_pDirectionManObj);
+
+        |
+
+
+
+Thanks it works, now i have to think of improving performance
+Thanks for help me.
+Ogre beginner
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Greenskin
+     
+    *Posts:* 132
+    *Kudos:* 0 
+    *Joined:* 18 Jun 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368886&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368886>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368886&sid=8765a79d1a85b5f48bebb5fef8b44633#p368886>by
+*tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Sat Dec 12, 2009 5:47 pm
+
+Ok, guys i use texture as grid instead of manual drawing, the
+performance is better than before, but i still got problem.
+In first picture you can see the yellow grid, which made in photoimpact,
+but you can see in picture the color are very different further grids
+are fuzzy, why?
+How to fix it?
+is it possible to improve more on performance?
+
+Image
+
+The grid is use this texture
+Image
+
+the code is here
+
+Code: Select all <#>
+
+    |      Ogre::ManualObject* Tile=mSceneMgr->createManualObject("ManualObject"+Ogre::StringConverter::toString(mObjNumber));
+          Tile->begin("NormalGrid");
+          Tile->position((*it)->GetFirstVertex());
+          Tile->textureCoord(0.0f, 0.0f);
+          Tile->position((*it)->GetSecondVertex());
+          Tile->textureCoord(0.0f, 1.0f);
+          Tile->position((*it)->GetThirdVertex());
+          Tile->textureCoord(1.0f, 1.0f);
+          Tile->position((*it)->GetFourthVertex());
+          Tile->textureCoord(1.0f, 0.0f);
+
+          Tile->quad(0, 1, 2, 3);
+          Tile->end();
+
+          mSceneMgr->getRootSceneNode()->createChildSceneNode("ManualObject"+Ogre::StringConverter::toString(mObjNumber))->attachObject(Tile);
+          mObjNumber++;
+
+    |
+
+
+
+this is the material script
+
+Code: Select all <#>
+
+    | material NormalGrid
+     {
+            technique
+            {
+                     pass
+                     {
+             lighting off
+             scene_blend alpha_blend
+             depth_write off
+             
+             texture_unit
+             {
+                texture NormalGrid.png
+             }
+                         }
+                     }
+            }
+     }
+
+    |
+
+Ogre beginner
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Greenskin
+     
+    *Posts:* 132
+    *Kudos:* 0 
+    *Joined:* 18 Jun 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368889&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368889>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368889&sid=8765a79d1a85b5f48bebb5fef8b44633#p368889>by
+*DanielSefton
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=15167&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Sat Dec 12, 2009 6:33 pm
+
+Try setting this after the creation of your render window:
+
+Code: Select all <#>
+
+    |Ogre::MaterialManager::getSingleton().setDefaultTextureFiltering(Ogre::TFO_ANISOTROPIC);
+    Ogre::MaterialManager::getSingleton().setDefaultAnisotropy(8);
+
+    |
+
+Twitter <http://twitter.com/danielsefton> / Blog
+<http://www.danielsefton.com/> / TidalWare <http://www.tidalware.com/>
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=15167&sid=8765a79d1a85b5f48bebb5fef8b44633>
+DanielSefton
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=15167&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Ogre Magi
+     
+    *Posts:* 1235
+    *Kudos:* 10
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=15167&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 26 Oct 2007
+    *Location:* Mountain View, CA
+
+      * Website
+
+        <http://www.tidalware.com/>
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368891&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368891>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368891&sid=8765a79d1a85b5f48bebb5fef8b44633#p368891>by
+*Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Sat Dec 12, 2009 6:39 pm
+
+Hi,
+it is fuzzy because it is mipmaping on that texture.
+Dynamic manual object is object which is very often rebuilt. In manual
+object you call setDynamic(true), and now vertex buffer of manual object
+is created dynamic instead of static. Statics are faster because they
+usually stays in graphics video memory. And dynamics will stay in some
+other memory, which is faster for access to cpu. If you try to rebuild
+static object often, you will get very poor performance, but dynamics
+are suitable for it.
+
+    tomneo2004 wrote:
+
+    I make grid is because i will use it for A*.
+    Each tiles are individual...
+
+
+You can represent each tile as you want. Just final graphics is better
+to put in to the one batch.
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Halfling
+     
+    *Posts:* 94
+    *Kudos:* 1
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=17710&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 11 Jun 2008
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=368936&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p368936>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=368936&sid=8765a79d1a85b5f48bebb5fef8b44633#p368936>by
+*tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Sun Dec 13, 2009 3:17 am
+
+    Anicka wrote:
+
+    Hi,
+    it is fuzzy because it is mipmaping on that texture.
+    Dynamic manual object is object which is very often rebuilt. In
+    manual object you call setDynamic(true), and now vertex buffer of
+    manual object is created dynamic instead of static. Statics are
+    faster because they usually stays in graphics video memory. And
+    dynamics will stay in some other memory, which is faster for access
+    to cpu. If you try to rebuild static object often, you will get very
+    poor performance, but dynamics are suitable for it.
+
+        tomneo2004 wrote:
+
+        I make grid is because i will use it for A*.
+        Each tiles are individual...
+
+
+    You can represent each tile as you want. Just final graphics is
+    better to put in to the one batch.
+
+
+
+How to put in one batch?
+Ogre beginner
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Greenskin
+     
+    *Posts:* 132
+    *Kudos:* 0 
+    *Joined:* 18 Jun 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=369004&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p369004>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=369004&sid=8765a79d1a85b5f48bebb5fef8b44633#p369004>by
+*tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Mon Dec 14, 2009 2:13 am
+
+Any one?
+Ogre beginner
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Greenskin
+     
+    *Posts:* 132
+    *Kudos:* 0 
+    *Joined:* 18 Jun 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=369010&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p369010>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=369010&sid=8765a79d1a85b5f48bebb5fef8b44633#p369010>by
+*jacmoe
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=1170&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Mon Dec 14, 2009 3:27 am
+
+You are in way too deep waters here. :)
+Can't use ManualObject for that - you need to use vertex/index buffers
+directly. Create a mesh or a simple renderable.
+
+Did you check out the Daimonin TileEngine yet? :P
+/* Less noise. More signal. */
+Ogitor Scenebuilder <https://bitbucket.org/ogitor> - powered by Ogre,
+presented by Qt, fueled by Passion.
+OgreAddons <https://bitbucket.org/ogreaddons> - the Ogre code suppository.
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=1170&sid=8765a79d1a85b5f48bebb5fef8b44633>
+jacmoe
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=1170&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    OGRE Retired Moderator
+    OGRE Retired Moderator
+     
+    *Posts:* 20570
+    *Kudos:* 181
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=1170&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 22 Jan 2004
+    *Location:* Denmark
+
+      * Website
+
+        <https://jacmoe.dk/>
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=369036&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p369036>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=369036&sid=8765a79d1a85b5f48bebb5fef8b44633#p369036>by
+*Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Mon Dec 14, 2009 10:01 am
+
+Hi,
+
+    jacmoe wrote:
+
+    Can't use ManualObject for that - you need to use vertex/index
+    buffers directly.
+
+
+Why he can't use manual object? I was using manual object and it was
+working fine. And one batch means you are using one manual object, not more.
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Halfling
+     
+    *Posts:* 94
+    *Kudos:* 1
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=17710&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 11 Jun 2008
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=369048&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p369048>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=369048&sid=8765a79d1a85b5f48bebb5fef8b44633#p369048>by
+*jacmoe
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=1170&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Mon Dec 14, 2009 10:23 am
+
+Of course it's possible, but not if you want raw performance.
+There is a tradeoff between easy of use and power.
+/* Less noise. More signal. */
+Ogitor Scenebuilder <https://bitbucket.org/ogitor> - powered by Ogre,
+presented by Qt, fueled by Passion.
+OgreAddons <https://bitbucket.org/ogreaddons> - the Ogre code suppository.
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=1170&sid=8765a79d1a85b5f48bebb5fef8b44633>
+jacmoe
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=1170&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    OGRE Retired Moderator
+    OGRE Retired Moderator
+     
+    *Posts:* 20570
+    *Kudos:* 181
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=1170&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 22 Jan 2004
+    *Location:* Denmark
+
+      * Website
+
+        <https://jacmoe.dk/>
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=369051&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p369051>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=369051&sid=8765a79d1a85b5f48bebb5fef8b44633#p369051>by
+*Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Mon Dec 14, 2009 10:38 am
+
+    jacmoe wrote:
+
+    Of course it's possible, but not if you want raw performance.
+    There is a tradeoff between easy of use and power.
+
+
+I am using only one manual object in my project. Can you be more
+specific what is slower? I have no problem to do something more complicated.
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+Anicka
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=17710&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Halfling
+     
+    *Posts:* 94
+    *Kudos:* 1
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=17710&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 11 Jun 2008
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=372799&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p372799>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=372799&sid=8765a79d1a85b5f48bebb5fef8b44633#p372799>by
+*princeofvampire
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25788&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Tue Jan 12, 2010 4:49 pm
+
+hi guys....i am newbie of ogre, i doing rts game as well, and currently
+need to draw the grid on the terrain, but i use these code from
+spacegaier and put in the createScene function and created a terrain,
+but the grid doesnt show, can any1 help pls :D
+ManualObject* m_pDirectionManObj;
+SceneNode* m_pDirectionManObjNode;
+MaterialPtr m_pDirectionManObjMaterial;
+
+// X-Axe
+m_pDirectionManObj = m_pSceneMgr->createManualObject("X-Axe");
+m_pDirectionManObjNode =
+m_pSceneMgr->getRootSceneNode()->createChildSceneNode("X-Axe-Node");
+
+m_pDirectionManObjMaterial =
+MaterialManager::getSingleton().create("X-Axe-Mat","Debugger");
+m_pDirectionManObjMaterial->setReceiveShadows(false);
+m_pDirectionManObjMaterial->getTechnique(0)->setLightingEnabled(true);
+m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setDiffuse(1,0,0,0);
+m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setAmbient(1,0,0);
+m_pDirectionManObjMaterial->getTechnique(0)->getPass(0)->setSelfIllumination(1,0,0);
+
+m_pDirectionManObj->begin("X-Axe-Mat", Ogre::RenderOperation::OT_LINE_LIST);
+m_pDirectionManObj->position(-100,0,0);
+m_pDirectionManObj->position(+100,0,0);
+m_pDirectionManObj->end();
+m_pDirectionManObjNode->attachObject(m_pDirectionManObj);
+
+princeofvampire
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25788&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Gnoblar
+     
+    *Posts:* 4
+    *Kudos:* 0 
+    *Joined:* 16 Aug 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=372801&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p372801>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=372801&sid=8765a79d1a85b5f48bebb5fef8b44633#p372801>by
+*spacegaier
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=16228&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Tue Jan 12, 2010 4:57 pm
+
+Perhaps you don't have a light in the scene. So either add one or set
+lightning to false in the line materials.
+Ogre Admin [Admin, Dev, PR, Finance, Wiki, etc.] | BasicOgreFramework
+<http://www.ogre3d.org/tikiwiki/Basic%20Ogre%20Framework> |
+AdvancedOgreFramework
+<http://www.ogre3d.org/tikiwiki/Advanced%20Ogre%20Framework>
+Don't know what to do in your spare time? Help the Ogre wiki grow! Or
+squash a bug...
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=16228&sid=8765a79d1a85b5f48bebb5fef8b44633>
+spacegaier
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=16228&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    OGRE Team Member
+    OGRE Team Member
+     
+    *Posts:* 4291
+    *Kudos:* 126
+    <http://www.ogre3d.org/forums/thankslist.php?mode=givens&author_id=16228&give=false&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    *Joined:* 04 Feb 2008
+    *Location:* Germany
+
+      * Website
+
+        <http://www.bpcompass.com/>
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=372880&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p372880>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=372880&sid=8765a79d1a85b5f48bebb5fef8b44633#p372880>by
+*princeofvampire
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25788&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Wed Jan 13, 2010 3:07 am
+
+i draw the grid using this way,thanks it show the grid.
+for(int t=0;t<1500;t+=15)
+{
+m_pDirectionManObj->begin("X-Axe-Mat", Ogre::RenderOperation::OT_LINE_LIST);
+m_pDirectionManObj->position(0,0,t);
+m_pDirectionManObj->position(1500,0,t);
+m_pDirectionManObj->end();
+}
+for(int i=0;i<1500;i+=15)
+{
+m_pDirectionManObj->begin("X-Axe-Mat", Ogre::RenderOperation::OT_LINE_LIST);
+m_pDirectionManObj->position(i,0,0);
+m_pDirectionManObj->position(i,0,1500);
+m_pDirectionManObj->end();
+}
+but it doesnt follow the height of the terrain, it just flat.
+how to make it follow the terrain?
+if i draw part by part it will cause lag
+for(int t=0;t<1500;t+=15)
+{
+for(int i=0;i<1500;i+=15)
+{
+m_pDirectionManObj->begin("X-Axe-Mat", Ogre::RenderOperation::OT_LINE_LIST);
+m_pDirectionManObj->position(i,0,t);
+m_pDirectionManObj->position(i+15,0,t);
+m_pDirectionManObj->end();
+}
+}
+
+princeofvampire
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25788&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Gnoblar
+     
+    *Posts:* 4
+    *Kudos:* 0 
+    *Joined:* 16 Aug 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=372897&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p372897>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=372897&sid=8765a79d1a85b5f48bebb5fef8b44633#p372897>by
+*tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Wed Jan 13, 2010 6:24 am
+
+    princeofvampire wrote:
+
+    i draw the grid using this way,thanks it show the grid.
+    for(int t=0;t<1500;t+=15)
+    {
+    m_pDirectionManObj->begin("X-Axe-Mat",
+    Ogre::RenderOperation::OT_LINE_LIST);
+    m_pDirectionManObj->position(0,0,t);
+    m_pDirectionManObj->position(1500,0,t);
+    m_pDirectionManObj->end();
+    }
+    for(int i=0;i<1500;i+=15)
+    {
+    m_pDirectionManObj->begin("X-Axe-Mat",
+    Ogre::RenderOperation::OT_LINE_LIST);
+    m_pDirectionManObj->position(i,0,0);
+    m_pDirectionManObj->position(i,0,1500);
+    m_pDirectionManObj->end();
+    }
+    but it doesnt follow the height of the terrain, it just flat.
+    how to make it follow the terrain?
+    if i draw part by part it will cause lag
+    for(int t=0;t<1500;t+=15)
+    {
+    for(int i=0;i<1500;i+=15)
+    {
+    m_pDirectionManObj->begin("X-Axe-Mat",
+    Ogre::RenderOperation::OT_LINE_LIST);
+    m_pDirectionManObj->position(i,0,t);
+    m_pDirectionManObj->position(i+15,0,t);
+    m_pDirectionManObj->end();
+    }
+    }
+
+
+
+Hi, i actually figure out my problem, i use ray to find out the height
+of terrain. In debug mode it get pretty lag, therefore, i normally use
+release mode Another thing is that you create manually then you attach
+it to scene node to draw, this cause low frame rate i have the same
+problem as same as you, but for drawing grid i use batch geometry to
+draw, it can increase your frame rate very much. you can try, also my
+grid are independent so i can change each grids color or properties.
+Ogre beginner
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+tomneo2004
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25109&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Greenskin
+     
+    *Posts:* 132
+    *Kudos:* 0 
+    *Joined:* 18 Jun 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+
+  * Reply with quote
+
+    <http://www.ogre3d.org/forums/posting.php?mode=quote&f=2&p=378286&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+
+      Re: Help change color of manual object <#p378286>
+
+Post
+<http://www.ogre3d.org/forums/viewtopic.php?p=378286&sid=8765a79d1a85b5f48bebb5fef8b44633#p378286>by
+*globalsinner
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25253&sid=8765a79d1a85b5f48bebb5fef8b44633>*
+» Thu Feb 18, 2010 4:50 pm
+
+Hi, could u tell me how u have used batched geometry for the
+manualobject. I am doing a project which uses real world data and has
+huge terrain overlays. some boost in speed would be welcome.. :)
+your life was ended by mermaids... \m/
+
+User avatar
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25253&sid=8765a79d1a85b5f48bebb5fef8b44633>
+globalsinner
+<http://www.ogre3d.org/forums/memberlist.php?mode=viewprofile&u=25253&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+    Kobold
+     
+    *Posts:* 30
+    *Kudos:* 0 
+    *Joined:* 01 Jul 2009
+
+Top
+
+<#wrap>
+------------------------------------------------------------------------
+Display posts from previous:
+
+Sort by
+
+------------------------------------------------------------------------
+Post a reply
+
+<http://www.ogre3d.org/forums/posting.php?mode=reply&f=2&t=54233&sid=8765a79d1a85b5f48bebb5fef8b44633>
+19 posts • Page *1* of *1*
+
+Return to Help
+
+<http://www.ogre3d.org/forums/viewforum.php?f=2&sid=8765a79d1a85b5f48bebb5fef8b44633>
+
+Jump to:
+
+
+      Who is online
+
+Users browsing this forum: No registered users and 6 guests
+
+  * Board index
+    <http://www.ogre3d.org/forums/index.php?sid=8765a79d1a85b5f48bebb5fef8b44633>
+  * The team
+    <http://www.ogre3d.org/forums/memberlist.php?mode=leaders&sid=8765a79d1a85b5f48bebb5fef8b44633>
+    • Delete all board cookies
+    <http://www.ogre3d.org/forums/ucp.php?mode=delete_cookies&sid=8765a79d1a85b5f48bebb5fef8b44633>
+    • All times are UTC [ DST ]
+
+Powered by phpBB <http://www.phpbb.com/> © 2000, 2002, 2005, 2007 phpBB
+Group. Color scheme by ColorizeIt! <http://www.colorizeit.com/>

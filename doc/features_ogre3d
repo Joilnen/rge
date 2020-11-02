@@ -1,0 +1,68 @@
+Features
+
+Productivity features
+    Simple, easy to use OO interface designed to minimise the effort required to render 3D scenes, and to be independent of 3D implementation i.e. Direct3D/OpenGL.
+    Extensible example framework makes getting your application running is quick and simple
+    Common requirements like render state management, spatial culling, dealing with transparency are done for you automatically saving you valuable time
+    Clean, uncluttered design and full documentation of all engine classes
+    Proven, stable engine used in several commercial products
+
+Platform & 3D API support
+    Direct3D 9 & 11, OpenGL (incl. ES2, ES3 and OGL3+) and WebGL (Emscripten) support
+    Windows (all major versions & WinRT), Linux, Mac OSX, Android and iOS support
+    Builds on various compilers such as MSVC, GCC 4.8+ or Clang
+
+Material / Shader support
+    Powerful material declaration language allows you to maintain material assets outside of your code
+    Supports vertex and fragment programs (shaders), both low-level programs written in assembler, and high-level programs written in Cg, DirectX9 HLSL, or GLSL and provides automatic support for many commonly bound constant parameters like worldview matrices, light state information, object space eye position etc
+    Supports the complete range of fixed function operations such as multitexture and multipass blending, texture coordinate generation and modification, independent colour and alpha operations for non-programmable hardware or for lower cost materials
+    Multiple pass effects, with pass iteration if required for the closest ‘n’ lights
+    Support for multiple material techniques means you can design in alternative effects for a wide range of cards and OGRE automatically uses the best one supported
+    Material LOD support; your materials can reduce in cost as the objects using them get further away
+    Load textures from PNG, JPEG, TGA, BMP or DDS files, including unusual formats like 1D textures, volumetric textures, cubemaps and compressed textures (DXT/S3TC)
+    Textures can be provided and updated in realtime by plugins, for example a video feed
+    Easy to use projective texturing support
+
+Meshes
+    Flexible mesh data formats accepted, separation of the concepts of vertex buffers, index buffers, vertex declarations and buffer mappings
+    Biquadric Bezier patches for curved surfaces
+    Progressive meshes (LOD), manual or automatically generated
+    Static geometry batcher
+
+Animation
+    Sophisticated skeletal animation support
+        blending of multiple animations with variable weights
+        variable/multiple bone weight skinning
+        software and hardware-accelerated skinning pipelines with intelligent buffer sharing
+        manual bone control
+        Configurable interpolation modes, accuracy vs speed tradeoffs
+    Flexible shape animation support
+        Morph animation for legacy applications where you wish to perform simple linear blends between shape snapshots
+        Pose animation for modern shape animation, allowing you to blend many poses at variable weights along a timeline, for example expression / mouth shapes to perform facial animation
+        Both techniques can be implemented in hardware and software depending on hardware support
+    Animation of SceneNodes for camera paths and similar techniques, using spline interpolation where needed
+    Generic animation tracks can accept pluggable object adaptors to enable you to animate any parameter of any object over time
+
+Scene Features
+    Highly customisable, flexible scene management, not tied to any single scene type. Use predefined classes for scene organisation if they suit or plug in your own subclass to gain full control over the scene organisation
+    Several example plugins demonstrate various ways of handling the scene specific to a particular type of layout (e.g. BSP, Octree)
+    Hierarchical scene graph; nodes allow objects to be attached to each other and follow each others movements, articulated structures etc
+    Multiple shadow rendering techniques, both modulative and additive techniques, stencil and texture based, each highly configurable and taking full advantage of any hardware acceleration available.
+    Scene querying features
+
+Special Effects
+    Compositor system, allowing for full-screen postprocessing effects to be defined easily, via scripts if desired
+    Particle Systems, including easily extensible emitters, affectors and renderers (customisable through plugins). Systems can be defined in text scripts for easy tweaking. Automatic use of particle pooling for maximum performance
+    Support for skyboxes, skyplanes and skydomes, very easy to use
+    Billboarding for sprite graphics
+    Ribbon trails
+    Transparent objects automatically managed (rendering order & depth buffer settings all set up for you)
+
+Misc features
+    Common resource infrastructure for memory management and loading from archives (ZIP, PK3)
+    Flexible plugin architecture allows engine to be extended without recompilation
+    ‘Controllers’ allow you to easily organise derived values between objects e.g. changing the colour of a ship based on shields left
+    XMLConverter to convert efficient runtime binary formats to/from XML for interchange or editing
+    Sample library + browser that showcases many features
+
+

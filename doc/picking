@@ -1,0 +1,116 @@
+http://wiki.ogre3d.org/ThreeDeeObjectPicking
+
+ Example 1
+
+This could be used for 3D object picking from a Win32 aplication, I use it from a OnMouseMove callback :
+
+RECT rc;
+ this->GetClientRect(&rc);
+ int width    = rc.right - rc.left;
+ int height    = rc.bottom - rc.top;
+ float tx = (float)(1.0f / width) * cpt.x;
+ float ty = (float)(1.0f / height) * cpt.y;
+ Camera *pCam = ogreEngine::getSingletonPtr()->getCurrentCamera();
+ // calc the ray using normalised screen coordinates [0-1]
+ Ray ray = pCam->getCameraToViewportRay(tx - 0.5, 0.5 - ty);
+ // Set up the ray query
+ if (!mpRayQuery)
+     mpRayQuery = ogreEngine::getSingletonPtr()->getSceneManager()->createRayQuery(ray);
+ else
+     mpRayQuery->setRay(ray); // update ray
+ // Sort by distance, and say we're only interested in the first hit
+ mpRayQuery->setSortByDistance(true, 1);
+ // Execute
+ RaySceneQueryResult res = mpRayQuery->execute();
+ RaySceneQueryResult::iterator it = res.begin();
+ if (it != res.end())
+ {
+     mCurrMO = it->movable;
+     this->updateProgressListeners("mouse : " + mCurrMO->getName());
+ }
+ else
+ {
+     this->updateProgressListeners("mouse : " + StringConverter::toString(tx) + "x" + StringConverter::toString(ty));
+     mCurrMO = NULL;
+ }
+ mpRayQuery->clearResults();
+
+Example 2
+
+Quick background: I was trying to do some simple 3D object-picking-and-dragging, and the code sample above helped me a lot; also, this forum thread helped me a lot. But there were a few hitches that I had to overcome even with those code samples, so I offer my version of 3D object picking & dragging, with an explanation for my rationale.
+
+Note: my code is fairly sloppy, so don't expect the best design decisions to be reflected in it. :-)
+Picking
+
+void MyClassName::MouseClicky(unsigned int absoluteX, unsigned int absoluteY) {
+  float width = (float) this->mCam->getViewport()->getActualWidth(); // viewport width
+  float height = (float) this->mCam->getViewport()->getActualHeight(); // viewport height
+
+  Ray ray = this->mCam->getCameraToViewportRay((float) absoluteX / width, (float) absoluteY / height);
+
+  // Set up the ray query - you will probably not want to create this every time
+  RaySceneQuery * rq = this->mSceneMan->createRayQuery(ray);
+
+  // Sort by distance, and say we're only interested in the first hit; also, only pick entities
+  rq->setSortByDistance(true, 1);
+  rq->setQueryTypeMask(Ogre::SceneManager::ENTITY_TYPE_MASK);
+
+  // Execute
+  RaySceneQueryResult res = rq->execute();
+  RaySceneQueryResult::iterator it = res.begin();
+
+  // these two things should probably be encapsulated in their own class/struct
+  this->mSelectedEntity = NULL;
+  this->mSelectedEntityDist = 0.0f;
+
+  if (it != res.end())
+  {
+    this->mSelectedEntity = it->movable;
+    this->mSelectedEntityDist = it->distance;
+    printf("clicked: %s\n", this->mSelectedEntity ->getName().c_str());
+  }
+  else
+  {
+    printf("cleared selection.\n");
+  }
+
+  this->mSceneMan->destroyQuery(rq);
+}
+
+
+It's pretty much the same as Example 1, but I made a few changes:
+
+    When using the getCameraToViewportRay function, I left out the 0.5 constant arithmetic (it wasn't applicable in my case and was giving me strange results.)
+    I added a line to make it so that the ray will only register hits with entities. This is because I had a lot of other junk in my scene, like particles and a skybox, and I wanted to make sure those were not being selected.
+    I saved the distance from the viewport to the selected entity; this will be useful for dragging, which is next!
+
+Dragging
+
+void MyClassName::Mousedraggy(unsigned int x, unsigned int y) // these are absolute screen coords, like in picking
+{
+  if(this->mSelectedEntity)
+  {
+    SceneNode * p = this->mSelectedEntity->getParentSceneNode();
+    if(p){
+      // Should make this a separate function that returns a Ray instead of copying and pasting code
+      int width = this->mCam->getViewport()->getActualWidth();
+      int height = this->mCam->getViewport()->getActualHeight();
+
+      Ray ray = this->mCam->getCameraToViewportRay((float) x / width, (float) y / height);
+      Vector3 pos = ray.getPoint(this->mSelectedEntityDist);
+      pos.y = 0;
+
+      p->setPosition(pos);
+    }
+  }
+}
+
+
+This is pretty much the same code as the example I linked to in the forum thread above (this one). Some differences:
+
+    I use the entity distance in the ray.getPoint function instead of the camera's near clip plane distance. The getPoint function gives you the point on the ray at the specified length down the ray. This will give you a better 1-to-1 mouse-movement-to-entity-movement (it did for me anyway).
+    I zeroed out the Y component of the final position, because I didn't want my entities to move up or down, but you may not want to do that.
+
+Conclusion
+
+I hope this clarified some things and comes in handy for some people!

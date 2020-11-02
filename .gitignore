@@ -1,0 +1,7 @@
+*~
+*.swp
+tags
+*.o
+*.log
+stolen_death
+*.bak
