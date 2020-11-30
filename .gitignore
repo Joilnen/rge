@@ -7,3 +7,4 @@ russell
 *.bak
 *.so
 *.a
+external/*
