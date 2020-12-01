@@ -9,8 +9,6 @@
 #include <SDL2/SDL.h>
 
 using namespace Ogre;
-// using namespace OgreBites;
-
 
 void  ui(Ogre::RenderWindow *rw, Ogre::SceneManager *s);
 
@@ -30,7 +28,6 @@ class Ui : public RenderTargetListener {
         static void callBackExit(MyGUI::WidgetPtr w, int x, int y, MyGUI::MouseButton b);
         void addUiComponents(Ogre::RenderWindow *rw, Ogre::SceneManager *s);
 };
-
 
 #endif
 

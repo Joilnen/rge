@@ -1,7 +1,7 @@
 SRC=main.cpp frame_listener.cpp resources.cpp Actor.cpp Event.cpp EngineManager.cpp World.cpp \
-	Render.cpp Ui.cpp ParticleUniverseWrapper.cpp 
+	Render.cpp Ui.cpp ParticleUniverseWrapper.cpp SampleUI.cpp 
 OBJ=main.o FrameListener.o resources.o Actor.o Event.o EngineManager.o World.o \
-	Render.o Ui.o ParticleUniverseWrapper.o
+	Render.o Ui.o ParticleUniverseWrapper.o SampleUI.o  
 BIN=russell
 CC=c++ -std=c++2a
 INC=-I ../external/particleuniverse/Plugins/ParticleUniverse/include -I../external/mygui/include -I ../external/mygui/include/OgrePlatform/include -I /usr/local/include/OGRE/Overlay

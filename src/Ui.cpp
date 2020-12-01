@@ -13,7 +13,7 @@ void Ui::callBackExit(MyGUI::WidgetPtr w, int x, int y, MyGUI::MouseButton b) {
     MyGUI::InputManager::getInstance().injectMouseRelease(x, y, b); 	
     SDL_Event e;
     e.type = SDL_KEYDOWN;
-    e.key.keysym.sym = SDLK_ESCAPE;
+    e.key.keysym.sym = ::SDLK_ESCAPE;
     SDL_PushEvent(&e);
 }
 
