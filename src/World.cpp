@@ -77,7 +77,6 @@ void World::create() {
     robot->yaw(Radian(-Math::HALF_PI));
     robot->setMaterialName("Examples/Material4");
 
-
     Actor *a3 = new Actor;
     a3->setSceneManager(sm);
     a3->setAnimString("ArmatureAction");

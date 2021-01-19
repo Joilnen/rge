@@ -29,16 +29,15 @@ int main()
 
     for_each(world.getActorList().cbegin(),
         world.getActorList().cend(),
-        [&gm](Actor *a){
+        [&gm](Actor *a) {
             gm.addActor(a);
         }
     );
 
-    Ui::getInstance().addUiComponents(window, sceneMgr);
-
     // create scene
     sceneMgr->setAmbientLight(ColourValue(.25, .25, .25));
 
+    Ui::getInstance().addUiComponents(window, sceneMgr);
     // getEvent and mainLoop;
     getEvent(window, root, sceneMgr);
 

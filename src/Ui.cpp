@@ -8,6 +8,18 @@ Ui::~Ui() {
 
 }
 
+void Ui::notifyWindowPressed(MyGUI::Window* _widget, const std::string& _name) { 
+    MyGUI::WindowPtr window = _widget->castType<MyGUI::Window>(); 
+    if(_name == "close")
+        window->destroySmooth(); 
+    else if (_name == "minimized") { 
+        // hide window and show button in your taskbar 
+    } 
+    else if (_name == "maximized") { 
+        // maximized window 
+    } 
+}
+
 void Ui::callBackExit(MyGUI::WidgetPtr w, int x, int y, MyGUI::MouseButton b) {
     std::cout << "Clicou exit\n";
     MyGUI::InputManager::getInstance().injectMouseRelease(x, y, b); 	
@@ -18,16 +30,29 @@ void Ui::callBackExit(MyGUI::WidgetPtr w, int x, int y, MyGUI::MouseButton b) {
 }
 
 void Ui::addUiComponents(Ogre::RenderWindow *rw, Ogre::SceneManager *s) {
-    MyGUI::OgrePlatform *plat = new MyGUI::OgrePlatform;
+
+    auto plat = new MyGUI::OgrePlatform;
     plat->initialise(rw, s);
-    MyGUI::Gui *gui = new MyGUI::Gui;
+
+    auto gui = new MyGUI::Gui;
     gui->initialise();
 
     MyGUI::LayoutManager::getInstance().loadLayout("Button.layout");
-    MyGUI::ButtonPtr button = gui->findWidget<MyGUI::Button>("MyFirstButton");
+    auto button = gui->findWidget<MyGUI::Button>("MyFirstButton"); 
     button->eventMouseButtonPressed += MyGUI::newDelegate(Ui::callBackExit);
-}
 
+    /****
+    MyGUI::WindowPtr window = _widget->castType<MyGUI::Window>(); 
+    if(_name == "close")
+        window->destroySmooth(); 
+    else if(_name == "minimized") { 
+        // hide window and show button in your taskbar 
+    } 
+    else if(_name == "maximized") { 
+        // maximized window 
+    }
+    ****/
+}
 
 
 

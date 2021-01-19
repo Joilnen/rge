@@ -104,7 +104,6 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
                         getParentSceneNode()->
                         translate(Vector3(0, 0, 0.4),
                         Node::TransformSpace::TS_WORLD);
-
                 }
             }
         }
@@ -182,7 +181,7 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
                     if(event.key.keysym.sym == SDLK_ESCAPE)
                         goto OUT;
                     else if(event.key.keysym.sym == SDLK_w) {
-                        Camera *c = sceneMgr->getCamera("MainCam");
+                        auto c = sceneMgr->getCamera("MainCam");
                         if(c && c->getPolygonMode() == PM_WIREFRAME)
                             c->setPolygonMode(PM_SOLID);
                         else
