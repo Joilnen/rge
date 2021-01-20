@@ -168,11 +168,11 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
                     break;
                 case SDL_MOUSEBUTTONDOWN:
                     mouseClick(event.button.x, event.button.y, sceneMgr, w);
-                    MyGUI::InputManager::getInstance().injectMousePress(
-                            event.button.x,
-                            event.button.y,
-                            MyGUI::MouseButton::Left
-                    );
+                    // MyGUI::InputManager::getInstance().injectMousePress(
+                    //         event.button.x,
+                    //         event.button.y,
+                    //         MyGUI::MouseButton::Left
+                    // );
                     break;
                 case SDL_MOUSEBUTTONUP:
                     mouseClick(event.button.x, event.button.y, sceneMgr, w);

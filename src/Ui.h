@@ -25,8 +25,8 @@ class Ui : public RenderTargetListener {
         }
         virtual ~Ui();
 
-        static void callBackExit(MyGUI::WidgetPtr w, int x, int y, MyGUI::MouseButton b);
-        static void notifyWindowPressed(MyGUI::Window* _widget, const std::string& _name);
+        static void callBackExit(MyGUI::Widget *w, int x, int y, MyGUI::MouseButton b);
+        static void notifyWindowPressed(MyGUI::Widget *_widget);
         void addUiComponents(Ogre::RenderWindow *rw, Ogre::SceneManager *s);
 };
 
