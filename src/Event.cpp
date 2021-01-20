@@ -119,7 +119,6 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
         else if(mod[SDL_SCANCODE_DOWN]) {
             for (auto &a : EngineManager::getInstance().getVectorActor()) {
                 if(a->getEntity()->getParentSceneNode()->getShowBoundingBox()) {
-
                     a->getEntity()->
                         getParentSceneNode()->
                         translate(Vector3(0, -0.4, 0),
@@ -132,7 +131,6 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
         if(mod[SDL_SCANCODE_RIGHT]) {
             for (auto &a : EngineManager::getInstance().getVectorActor()) {
                 if(a->getEntity()->getParentSceneNode()->getShowBoundingBox()) {
-
                     a->getEntity()->
                         getParentSceneNode()->
                         translate(Vector3(0.4, 0 ,0),
@@ -173,7 +171,15 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
                     MyGUI::InputManager::getInstance().injectMousePress(
                             event.button.x,
                             event.button.y,
-                            MyGUI::MouseButton::Enum(0)
+                            MyGUI::MouseButton::Left
+                    );
+                    break;
+                case SDL_MOUSEBUTTONUP:
+                    mouseClick(event.button.x, event.button.y, sceneMgr, w);
+                    MyGUI::InputManager::getInstance().injectMouseRelease(
+                            event.button.x,
+                            event.button.y,
+                            MyGUI::MouseButton::Left
                     );
                     break;
                 case SDL_QUIT:

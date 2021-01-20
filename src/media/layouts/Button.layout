@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyGUI type="Layout">
-    <Widget type="Button" skin="Button" position="1210 10 150 26" align="Default" layer="Main" name="MyFirstButton" >
-        <Property key="Caption" value="Exit" />
+<MyGUI type = "Layout">
+    <Widget type = "Button" skin = "Button" position = "1210 10 150 26" align = "Default" layer = "Main" name = "MyFirstButton" >
+        <Property key = "Caption" value = "Exit" />
     </Widget>
 </MyGUI>
 

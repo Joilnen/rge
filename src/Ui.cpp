@@ -22,15 +22,15 @@ void Ui::notifyWindowPressed(MyGUI::Window* _widget, const std::string& _name) {
 
 void Ui::callBackExit(MyGUI::WidgetPtr w, int x, int y, MyGUI::MouseButton b) {
     std::cout << "Clicou exit\n";
-    MyGUI::InputManager::getInstance().injectMouseRelease(x, y, b); 	
-    SDL_Event e;
-    e.type = SDL_KEYDOWN;
-    e.key.keysym.sym = ::SDLK_ESCAPE;
-    SDL_PushEvent(&e);
+    if(b == MyGUI::MouseButton::Left) {
+        SDL_Event e;
+        e.type = SDL_KEYDOWN;
+        e.key.keysym.sym = ::SDLK_ESCAPE;
+        SDL_PushEvent(&e);
+    }
 }
 
 void Ui::addUiComponents(Ogre::RenderWindow *rw, Ogre::SceneManager *s) {
-
     auto plat = new MyGUI::OgrePlatform;
     plat->initialise(rw, s);
 
@@ -39,7 +39,8 @@ void Ui::addUiComponents(Ogre::RenderWindow *rw, Ogre::SceneManager *s) {
 
     MyGUI::LayoutManager::getInstance().loadLayout("Button.layout");
     auto button = gui->findWidget<MyGUI::Button>("MyFirstButton"); 
-    button->eventMouseButtonPressed += MyGUI::newDelegate(Ui::callBackExit);
+    // button->eventMouseButtonPressed += MyGUI::newDelegate(Ui::callBackExit);
+    button->eventMouseButtonReleased += MyGUI::newDelegate(Ui::callBackExit);
 
     /****
     MyGUI::WindowPtr window = _widget->castType<MyGUI::Window>(); 
