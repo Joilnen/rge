@@ -34,6 +34,7 @@ std::vector<Actor *> &World::getActorList() {
 }
 
 void World::addPUParticle(SceneNode *n) {
+
 }
 
 void World::addParticles(SceneNode *n) {
@@ -45,30 +46,30 @@ void World::addParticles(SceneNode *n) {
 }
 
 void World::create() {
-    SceneManager *sm = root->getSceneManagers().begin()->second;
+    auto sm = root->getSceneManagers().begin()->second;
     sm->setAmbientLight(ColourValue(0.8, 0.8, 0.8));
 
     MeshManager::getSingleton().createPlane("floor", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, Plane(Vector3::UNIT_Y, 0), 400, 400, 10, 10, true, 1, 10, 10, Vector3::UNIT_Z);
 
-    Entity *floor = sm->createEntity("floor");
+    auto floor = sm->createEntity("floor");
     floor->setMaterialName("Panels");
     SceneNode *nodePlane= sm->getRootSceneNode()->createChildSceneNode("Floor");
     sm->getRootSceneNode()->getChild("Floor")->setPosition(Vector3(0, -20, 0));
     nodePlane->attachObject(floor);
     
-    Actor *a1 = new Actor;
+    auto a1 = new Actor;
     a1->setSceneManager(sm);
     a1->setAnimString("ArmatureAction");
     a1->createEntity("Fighter1.mesh");
     a1->translate({-30, 0, -24});
 
-    Actor *a2 = new Actor;
+    auto a2 = new Actor;
     a2->setSceneManager(sm);
     a2->setAnimString("Dance1");
     a2->createEntity("Fighter2.mesh");
     a2->translate({30, 0, -24});
 
-    Actor *robot = new Actor;
+    auto robot = new Actor;
     robot->setSceneManager(sm);
     robot->setAnimString("Walk");
     robot->createEntity("robot.mesh");
@@ -77,7 +78,7 @@ void World::create() {
     robot->yaw(Radian(-Math::HALF_PI));
     robot->setMaterialName("Examples/Material4");
 
-    Actor *a3 = new Actor;
+    auto a3 = new Actor;
     a3->setSceneManager(sm);
     a3->setAnimString("ArmatureAction");
     a3->createEntity("tenta.mesh");
@@ -112,7 +113,7 @@ void World::create() {
 }
 
 void World::loadTerrain() {
-    SceneManager *sm = root->getSceneManagers().begin()->second;
+    auto sm = root->getSceneManagers().begin()->second;
     auto mTerrainGroup = OGRE_NEW Ogre::TerrainGroup(sm, Ogre::Terrain::ALIGN_X_Z, 512, 12000.0f);
     mTerrainGroup->setFilenameConvention("terrain", "dat");
     mTerrainGroup->setOrigin(Vector3(1000, 0, 5000));
