@@ -1,8 +1,6 @@
 // The name of the overlay comes first
-MyOverlay/ANewOverlay
+overlay MyOverlay/ANewOverlay
 {
-    zorder 200
-
     container Panel(MyOverlayElement/TestPanel)
     {
         // Center it horizontally, put it at the top
@@ -10,7 +8,7 @@ MyOverlay/ANewOverlay
         top 0
         width 0.5
         height 0.1
-        material MyMaterials/APanelMaterial
+        material Example/Material5
 
         // Another panel nested in this one
         container Panel(MyOverlayElement/AnotherPanel)
@@ -19,7 +17,7 @@ MyOverlay/ANewOverlay
              top 0
              width 0.1
              height 0.1
-             material MyMaterials/NestedPanel
+             material Example/Material5
         }
     }
 }

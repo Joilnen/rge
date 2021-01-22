@@ -10,6 +10,7 @@
 #include "World.h"
 #include "Ui.h"
 #include "RgeGui.h"
+#include <OgreOverlaySystem.h>
 
 using namespace Ogre;
 
@@ -21,13 +22,16 @@ int main()
     auto root = gm.getRootSceneNode();
     auto window = gm.getRenderWindow();
     auto sceneMgr = gm.getSceneManager();
-    unique_ptr<RgeGui> rgeGui(new RgeGui);
-    auto imGuiOverlay = new ImGuiOverlay;
-    imGuiOverlay->setZOrder(300);
-    imGuiOverlay->show();
-    // OverlayManager::getSingleton();
+    sceneMgr->addRenderQueueListener(new OverlaySystem);
 
     setResources();
+
+    auto imGuiOverlay = new ImGuiOverlay;
+    auto rgeGui = new RgeGui;
+    imGuiOverlay->setZOrder(300);
+    imGuiOverlay->show();
+    OverlayManager::getSingleton().addOverlay(imGuiOverlay);
+    window->addListener(rgeGui); 
 
     auto world = World::getInstance();
     world.init(root);

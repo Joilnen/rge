@@ -6,6 +6,8 @@
 #include "Actor.h"
 #include <iostream>
 #include <memory>
+#include "RgeGui.h"
+#include <OgreOverlaySystem.h>
 
 using namespace Ogre;
 using namespace std;
