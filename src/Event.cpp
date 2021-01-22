@@ -12,6 +12,8 @@
 #include "FrameListener.h"
 #include "EngineManager.h"
 #include "Event.h"
+#include "RgeGui.h"
+#include "OgreImGuiOverlay.h"
 
 MovableObject *mSelectedEntity = nullptr;
 float mSelectedEntityDist = 0.0f;

@@ -17,6 +17,8 @@ class Ui : public RenderTargetListener {
     // std::unique_ptr<ImGuiInputListener> mImguiListener;
     // InputListenerChain mListenerChain;
 
+    MyGUI::OgrePlatform *plat {nullptr};
+    MyGUI::Gui *gui {nullptr};
     Ui();
     public:
         static Ui& getInstance() {
@@ -25,8 +27,9 @@ class Ui : public RenderTargetListener {
         }
         virtual ~Ui();
 
-        static void callBackExit(MyGUI::Widget *w, int x, int y, MyGUI::MouseButton b);
-        static void notifyWindowPressed(MyGUI::Widget *_widget);
+        void callBackExitReal(MyGUI::Widget *w, int x, int y, MyGUI::MouseButton b);
+        void callBackExit(MyGUI::Widget *w, int x, int y, MyGUI::MouseButton b);
+        void notifyWindowPressed(MyGUI::Widget *_widget);
         void addUiComponents(Ogre::RenderWindow *rw, Ogre::SceneManager *s);
 };
 
