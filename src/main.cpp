@@ -26,13 +26,6 @@ int main()
 
     setResources();
 
-    auto imGuiOverlay = new ImGuiOverlay;
-    auto rgeGui = new RgeGui;
-    imGuiOverlay->setZOrder(300);
-    imGuiOverlay->show();
-    OverlayManager::getSingleton().addOverlay(imGuiOverlay);
-    window->addListener(rgeGui); 
-
     auto world = World::getInstance();
     world.init(root);
     world.create();
@@ -49,6 +42,13 @@ int main()
 
     Ui::getInstance().addUiComponents(window, sceneMgr);
     // getEvent and mainLoop;
+    auto imGuiOverlay = new ImGuiOverlay;
+    auto rgeGui = new RgeGui;
+    imGuiOverlay->setZOrder(300);
+    imGuiOverlay->show();
+    OverlayManager::getSingleton().addOverlay(imGuiOverlay);
+    window->addListener(rgeGui); 
+
     getEvent(window, root, sceneMgr);
 
     SDL_Quit();

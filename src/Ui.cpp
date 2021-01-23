@@ -37,6 +37,8 @@ void Ui::addUiComponents(Ogre::RenderWindow *rw, Ogre::SceneManager *s) {
     gui = new MyGUI::Gui;
     gui->initialise();
 
+    MyGUI::LayerManager::getInstance().getLayerCount();
+
     MyGUI::LayoutManager::getInstance().loadLayout("Button.layout");
     auto button = gui->findWidget<MyGUI::Button>("MyFirstButton"); 
     button->eventMouseButtonReleased += MyGUI::newDelegate(this, &Ui::callBackExitReal);

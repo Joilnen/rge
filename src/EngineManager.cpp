@@ -50,7 +50,7 @@ void EngineManager::_init(const std::string &pcfg, const std::string &ocfg) {
 
     }
 
-    SDL_ShowCursor(SDL_DISABLE);
+    SDL_ShowCursor(SDL_ENABLE);
 
     Ogre::String winHandle;
     Ogre::NameValuePairList params;
@@ -160,8 +160,8 @@ void EngineManager::_initSceneManager() {
     cameraNode->lookAt(Vector3(0, 0, -10), Node::TransformSpace::TS_WORLD);
 
     vpBottom = renderWindow->addViewport(camera);
-    vpTop = renderWindow->addViewport(camera, vpBottom->getZOrder() + 1, 0, 0, 0.25f, 0.25f);
-    vpTop->setBackgroundColour(ColourValue(0, 0, 0.68));
+    // vpTop = renderWindow->addViewport(camera, vpBottom->getZOrder() + 1, 0, 0, 0.25f, 0.25f);
+    // vpTop->setBackgroundColour(ColourValue(0, 0, 0.68));
 }
 
 void EngineManager::loop() {

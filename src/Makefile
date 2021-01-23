@@ -11,7 +11,7 @@ PARTICLE=../external/particleuniverse/build/Plugin_ParticleUniverse.so
 .cpp.o:
 	$(CC) -g -c $< `pkg-config --cflags --libs OGRE` $(INC)
 all:$(OBJ)
-	$(CC) -g $(OBJ) -o $(BIN) $(LIB) $(PARTICLE) `pkg-config --cflags --libs OGRE` -lGL -ltinyxml -lboost_system -lSDL2 -lOgreOverlay -lOgreTerrain -lMyGUIEngine -lMyGUI.OgrePlatform
+	$(CC) -g $(OBJ) -o $(BIN) $(LIB) $(PARTICLE) `pkg-config --cflags --libs OGRE` -lGL -ltinyxml -lboost_system -lSDL2 -lOgreOverlay -lOgreTerrain -lMyGUIEngine -lMyGUI.OgrePlatform -lOgreBites
 clean:
 	@rm -rf $(BIN) $(OBJ) > /dev/null
 
