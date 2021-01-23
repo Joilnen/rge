@@ -1,0 +1,7 @@
+All of the ogre3d documentation is quite sparse and not easy to learn it,
+here some problems I got working with ogre3d
+
+* Some singleton, don't intilise themselves with getSinglton, for example OverlayManager, so you need to create this first to get an instance, they said
+it is for to make possible the specialization
+
+
