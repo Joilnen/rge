@@ -7,10 +7,8 @@
 #include <OgreRenderTargetListener.h>
 
 
-class RgeGui : public RenderTargetListener, public OgreBites::ImGuiInputListener {
-
-
-    OgreBites::InputListenerChain mListenerChain;
+class RgeGui : public OgreBites::InputListener, public RenderTargetListener {
+    OgreBites::InputListenerChain il;
 
     void preViewportUpdate(const RenderTargetViewportEvent& evt) {
 
