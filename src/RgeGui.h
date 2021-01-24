@@ -42,7 +42,7 @@ class RgeGui : public OgreBites::InputListener, public RenderTargetListener {
         bool mouseWheelRolled(const OgreBites::MouseWheelEvent& evt) { return mListenerChain.mouseWheelRolled(evt); }
         bool mousePressed(const OgreBites::MouseButtonEvent& evt) { return mListenerChain.mousePressed(evt); }
         bool mouseReleased(const OgreBites::MouseButtonEvent& evt) { return mListenerChain.mouseReleased(evt); }
-        // bool textInput (const OgreBites::TextInputEvent& evt) { return mListenerChain.textInput (evt);
+        bool textInput (const OgreBites::TextInputEvent& evt) { return mListenerChain.textInput(evt); }
 };
 
 
