@@ -26,7 +26,7 @@ class BasicTutorial7 : public BaseApplication
 {
 public:
     BasicTutorial7(void);
-    VIVI ~BasicTutorial7(void);
+    virtual ~BasicTutorial7(void);
  
 protected:
     CEGUI::OgreRenderer* mRenderer;

@@ -164,10 +164,6 @@ void EngineManager::_initSceneManager() {
     // vpTop->setBackgroundColour(ColourValue(0, 0, 0.68));
 }
 
-void EngineManager::loop() {
-
-}
-
 RenderWindow *EngineManager::getRenderWindow() {
     return renderWindow;
 }

@@ -4,7 +4,7 @@ OBJ=main.o FrameListener.o resources.o Actor.o Event.o EngineManager.o World.o \
 	Render.o Ui.o ParticleUniverseWrapper.o SampleUI.o  
 BIN=russell
 CC=c++ -std=c++2a
-INC=-I ../external/particleuniverse/Plugins/ParticleUniverse/include -I../external/mygui/include -I ../external/mygui/include/OgrePlatform/include -I /usr/local/include/OGRE/Overlay
+INC=-I ../external/particleuniverse/Plugins/ParticleUniverse/include -I../external/mygui/include -I ../external/mygui/include/OgrePlatform/include -I /usr/local/include/OGRE/Overlay -I /usr/local/include/OGRE/RTShaderSystem
 LIB=-L../external/mygui/lib -L../external/particleuniverse/build
 PARTICLE=../external/particleuniverse/build/Plugin_ParticleUniverse.so
 

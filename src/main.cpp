@@ -40,7 +40,7 @@ int main()
     // create scene
     sceneMgr->setAmbientLight(ColourValue(.25, .25, .25));
 
-    Ui::getInstance().addUiComponents(window, sceneMgr);
+    // Ui::getInstance().addUiComponents(window, sceneMgr);
     // getEvent and mainLoop;
     auto imGuiOverlay = new ImGuiOverlay;
     auto rgeGui = new RgeGui;
@@ -49,7 +49,7 @@ int main()
     OverlayManager::getSingleton().addOverlay(imGuiOverlay);
     window->addListener(rgeGui); 
 
-    getEvent(window, root, sceneMgr);
+    // getEvent(window, root, sceneMgr);
 
     delete rgeGui;
     delete imGuiOverlay;

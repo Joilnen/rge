@@ -6,8 +6,11 @@
 #include "Event.h"
 #include <vector>
 #include <SDL2/SDL.h>
+#include <Bites/OgreApplicationContext.h>
+#include <OgreRTShaderSystem.h>
+#include <Bites/OgreImGuiInputListener.h>
 
-class EngineManager : public Event {
+class EngineManager : public OgreBites::ApplicationContext, public OgreBites::ImGuiInputListener {
 
     std::vector<Actor*> actorsStack;
     SDL_Window *window {nullptr};
@@ -33,8 +36,6 @@ class EngineManager : public Event {
         void addActor(Actor *a);
         // void addActor(std::shared_ptr<Actor> &a);
         std::vector<Actor *> &getVectorActor();
-
-        void loop() override;
 
         RenderWindow *getRenderWindow();
         SceneManager *getSceneManager();
