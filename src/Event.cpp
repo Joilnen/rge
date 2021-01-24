@@ -18,58 +18,6 @@
 MovableObject *mSelectedEntity = nullptr;
 float mSelectedEntityDist = 0.0f;
 
-static SDL_Window*  g_Window = NULL;
-static Uint64       g_Time = 0;
-static bool         g_MousePressed[3] = { false, false, false };
-static SDL_Cursor*  g_MouseCursors[ImGuiMouseCursor_COUNT] = {};
-static char*        g_ClipboardTextData = NULL;
-static bool         g_MouseCanUseGlobalState = true;
-
-static bool ImGui_ImplSDL2_ProcessEvent(const SDL_Event* event) {
-    ImGuiIO& io = ImGui::GetIO();
-    switch (event->type)
-    {
-    case SDL_MOUSEWHEEL:
-        {
-            if (event->wheel.x > 0) io.MouseWheelH += 1;
-            if (event->wheel.x < 0) io.MouseWheelH -= 1;
-            if (event->wheel.y > 0) io.MouseWheel += 1;
-            if (event->wheel.y < 0) io.MouseWheel -= 1;
-            return true;
-        }
-    case SDL_MOUSEBUTTONDOWN:
-        {
-            if (event->button.button == SDL_BUTTON_LEFT) g_MousePressed[0] = true;
-            if (event->button.button == SDL_BUTTON_RIGHT) g_MousePressed[1] = true;
-            if (event->button.button == SDL_BUTTON_MIDDLE) g_MousePressed[2] = true;
-            return true;
-        }
-    case SDL_TEXTINPUT:
-        {
-            io.AddInputCharactersUTF8(event->text.text);
-            return true;
-        }
-    case SDL_KEYDOWN:
-    case SDL_KEYUP:
-        {
-            int key = event->key.keysym.scancode;
-            IM_ASSERT(key >= 0 && key < IM_ARRAYSIZE(io.KeysDown));
-            io.KeysDown[key] = (event->type == SDL_KEYDOWN);
-            io.KeyShift = ((SDL_GetModState() & KMOD_SHIFT) != 0);
-            io.KeyCtrl = ((SDL_GetModState() & KMOD_CTRL) != 0);
-            io.KeyAlt = ((SDL_GetModState() & KMOD_ALT) != 0);
-#ifdef _WIN32
-            io.KeySuper = false;
-#else
-            io.KeySuper = ((SDL_GetModState() & KMOD_GUI) != 0);
-#endif
-            return true;
-        }
-    }
-    return false;
-}
-
-
 void Event::getKeyboardEvent() {
 
 }
@@ -207,7 +155,6 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
         }
 
         while(SDL_PollEvent(&event)) {
-            ImGui_ImplSDL2_ProcessEvent(&event);
             switch(event.type) {
                 case SDL_MOUSEMOTION:
                     std::cout << "Mouse moving\n";
@@ -216,11 +163,11 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
                     // SDL_WarpMouseInWindow(Render::getInstance().getWindow(), x, y);
                     // SDL_EventState(SDL_MOUSEMOTION, SDL_ENABLE);
                     dragObject(event.motion.x, event.motion.y, sceneMgr, w);
-                    // MyGUI::InputManager::getInstance().injectMouseMove(
-                    //         event.motion.x,
-                    //         event.motion.y,
-                    //         0
-                    // );
+                    MyGUI::InputManager::getInstance().injectMouseMove(
+                            event.motion.x,
+                            event.motion.y,
+                            0
+                    );
                     break;
                 case SDL_MOUSEBUTTONDOWN:
                     mouseClick(event.button.x, event.button.y, sceneMgr, w);
@@ -232,11 +179,11 @@ void getEvent(RenderWindow *w,  Root *r, SceneManager *sceneMgr) {
                     break;
                 case SDL_MOUSEBUTTONUP:
                     mouseClick(event.button.x, event.button.y, sceneMgr, w);
-                    // MyGUI::InputManager::getInstance().injectMouseRelease(
-                    //         event.button.x,
-                    //         event.button.y,
-                    //         MyGUI::MouseButton::Left
-                    // );
+                    MyGUI::InputManager::getInstance().injectMouseRelease(
+                            event.button.x,
+                            event.button.y,
+                            MyGUI::MouseButton::Left
+                    );
                     break;
                 case SDL_QUIT:
                 case SDL_KEYDOWN:

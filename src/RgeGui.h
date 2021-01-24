@@ -7,10 +7,7 @@
 #include <OgreRenderTargetListener.h>
 
 
-class RgeGui : public OgreBites::InputListener, public RenderTargetListener {
-
-    OgreBites::InputListenerChain mListenerChain;
-    unique_ptr<OgreBites::ImGuiInputListener> mImguiListener;
+class RgeGui : public OgreBites::ImGuiInputListener, public RenderTargetListener {
 
     public:
         void preViewportUpdate(const RenderTargetViewportEvent& evt) {
@@ -32,17 +29,6 @@ class RgeGui : public OgreBites::InputListener, public RenderTargetListener {
             return true;
         }
 
-        void setUp(void) {
-            mImguiListener.reset(new OgreBites::ImGuiInputListener());
-            mListenerChain = OgreBites::InputListenerChain({mImguiListener.get()});
-        }
-
-        bool keyPressed(const OgreBites::KeyboardEvent& evt) { return mListenerChain.keyReleased(evt); }
-        bool mouseMoved(const OgreBites::MouseMotionEvent& evt) { return mListenerChain.mouseMoved(evt); }
-        bool mouseWheelRolled(const OgreBites::MouseWheelEvent& evt) { return mListenerChain.mouseWheelRolled(evt); }
-        bool mousePressed(const OgreBites::MouseButtonEvent& evt) { return mListenerChain.mousePressed(evt); }
-        bool mouseReleased(const OgreBites::MouseButtonEvent& evt) { return mListenerChain.mouseReleased(evt); }
-        bool textInput (const OgreBites::TextInputEvent& evt) { return mListenerChain.textInput(evt); }
 };
 
 
