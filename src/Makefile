@@ -1,6 +1,6 @@
-SRC=main.cpp frame_listener.cpp resources.cpp Actor.cpp Event.cpp EngineManager.cpp World.cpp \
+SRC=main.cpp EngineManager.cpp # frame_listener.cpp resources.cpp Actor.cpp Event.cpp World.cpp \
 	Render.cpp Ui.cpp ParticleUniverseWrapper.cpp SampleUI.cpp 
-OBJ=main.o FrameListener.o resources.o Actor.o Event.o EngineManager.o World.o \
+OBJ=main.o EngineManager.o # FrameListener.o resources.o Actor.o Event.o  World.o \
 	Render.o Ui.o ParticleUniverseWrapper.o SampleUI.o  
 BIN=russell
 CC=c++ -std=c++2a
