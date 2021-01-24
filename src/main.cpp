@@ -44,12 +44,16 @@ int main()
     // getEvent and mainLoop;
     auto imGuiOverlay = new ImGuiOverlay;
     auto rgeGui = new RgeGui;
+    rgeGui->setUp();
     imGuiOverlay->setZOrder(300);
     imGuiOverlay->show();
     OverlayManager::getSingleton().addOverlay(imGuiOverlay);
     window->addListener(rgeGui); 
 
     getEvent(window, root, sceneMgr);
+
+    delete rgeGui;
+    delete imGuiOverlay;
 
     SDL_Quit();
     // Crashing I don't know why 
