@@ -1,4 +1,4 @@
 # rge
-## RUSSELL GAME ENGINE
+** RUSSELL GAME ENGINE
 A game engine based on Ogre3d
 
