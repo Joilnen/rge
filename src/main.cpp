@@ -17,6 +17,10 @@ using namespace Ogre;
 int main()
 {
 
+    EngineManager em;
+    em.initApp();
+    em.getRoot()->startRendering();
+    em.closeApp();
 
     return 0;
 }

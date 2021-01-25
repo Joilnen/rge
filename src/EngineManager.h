@@ -17,7 +17,11 @@ class EngineManager : public OgreBites::ApplicationContext, public OgreBites::Im
         void _createParticle();
         void _addLights();
         void _initSceneManager();
+        bool keyPressed(const OgreBites::KeyboardEvent& evt);
+        void setup(void);
     public:
+        EngineManager();
+        virtual ~EngineManager();
         void init(const std::string &pcfg, const std::string &ocfg);
         void setResources();
 };
