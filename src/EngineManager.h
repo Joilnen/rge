@@ -2,15 +2,11 @@
 #define ENGINE_MANAGER_H
 
 #include <OGRE/Ogre.h>
-#include "Actor.h"
-#include "Event.h"
-#include <vector>
-#include <SDL2/SDL.h>
 #include <Bites/OgreApplicationContext.h>
 #include <OgreRTShaderSystem.h>
-#include <Bites/OgreImGuiInputListener.h>
+#include "RgeGui.h"
 
-class EngineManager : public OgreBites::ApplicationContext, public OgreBites::ImGuiInputListener {
+class EngineManager : public OgreBites::ApplicationContext, public OgreBites::InputListener {
 
     private:
         void _init(const std::string &pcfg, const std::string &ocfg);

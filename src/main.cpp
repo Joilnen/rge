@@ -1,26 +1,21 @@
 #include <OGRE/Ogre.h>
-#include "FrameListener.h"
-#include <iostream>
-#include <vector>
-#include <string>
-#include <sstream>
-#include "resources.h"
-#include "Event.h"
 #include "EngineManager.h"
-#include "World.h"
-#include "Ui.h"
-#include "RgeGui.h"
-#include <OgreOverlaySystem.h>
+#include <iostream>
 
 using namespace Ogre;
 
-int main()
+int main(int argc, char *argv[])
 {
-
-    EngineManager em;
-    em.initApp();
-    em.getRoot()->startRendering();
-    em.closeApp();
+    try {
+        EngineManager em;
+        em.initApp();
+        em.getRoot()->startRendering();
+        // em.closeApp(); // I got double cleaning crash
+    }
+    catch(const std::exception &e) {
+        std::cerr << e.what() << "\n";
+        return 1;
+    }
 
     return 0;
 }
