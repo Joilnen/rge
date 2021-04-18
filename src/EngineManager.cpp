@@ -21,10 +21,11 @@ EngineManager::~EngineManager() {
 }
 
 void EngineManager::preViewportUpdate (const Ogre::RenderTargetViewportEvent &evt) { 
-    if(!evt.source->getOverlaysEnabled()) return;
+    Ogre::LogManager::getSingleton().logMessage("PINTEI");
+    if(!evt.source->getOverlaysEnabled())
+        return;
     ImGuiOverlay::NewFrame();
     ImGui::ShowDemoWindow();
-    Ogre::LogManager::getSingleton().logMessage("PINTEI");
 }
 
 #ifndef OGRE_BUILD_COMPONENT_RTSHADERSYSTEM
@@ -49,6 +50,9 @@ void EngineManager::setup() {
     auto shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
     shadergen->addSceneManager(scnMgr);
 
+    mImguiListener.reset(new OgreBites::ImGuiInputListener);
+    mListenerChain = OgreBites::InputListenerChain({mImguiListener.get()});
+
     // ImGui::CreateContext();
     auto imguiOverlay = new Ogre::ImGuiOverlay;
     imguiOverlay->setZOrder(300);
@@ -64,9 +68,6 @@ void EngineManager::setup() {
     cam->setNearClipDistance(5); // specific to this sample
     cam->setAutoAspectRatio(true);
     getRenderWindow()->addViewport(cam);
-
-    mImguiListener.reset(new OgreBites::ImGuiInputListener);
-    mListenerChain = OgreBites::InputListenerChain({mImguiListener.get()});
 
     auto camNode = scnMgr->getRootSceneNode()->createChildSceneNode();
     camNode->setPosition(0, 0, 15);
