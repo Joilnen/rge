@@ -7,6 +7,7 @@
 #include "EngineManager.h"
 #include <iostream>
 #include <memory>
+#include "EngineGui.h"
 #include "RgeGui.h"
 
 using namespace Ogre;
@@ -20,6 +21,7 @@ EngineManager::~EngineManager() {
 
 }
 
+/****
 void EngineManager::preViewportUpdate (const Ogre::RenderTargetViewportEvent &evt) { 
     Ogre::LogManager::getSingleton().logMessage("PINTEI");
     if(!evt.source->getOverlaysEnabled())
@@ -27,18 +29,17 @@ void EngineManager::preViewportUpdate (const Ogre::RenderTargetViewportEvent &ev
     ImGuiOverlay::NewFrame();
     ImGui::ShowDemoWindow();
 }
+****/
 
 #ifndef OGRE_BUILD_COMPONENT_RTSHADERSYSTEM
 void EngineManager::locateResources() {
     OgreBites::ApplicationContext::locateResources();
-    // we have to manually specify the shaders
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation(
         "../resources", "FileSystem", Ogre::ResourceGroupManager::INTERNAL_RESOURCE_GROUP_NAME);
 }
 #endif
 
 void EngineManager::setup() {
-
     OgreBites::ApplicationContext::setup();
 
     // get a pointer to the already created root

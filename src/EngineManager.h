@@ -7,7 +7,7 @@
 #include <OgreRTShaderSystem.h>
 #include "RgeGui.h"
 
-class EngineManager : public OgreBites::ApplicationContext, public Ogre::RenderTargetListener, public OgreBites::InputListener {
+class EngineManager : public OgreBites::ApplicationContext, OgreBites::InputListener {
 
     std::unique_ptr<OgreBites::ImGuiInputListener> mImguiListener;
 	OgreBites::InputListenerChain mListenerChain;
@@ -15,8 +15,6 @@ class EngineManager : public OgreBites::ApplicationContext, public Ogre::RenderT
     public:
         EngineManager();
         virtual ~EngineManager();
-
-        void preViewportUpdate (const Ogre::RenderTargetViewportEvent &evt);
 
 #ifndef OGRE_BUILD_COMPONENT_RTSHADERSYSTEM
         void locateResources() {
