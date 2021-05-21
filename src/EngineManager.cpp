@@ -51,14 +51,16 @@ void EngineManager::setup() {
     auto shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
     shadergen->addSceneManager(scnMgr);
 
-    mImguiListener.reset(new OgreBites::ImGuiInputListener);
-    mListenerChain = OgreBites::InputListenerChain({mImguiListener.get()});
+    // mImguiListener.reset(new OgreBites::ImGuiInputListener);
+    // mListenerChain = OgreBites::InputListenerChain({mImguiListener.get()});
 
     // ImGui::CreateContext();
+    /****
     auto imguiOverlay = new Ogre::ImGuiOverlay;
     imguiOverlay->setZOrder(300);
 	imguiOverlay->show();
     Ogre::OverlayManager::getSingleton().addOverlay(imguiOverlay);
+    ****/
 
     auto light = scnMgr->createLight("MainLight");
     auto lightNode = scnMgr->getRootSceneNode()->createChildSceneNode();
@@ -81,7 +83,6 @@ void EngineManager::setup() {
 }
 
 bool EngineManager::keyPressed(const OgreBites::KeyboardEvent& evt) {
-
     if (evt.keysym.sym == OgreBites::SDLK_ESCAPE) {
         getRoot()->queueEndRendering();
         return true;
