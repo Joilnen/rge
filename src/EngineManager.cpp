@@ -51,15 +51,12 @@ void EngineManager::setup() {
 
 	scnMgr->addRenderQueueListener(getOverlaySystem()); // Enable drawing of Overlays
 
-
     addInputListener(this);
-
 
     auto imguiOverlay = new Ogre::ImGuiOverlay;
     imguiOverlay->setZOrder(300);
 	imguiOverlay->show();
     Ogre::OverlayManager::getSingleton().addOverlay(imguiOverlay);
-
 
     auto light = scnMgr->createLight("MainLight");
     auto lightNode = scnMgr->getRootSceneNode()->createChildSceneNode();
