@@ -21,7 +21,13 @@ class EngineManager : public OgreBites::ApplicationContext, OgreBites::InputList
 #endif
         void setup();
         bool keyPressed(const OgreBites::KeyboardEvent& evt);
+        bool keyReleased(const OgreBites::KeyboardEvent& evt) { return mImguiListener->keyReleased(evt); }
+        bool mouseMoved(const OgreBites::MouseMotionEvent& evt) { return mImguiListener->mouseMoved(evt); }
+        bool mouseWheelRolled(const OgreBites::MouseWheelEvent& evt) { return mImguiListener->mouseWheelRolled(evt); }
+        bool mousePressed(const OgreBites::MouseButtonEvent& evt) { return mImguiListener->mousePressed(evt); }
+        bool mouseReleased(const OgreBites::MouseButtonEvent& evt) { return mImguiListener->mouseReleased(evt); }
 
+        bool frameStarted (const Ogre::FrameEvent &evt);
 };
 
 #endif

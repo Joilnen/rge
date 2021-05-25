@@ -21,15 +21,14 @@ EngineManager::~EngineManager() {
 
 }
 
-/****
-void EngineManager::preViewportUpdate (const Ogre::RenderTargetViewportEvent &evt) { 
-    Ogre::LogManager::getSingleton().logMessage("PINTEI");
-    if(!evt.source->getOverlaysEnabled())
-        return;
+bool EngineManager::frameStarted (const Ogre::FrameEvent &evt) { 
+    pollEvents();
+
     ImGuiOverlay::NewFrame();
     ImGui::ShowDemoWindow();
+
+	return OgreBites::ApplicationContext::frameStarted(evt);
 }
-****/
 
 #ifndef OGRE_BUILD_COMPONENT_RTSHADERSYSTEM
 void EngineManager::locateResources() {
@@ -46,21 +45,21 @@ void EngineManager::setup() {
     auto root = getRoot();
     auto scnMgr = root->createSceneManager();
 
-    addInputListener(this);
     // register our scene with the RTSS
     auto shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
     shadergen->addSceneManager(scnMgr);
 
-    // mImguiListener.reset(new OgreBites::ImGuiInputListener);
-    // mListenerChain = OgreBites::InputListenerChain({mImguiListener.get()});
+	scnMgr->addRenderQueueListener(getOverlaySystem()); // Enable drawing of Overlays
 
-    // ImGui::CreateContext();
-    /****
+
+    addInputListener(this);
+
+
     auto imguiOverlay = new Ogre::ImGuiOverlay;
     imguiOverlay->setZOrder(300);
 	imguiOverlay->show();
     Ogre::OverlayManager::getSingleton().addOverlay(imguiOverlay);
-    ****/
+
 
     auto light = scnMgr->createLight("MainLight");
     auto lightNode = scnMgr->getRootSceneNode()->createChildSceneNode();
@@ -71,6 +70,9 @@ void EngineManager::setup() {
     cam->setNearClipDistance(5); // specific to this sample
     cam->setAutoAspectRatio(true);
     getRenderWindow()->addViewport(cam);
+
+	mImguiListener.reset(new OgreBites::ImGuiInputListener);
+    addInputListener(mImguiListener.get());
 
     auto camNode = scnMgr->getRootSceneNode()->createChildSceneNode();
     camNode->setPosition(0, 0, 15);
@@ -83,12 +85,10 @@ void EngineManager::setup() {
 }
 
 bool EngineManager::keyPressed(const OgreBites::KeyboardEvent& evt) {
-    if (evt.keysym.sym == OgreBites::SDLK_ESCAPE) {
+    if (evt.keysym.sym == OgreBites::SDLK_ESCAPE)
         getRoot()->queueEndRendering();
-        return true;
-    }
 
-    return false;
+	return OgreBites::InputListener::keyPressed(evt);
 }
 
 
