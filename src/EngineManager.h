@@ -11,6 +11,7 @@ class EngineManager : public OgreBites::ApplicationContext, OgreBites::InputList
 
     std::unique_ptr<OgreBites::ImGuiInputListener> mImguiListener;
 	OgreBites::InputListenerChain mListenerChain;
+    void listNodes();
 
     public:
         EngineManager();

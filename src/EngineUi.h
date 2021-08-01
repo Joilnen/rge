@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENGINEUI_H
+#define ENGINEUI_H
 
 #include "OgreImGuiOverlay.h"
 #include <OgreImGuiInputListener.h>
@@ -10,6 +11,8 @@ class _OgreSampleClassExport EngineGui : public SdkSample, public RenderTargetLi
 
     std::unique_ptr<ImGuiInputListener> mImguiListener;
     InputListenerChain mListenerChain;
+
+    void listNodes();
 
     public:
         // Basic constructor
@@ -72,5 +75,5 @@ class _OgreSampleClassExport EngineGui : public SdkSample, public RenderTargetLi
         }
 };
 
-
+#endif
 

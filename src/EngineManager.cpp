@@ -7,7 +7,6 @@
 #include "EngineManager.h"
 #include <iostream>
 #include <memory>
-#include "EngineGui.h"
 #include "RgeGui.h"
 
 using namespace Ogre;
@@ -25,7 +24,8 @@ bool EngineManager::frameStarted (const Ogre::FrameEvent &evt) {
     pollEvents();
 
     ImGuiOverlay::NewFrame();
-    ImGui::ShowDemoWindow();
+    // ImGui::ShowDemoWindow();
+    listNodes();
 
 	return OgreBites::ApplicationContext::frameStarted(evt);
 }
@@ -88,5 +88,11 @@ bool EngineManager::keyPressed(const OgreBites::KeyboardEvent& evt) {
 	return OgreBites::InputListener::keyPressed(evt);
 }
 
+void EngineManager::listNodes() {
+    ImGui::Begin("List Nodes");
+    ImGui::Text("Test windows");
+    if (ImGui::Button("Button"));
+    ImGui::End();
+}
 
 
