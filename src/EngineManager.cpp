@@ -59,7 +59,7 @@ void EngineManager::setup() {
     Ogre::OverlayManager::getSingleton().addOverlay(imguiOverlay);
 
     auto light = scnMgr->createLight("MainLight");
-    auto lightNode = scnMgr->getRootSceneNode()->createChildSceneNode();
+    auto lightNode = scnMgr->getRootSceneNode()->createChildSceneNode(Ogre::NameGenerator("light").generate());
     lightNode->setPosition(0, 10, 15);
     lightNode->attachObject(light);
 
@@ -71,13 +71,13 @@ void EngineManager::setup() {
 	mImguiListener.reset(new OgreBites::ImGuiInputListener);
     addInputListener(mImguiListener.get());
 
-    auto camNode = scnMgr->getRootSceneNode()->createChildSceneNode();
+    auto camNode = scnMgr->getRootSceneNode()->createChildSceneNode(Ogre::NameGenerator("camera").generate());
     camNode->setPosition(0, 0, 15);
     camNode->lookAt(Ogre::Vector3(0, 0, -1), Ogre::Node::TS_PARENT);
     camNode->attachObject(cam);
 
     auto ent = scnMgr->createEntity("Sinbad.mesh");
-    auto node = scnMgr->getRootSceneNode()->createChildSceneNode();
+    auto node = scnMgr->getRootSceneNode()->createChildSceneNode(Ogre::NameGenerator("entidade").generate());
     node->attachObject(ent);
 }
 
@@ -89,9 +89,21 @@ bool EngineManager::keyPressed(const OgreBites::KeyboardEvent& evt) {
 }
 
 void EngineManager::listNodes() {
+    static int listItem = 0;
+    const char *items[] = {"Node 0", "Node 1", "Node 2", "Node 3", "Node 4", "Node 5", "Node 6"};
+    auto root = getRoot();
+    auto it = root->getSceneManagers().cbegin();
+    auto scnMgr = (*it).second;
+
     ImGui::Begin("List Nodes");
-    ImGui::Text("Test windows");
-    if (ImGui::Button("Button"));
+        ImGui::ListBox("", &listItem, items, IM_ARRAYSIZE(items), 2);
+
+        if(ImGui::Button("Button")) {
+            LogManager::getSingleton().logMessage("Numero de nodes ");
+            for(auto &a : scnMgr->getRootSceneNode()->getChildren()) {
+                LogManager::getSingleton().logMessage(a->getName());
+            }
+        }
     ImGui::End();
 }
 
