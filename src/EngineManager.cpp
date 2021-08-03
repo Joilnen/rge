@@ -90,19 +90,30 @@ bool EngineManager::keyPressed(const OgreBites::KeyboardEvent& evt) {
 
 void EngineManager::listNodes() {
     static int listItem = 0;
-    const char *items[] = {"Node 0", "Node 1", "Node 2", "Node 3", "Node 4", "Node 5", "Node 6"};
+    const char *items[] {
+        "xxxxxxxxxx", 
+        "xxxxxxxxxx", 
+        "xxxxxxxxxx", 
+        "xxxxxxxxxx", 
+        "xxxxxxxxxx", 
+        "xxxxxxxxxx", 
+        "xxxxxxxxxx", 
+    };
+
     auto root = getRoot();
     auto it = root->getSceneManagers().cbegin();
     auto scnMgr = (*it).second;
 
-    ImGui::Begin("List Nodes");
-        ImGui::ListBox("", &listItem, items, IM_ARRAYSIZE(items), 2);
+    ImGui::Begin("Node List");
+        unsigned short count = 0;
+        for(auto &a : scnMgr->getRootSceneNode()->getChildren()) {
+            items[count++] = a->getName().c_str();
+        }
+        ImGui::ListBox("", &listItem, items, IM_ARRAYSIZE(items), 5);
 
         if(ImGui::Button("Button")) {
             LogManager::getSingleton().logMessage("Numero de nodes ");
-            for(auto &a : scnMgr->getRootSceneNode()->getChildren()) {
-                LogManager::getSingleton().logMessage(a->getName());
-            }
+            LogManager::getSingleton().logMessage(StringConverter::toString(scnMgr->getRootSceneNode()->getChildren().size()));
         }
     ImGui::End();
 }
