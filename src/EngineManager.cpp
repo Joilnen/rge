@@ -77,8 +77,15 @@ void EngineManager::setup() {
     camNode->attachObject(cam);
 
     auto ent = scnMgr->createEntity("Sinbad.mesh");
-    auto node = scnMgr->getRootSceneNode()->createChildSceneNode(Ogre::NameGenerator("entidade").generate());
+    auto gen = Ogre::NameGenerator("entidade");
+    auto node = scnMgr->getRootSceneNode()->createChildSceneNode(gen.generate());
     node->attachObject(ent);
+    node->translate(-5, 0, 0);
+
+    auto ent1 = scnMgr->createEntity("Sinbad.mesh");
+    auto node1 = node->createChildSceneNode(gen.generate());
+    node1->attachObject(ent1);
+    node1->translate(10, 0, 0);
 }
 
 bool EngineManager::keyPressed(const OgreBites::KeyboardEvent& evt) {
@@ -106,6 +113,15 @@ void EngineManager::listNodes() {
 
     ImGui::Begin("Node List");
         unsigned short count = 0;
+        std::function<void(SceneNode *)> itNode;
+        itNode = [&](SceneNode *n) {
+            for(auto &a : n->getChildren()) {
+                items[count++] = a->getName().c_str();
+                if(a->numChildren())
+                    itNode(n);
+            }
+        };
+        // itNode(scnMgr->getRootSceneNode());
         for(auto &a : scnMgr->getRootSceneNode()->getChildren()) {
             items[count++] = a->getName().c_str();
         }
