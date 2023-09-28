@@ -20,7 +20,7 @@ EngineManager::~EngineManager() {
 
 }
 
-bool EngineManager::frameStarted (const Ogre::FrameEvent &evt) { 
+bool EngineManager::frameStarted (const Ogre::FrameEvent &evt) {
     pollEvents();
 
     ImGuiOverlay::NewFrame();
@@ -98,13 +98,13 @@ bool EngineManager::keyPressed(const OgreBites::KeyboardEvent& evt) {
 void EngineManager::listNodes() {
     static int listItem = 0;
     const char *items[] {
-        "xxxxxxxxxx", 
-        "xxxxxxxxxx", 
-        "xxxxxxxxxx", 
-        "xxxxxxxxxx", 
-        "xxxxxxxxxx", 
-        "xxxxxxxxxx", 
-        "xxxxxxxxxx", 
+        "xxxxxxxxxx",
+        "xxxxxxxxxx",
+        "xxxxxxxxxx",
+        "xxxxxxxxxx",
+        "xxxxxxxxxx",
+        "xxxxxxxxxx",
+        "xxxxxxxxxx",
     };
 
     auto root = getRoot();
@@ -122,7 +122,7 @@ void EngineManager::listNodes() {
             }
         };
         // itNode(scnMgr->getRootSceneNode());
-        for(auto &a : scnMgr->getRootSceneNode()->getChildren()) {
+        for(auto& a : scnMgr->getRootSceneNode()->getChildren()) {
             items[count++] = a->getName().c_str();
         }
         ImGui::ListBox("", &listItem, items, IM_ARRAYSIZE(items), 5);
